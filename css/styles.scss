@@ -1,23 +1,92 @@
 @import "/Users/krhefley/Documents/Sites/krhefley.github.io/css/bourbon/_bourbon.scss";
 @import "/Users/krhefley/Documents/Sites/krhefley.github.io/css/neat/_neat.scss";
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
+
+$large: 1024px;
+$medium: 768px;
+$small: 500px;
+$tiny: 320px;
+
+//responsive handling
+@mixin sauron {
+  @media (min-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin legolas {
+  @media (min-width: #{$medium}) and (max-width: #{$large - 1px}) {
+    @content;
+  }
+}
+
+@mixin aragorn {
+  @media (min-width: #{$small}) and (max-width: #{$medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin frodo {
+  @media (min-width: #{$tiny}) and (max-width: #{$small - 1px}) {
+    @content;
+  }
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+
+
+//fonts
+@font-face {
+ font-family: 'Amatic SC';
+ font-style: normal;
+ font-weight: 400;
+ src: url('http://localhost:3000/krhefley.github.io/css/fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+ font-family: 'Pacifico';
+ font-style: normal;
+ font-weight: 400;
+ src: url('http://localhost:3000/krhefley.github.io/css/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+}
+
+@font-face {
+ font-family: 'Arimo';
+ font-style: normal;
+ font-weight: 400;
+ src: url('http://localhost:3000/krhefley.github.io/css/fonts/Arimo/Arimo-Regular.ttf') format('truetype');
+}
+
+//variables
 $blue: #151D4B;
 $teal: #25E5C8;
 $purple: #272634;
 $light-gray: #DCDCDC;
 $max-width: 2000px;
-$visual-grid: true;
-$Pacifico: Pacifio;
+$dark-gray: rgb(51, 51, 51);
+
+//components
+head {
+	margin-bottom: 10px;
+}
 
 body {
-  margin: 0px;	
+  margin: 0px;
 }
 
 h1 {
 	font-size: 64px;
 	text-align: center;
-	font-family: $Pacifico;
+	font-family: 'Pacifico';
 	margin: 0;
 		}
 
@@ -25,6 +94,8 @@ h3 {
 color: #fff;
 font-size: 32px;
 text-align: center;
+font-family: 'Arimo';
+margin: 0px;
 
 }
 
@@ -33,15 +104,15 @@ section {
 }
 
 
-//nav
+//Navigation Menu
 .centered-navigation {
   $base-border-radius: 3px !default;
   $dark-gray: #333 !default;
   $large-screen: 53.75em !default;
-  $base-font-color: $dark-gray !default;
+  $base-font-color: $blue !default;
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
-  $centered-navigation-background: #E7F1EC;
+  $centered-navigation-background: $light-gray;
   $centered-navigation-color: transparentize($base-font-color, 0.3);
   $centered-navigation-color-hover: $base-font-color;
   $centered-navigation-height: 60px;
@@ -56,8 +127,17 @@ section {
   min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
+  position: fixed;
+ 
 
   // Mobile view
+
+ #mobile-menu {
+    width: 35px;
+    height: 5px;
+    margin: 5px 0;
+    background-color: $blue;
+}
 
   .mobile-logo {
     display: inline;
@@ -72,7 +152,7 @@ section {
     }
 
     @include media($horizontal-bar-mode) {
-      display: none;
+      display: none; 
     }
   }
 
@@ -81,7 +161,7 @@ section {
     display: block;
     float: right;
     line-height: $centered-navigation-height;
-    margin: 0;
+    margin: 10px 0px 0px 0px;
     padding-right: $centered-navigation-submenu-padding;
     text-decoration: none;
     text-transform: uppercase;
@@ -97,7 +177,6 @@ section {
   }
 
   // Nav menu
-
   .centered-navigation-wrapper {
     @include outer-container;
     @include clearfix;
@@ -111,7 +190,7 @@ section {
     margin: 0 auto;
     overflow: visible;
     padding: 0;
-    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    -webkit-transform-style: preserve-3d; 
     width: 100%;
     z-index: 99999;
 
@@ -126,7 +205,6 @@ section {
   }
 
   // The nav items
-
   .nav-link:first-child {
     @include media($horizontal-bar-mode) {
       margin-left: $centered-navigation-item-nudge;
@@ -148,6 +226,9 @@ section {
       display: inline-block;
       outline: none;
       text-decoration: none;
+      font-weight: bold;
+      font-family: 'Amatic SC';
+      font-size: 32px;
 
       &:focus,
       &:hover {
@@ -166,217 +247,192 @@ section {
     }
   }
 
-  li.logo.nav-link {
-    display: none;
-    line-height: 0;
-
-    @include media($horizontal-bar-mode) {
-      display: inline;
-    }
-  }
-
-  .logo img {
-    margin-bottom: -$centered-navigation-logo-height / 3;
-    max-height: $centered-navigation-logo-height;
-    opacity: 0.6;
-  }
-
-  // Sub menus
-
-  li.more.nav-link {
-    padding-right: 0;
-
-    @include media($large-screen) {
-      padding-right: $centered-navigation-submenu-padding;
-    }
-
-    > ul > li:first-child a  {
-      padding-top: 1em;
-    }
-
-    a {
-      margin-right: $centered-navigation-submenu-padding;
-    }
-
-    > a {
-      padding-right: 0.6em;
-    }
-
-    > a::after {
-      @include position(absolute, auto -0.4em auto auto);
-      color: $centered-navigation-color;
-      content: "\25BE";
-    }
-  }
-
-  li.more {
-    overflow: visible;
-    padding-right: 0;
-
-    a {
-      padding-right: $centered-navigation-submenu-padding;
-    }
-
-    > a {
-      padding-right: 1.6em;
-      position: relative;
-
-      @include media($large-screen) {
-        margin-right: $centered-navigation-submenu-padding;
-      }
-
-      &::after {
-        content: "›";
-        font-size: 1.2em;
-        position: absolute;
-        right: $centered-navigation-submenu-padding / 2;
-      }
-    }
-
-    &:focus > .submenu,
-    &:hover > .submenu {
-      display: block;
-    }
-
-    @include media($horizontal-bar-mode) {
-      padding-right: $centered-navigation-submenu-padding;
-      position: relative;
-    }
-  }
-
-  ul.submenu {
-    display: none;
-    padding-left: 0;
-
-    @include media($horizontal-bar-mode) {
-      left: -$centered-navigation-submenu-padding;
-      position: absolute;
-      top: 1.5em;
-    }
-
-    .submenu.fly-out-right {
-      @include media($horizontal-bar-mode) {
-        left: $centered-navigation-submenu-width - 0.2em;
-        top: 0;
-      }
-    }
-
-    .submenu.fly-out-left {
-      @include media($horizontal-bar-mode) {
-        left: -$centered-navigation-submenu-width + 0.2em;
-        top: 0;
-      }
-    }
-
-    li {
-      display: block;
-      padding-right: 0;
-
-      @include media($horizontal-bar-mode) {
-        line-height: $centered-navigation-height / 1.3;
-
-        &:first-child > a {
-          border-top-left-radius: $base-border-radius;
-          border-top-right-radius: $base-border-radius;
-        }
-
-        &:last-child > a {
-          border-bottom-left-radius: $base-border-radius;
-          border-bottom-right-radius: $base-border-radius;
-          padding-bottom: 0.7em;
-        }
-      }
-
-      a {
-        background-color: darken($centered-navigation-background, 3%);
-        display: inline-block;
-        text-align: right;
-        text-decoration: none;
-        width: 100%;
-
-        @include media($horizontal-bar-mode) {
-          background-color: $centered-navigation-background;
-          padding-left: $centered-navigation-submenu-padding;
-          text-align: left;
-          width: $centered-navigation-submenu-width;
-        }
-      }
-    }
-  }
 }
 
-
-
-
-
-//intro section
+//INTRODUCTION SECTION
 #intro {
-background-color: #FFF;
-background-image: url("/Users/krhefley/Documents/Sites/krhefley.github.io/css/images/mountains.svg") no-repeat center center fixed; 
-background-size: cover;
-
-
-$body-bg: transparent; 
-
-#intro-title {
 @include outer-container;
-@include span-columns(7); 
-padding-top: 12%; 
-color: $blue;
-margin-bottom: 0px;
- }	
-  	
-#intro-text {
- @extend #intro-title;
- @include span-columns(7);
- padding-top: 1px;
- font-size: 28px;
- text-align: center;
- margin-top: 0px;
-}
+background-color: $purple;
+
+
+
+#text {
+@include span-columns(4);
+
+margin-top: 5%;
+margin-bottom: 28%;
+
+	#intro-title {
+	color: #FFF;
 
 }
+ 	#intro-text {
+  	font-size: 22px;
+  	color: #FFF; 
+  	margin-top: 0px;	
 
-#ricay-image {
-	margin-top: 5%;
-	margin-bottom: 5%;
-	border-radius: 150px;
+  }
 }
 
-//About section
+ p {
+ 	@include span-columns(12);
+ 	text-align: center;
+ 	font-family: 'Arimo';
+}
+}
+
+
+//about
 
 #about {
 @include outer-container;
-background-color: #fff;
+background-color: $light-gray;
 
+.about-content {
+ 	@include span-columns(8);
+ 	text-align: center;
+ 	color: $blue;
+ 	display: inline-block;
+ 	padding-left: 40px;
 
-	p{
-	@include span-columns(10);
-	@include shift(1);
-	text-align: center;
-	color: $blue;
-	margin-bottom: 10%;
-	}
-	
+ @include aragorn {
+  @include span-columns(12);
+  margin-right: 0px;
+  padding-left: 0px;
+ 
 }
+@include frodo {
+  @include span-columns(12);
+  margin-right: 0px;
+padding-left: 0px;
+
+}
+
+h1 {
+  padding-top: 60px;
+
+  @include frodo {
+  	padding-top: 0px;
+  }
+
+  @include aragorn {
+  	 padding-top: 0px;
+  }
+}
+ }
+
+ .image{
+  display: inline-block;
+ 
+
+ @include sauron {
+  @include span-columns(4);
+  margin-right: 0px;
+}
+
+ @include legolas{
+  @include span-columns(4);
+  margin-right: 0px;
+ }
+
+ @include aragorn {
+  @include span-columns(12);
+  margin-right: 0px;
+
+ }
+
+ @include frodo {
+  @include span-columns(12);
+  background-color: $dark-gray;
+  margin-right: 0px;
+
+ }
+
+ img {
+ 	max-width: 100%;
+ 	height: auto;
+
+ 	@include frodo {
+ 	width: 50%;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 150px;
+    margin-top: 30px;
+   
+    
+
+ 		}
+
+ 		@include aragorn {
+ 	width: 50%;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 150px;
+    margin-top: 30px;
+    
+    
+
+ 		}
+
+ 	}
+
+ } 
+
+ 
+
+
+ }
+
+
+
+
 
 
 #skills {
   @include outer-container;
   background-color: $purple;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  #skills-title {
+  	color: #FFF;
+  	padding-top: 20px;
+  }
 
    #languages {
-  	@include span-columns(10);
-  	@include shift(1);
+  	@include span-columns(12);
   	text-align: center;
   }
 
+  h3 {
+  	@include span-columns(10);
+  	@include shift(1);
+    font-weight: normal;
+    font-family: 'Amatic SC';
+    padding: 0px;
+    margin-top: 10px;
+    text-align: center;
+
+  }
+
+  .icon{
+  	margin-top: 10px;
+  	display: inline-block;
+  }
 
   .icons {
 	color: #fff;
-	font-size: 100px;
+	font-size: 75px;
 	text-align: center;
 	padding: 30px;
+	margin-top: 10px !important;
+	border: 1px white;
 
 }
 
@@ -384,18 +440,34 @@ background-color: #fff;
 	margin-bottom: 20px;
 }
 
-  #skills-title {
-  	color: #FFF;
-  	margin-top: 20px;
-  }
-
-
+#last-row {
+	padding-bottom: 35px;
+}
 
 }
+
+
+
+
 //work
 #work {
 @include outer-container;
 background-color: #FFF;
+padding-top: 50px;
+padding-bottom: 50px;
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+
+#websites{
+	@include span-columns(12);
+	font-family: 'Amatic SC';
+	color: $blue;
+}
 	
 
 #work-title {
@@ -404,115 +476,398 @@ background-color: #FFF;
 
   }
 
-.port-item {
-	@include span-columns(6);
-	display: inline-block !important;
-	margin-right: auto;
+.flex-boxes {
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $base-font-color: $dark-gray !default;
+  $flex-box-border-color: $light-gray;
+  $flex-box-border: 1px solid $flex-box-border-color;
+  $flex-box-gutter: 0.4em;
+  $flex-box-width: 18em;
 
-}
+    
+  @include clearfix;
+  align-items: stretch;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 
-.port-image {
-	max-width: 100%;
-	height: auto;
+  .projects {
+    min-height: 200px;
+    max-height: 200px;
+
+  }
+
+ #desert-gypsy {
+    background: url("http://localhost:3000/krhefley.github.io/css/images/desertgypsy.png");
+  background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+  }
+
+  #massage {
+    background: url("http://localhost:3000/krhefley.github.io/css/images/M&Mmassage.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+  
+
+  }
+
+  #castironed {
+    background: url("http://localhost:3000/krhefley.github.io/css/images/castironed.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+
+  }
+
+  #kiyik {
+    background: url("http://localhost:3000/krhefley.github.io/css/images/kiyik.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+     }
+
+       #tribute {
+    background: url("http://localhost:3000/krhefley.github.io/css/images/Jimmy.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+    
+  }
+
+
+  #portfolio {
+    background: url("http://localhost:3000/krhefley.github.io/css/images/portfolio.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+   
+  }
+
+
+  #quote-machine {
+    background: url("http://localhost:3000/krhefley.github.io/css/images/quotemachine.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+   
+  }
+
+  #weather{
+    background: url("http://localhost:3000/krhefley.github.io/css/images/quotemachine.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+  }
+
+   #wiki{
+    background: url("http://localhost:3000/krhefley.github.io/css/images/wiki.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+   
+  }
+
+    #weather{
+    background: url("http://localhost:3000/krhefley.github.io/css/images/weatherapp.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+   
+   
+  }
+
+  #calc{
+    background: url("http://localhost:3000/krhefley.github.io/css/images/calculator.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+   
+  }
+  #clock{
+    background: url("http://localhost:3000/krhefley.github.io/css/images/clock.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+  }
+
+   #twitch{
+    background: url("http://localhost:3000/krhefley.github.io/css/images/twitch.png"); 
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+     &:hover {
+     	filter: none;
+  -webkit-filter: grayscale(0%);
+     }
+   
+  }
+
+  
+
+
+
+  .flex-box {
+    align-self: stretch;
+    border-radius: $base-border-radius;
+    //box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10%);
+    display: block;
+    flex: 2 1 18em;
+    position: relative;
+   
+    margin: $flex-box-gutter;
+    padding: 2em 2em 3em 2em;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    
+
+    .caption {
+    visibility: hidden;
+     position: relative;
+     margin-top: 0px;
+    font-family: 'Amatic SC';
+    background-color: #333333;
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+	color: #FFF;
+	margin-bottom: 40%;
+	display: block;
+	transition: all 0.2s ease-in-out;
+    }
+
+   
+
+        &:focus,
+        &:hover {
+        	  p {
+        	  	visibility: visible;
+
  
+        	  }
+        	  .caption {
+        	  	visibility: visible;
+        	  }
+
+
+        	}  
+
+
+    .flex-title {
+      color: #FFF;
+      font-size: 2.5em;
+    }
+
+   p {
+   	
+   	visibility: hidden;
+   	font-weight: bold;
+     color: $blue;
+     font-size: 50px;
+     background-color: #FFF;
+     margin-top: 20px;
+      border-radius: 300px;
+      padding-top: 10px;
+      padding-right: 30px;
+      padding-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+      display: inline-block;
+      transition: all 0.2s ease-in-out;
+
+      
+   }
+  
 }
+
+}
+ 
 
 #random {
 @include outer-container;
 background-color: $purple;
+padding-top: 20px;
+padding-bottom: 20px;
 
 
 	#random-title {
-    @include span-columns(12); 
-	margin-bottom:10px;	
+    @include span-columns(12);
+    font-family: 'Pacifico';
 	color: white;
-	margin-top: 40px;
+	
   	}
 
-	
 
-	
+.icon-container {
+	@include span-columns(2);
+	  margin-top: 40px;
+		color: white;
+		text-align: center;
+
+		@include aragorn {
+			@include span-columns(6);
+			margin-right: 0px;
+		}
+
+		@include frodo {
+			@include span-columns(6);
+			margin-right: 0px;
+
+		}
+
+	.random-icons {
+	  height: 75px;
+	  width: 75px;
+	  
+	}
 }
 
-// Uncomment this for a sticky footer.
-//
-// .wrapper-for-content-outside-of-footer {
-//   min-height: 100%;
-//   height: auto !important;
-//   height: 100%;
-//   margin: 0 auto -4em;
-// }
+	p {
+	  font-family: 'Amatic SC';
+	  font-size: 30px;
 
-// html, body {
-//  height: 100%;
-// }
+		}
+}
 
-// .wrapper-for-content-outside-of-footer::after {
-//   content: "";
-//   display: block;
-// }
 
-// .footer-2, .wrapper-for-content-outside-of-footer::after {
-//   height: 17em;
-
-//   @include media($large-screen) {
-//     height: 4em;
-//   }
-// }
-
-.footer-2 {
-  $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+.footer {
+  $base-spacing: 1em !default;
+  $action-color: $light-gray !default;
   $medium-screen: 40em !default;
   $large-screen: 53.75em !default;
-  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-background: $light-gray;
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
-  display: inline-block;
-  padding: $base-spacing;
+  padding: ($base-spacing) $gutter;
   width: 100%;
 
   .footer-logo {
-    margin-bottom: 1em;
-    margin-right: 1em;
+    margin-bottom: .75em;
+    text-align: center;
 
-    @include media($large-screen) {
-      float: left;
-      margin-bottom: 0;
+    img {
+      height: 2em;
     }
   }
 
-  .footer-logo img {
-    height: 1.6em;
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: $base-spacing;
+    font-family: 'Arimo';
   }
 
   ul {
-    line-height: 1.5em;
-    margin: 0 0 1em 0;
+    flex-basis: 13em;
+    flex-shrink: 0;
+    margin-bottom: $base-spacing;
     padding: 0;
-
-    @include media($large-screen) {
-      float: left;
-      line-height: 1.8em;
-      margin-bottom: 0;
-      margin-left: 1em;
-    }
   }
 
-  ul li {
+  li {
+    line-height: 1em;
     list-style: none;
-    padding-right: 1em;
-
-    @include media($large-screen) {
-      display: inline;
-      text-align: left;
-    }
+    text-align: center;
   }
 
-  ul li a {
+  li a {
     color: $footer-link-color;
     text-decoration: none;
 
@@ -522,48 +877,54 @@ background-color: $purple;
     }
   }
 
-  .footer-secondary-links {
-    @include media($large-screen) {
-      float: right;
-    }
+  li h3 {
+    color: $footer-color;
+    font-size: 1em;
+    margin-bottom: 0.4em;
+  }
 
-    li {
-      font-size: 0.8em;
-    }
+  hr {
+    border: 1px solid transparentize($footer-disclaimer-color, 0.3);
+    margin: 0 auto $base-spacing;
+    width: 12em;
+  }
 
-    ul.footer-social {
-      margin: 1em 0 0 0;
-
-      @include media($large-screen) {
-        float: right;
-        margin-top: 0;
-      }
-
-      li {
-        float: left;
-        font-size: 1em;
-        line-height: 0;
-        margin: 0;
-        padding-right: 0.7em;
-
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-
-      img {
-        height: 1.6em;
-        opacity: 0.7;
-        padding: 1px;
-
-        &:focus,
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
+  p {
+    color: $footer-disclaimer-color;
+    font-size: 0.9em;
+    font-family: 'Arimo';
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
   }
 }
+
+
+.modal{
+   h2 {
+   	font-size: 30px;
+   	font-family: 'Pacifico';
+   	text-align: center;
+   	color: $blue;
+
+   }
+
+   p {
+   	font-family: 'Arimo';
+   	color: $blue;
+   }
+
+   ul, li {
+   	font-family: 'Arimo';
+   	color: $blue;
+   }
+}
+
+
+
+
+
 
 
 
