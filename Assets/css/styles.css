@@ -28,18 +28,50 @@ head {
 body {
   margin: 0px; }
 
+section {
+  width: 100%;
+  height: auto; }
+
 h1 {
+  font-size: 70px;
+  font-family: 'Pacifico';
+  margin: 0;
+  color: #272634; }
+
+h2 {
   font-size: 64px;
   text-align: center;
   font-family: 'Pacifico';
-  margin: 0; }
+  margin: 0px;
+  padding-top: 60px; }
 
 h3 {
-  color: #fff;
-  font-size: 32px;
+  color: #272634;
+  font-size: 40px;
   text-align: center;
-  font-family: 'Arimo';
+  font-family: 'Amatic SC';
   margin: 0px; }
+
+h4 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 8.5298%;
+  font-weight: normal;
+  color: #FFF;
+  font-size: 25px;
+  font-family: 'Arimo';
+  margin-top: 10px;
+  text-align: center; }
+  h4:last-child {
+    margin-right: 0; }
+
+p {
+  font-size: 28px;
+  color: #FFF;
+  font-family: 'Amatic SC';
+  text-align: center; }
 
 .centered-navigation {
   background-color: #DCDCDC;
@@ -149,7 +181,7 @@ h3 {
     clear: both;
     content: "";
     display: block; }
-  #intro #text {
+  #intro #text-container {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -157,91 +189,57 @@ h3 {
     margin-left: 68.23843%;
     margin-top: 5%;
     margin-bottom: 28%; }
-    #intro #text:last-child {
+    #intro #text-container:last-child {
       margin-right: 0; }
     @media (min-width: 768px) and (max-width: 1023px) {
-      #intro #text {
+      #intro #text-container {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%;
         margin-left: 0%;
         margin-top: 8%; }
-        #intro #text:last-child {
+        #intro #text-container:last-child {
           margin-right: 0; } }
-    @media (min-width: 500px) and (max-width: 767px) {
-      #intro #text {
+    @media (min-width: 320px) and (max-width: 767px) {
+      #intro #text-container {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%;
         margin-left: 0%;
         margin-top: 12%; }
-        #intro #text:last-child {
+        #intro #text-container:last-child {
           margin-right: 0; } }
-    @media (min-width: 320px) and (max-width: 499px) {
-      #intro #text {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 100%;
-        margin-left: 0%;
-        margin-top: 12%; }
-        #intro #text:last-child {
-          margin-right: 0; } }
-    #intro #text #intro-title {
-      color: #272634; }
-    #intro #text #intro-text {
-      font-size: 22px;
-      color: #272634;
-      margin-top: 0px; }
-  #intro p {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    text-align: center;
-    font-family: 'Arimo'; }
-    #intro p:last-child {
-      margin-right: 0; }
 
 #skills {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #272634;
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  background-color: #272634; }
   #skills::after {
     clear: both;
     content: "";
     display: block; }
   #skills #skills-title {
-    color: #FFF;
-    padding-top: 20px; }
+    color: #FFF; }
+  #skills p {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%; }
+    #skills p:last-child {
+      margin-right: 0; }
   #skills #languages {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
     text-align: center;
-    margin-top: 100px; }
+    margin-top: 100px;
+    margin-bottom: 80px; }
     #skills #languages:last-child {
-      margin-right: 0; }
-  #skills h4 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    margin-left: 8.5298%;
-    font-weight: normal;
-    color: #FFF;
-    font-size: 25px;
-    font-family: 'Arimo';
-    padding: 0px;
-    margin-top: 10px;
-    text-align: center; }
-    #skills h4:last-child {
       margin-right: 0; }
   #skills .icons {
     color: #fff;
@@ -256,15 +254,14 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   background-color: #FFF;
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 50px; }
   #work::after {
     clear: both;
     content: "";
     display: block; }
-  #work .wrapper {
-    display: flex;
-    flex-wrap: wrap; }
+  #work h2 {
+    padding-top: 0px; }
   #work h3 {
     float: left;
     display: block;
@@ -273,16 +270,6 @@ h3 {
     font-family: 'Amatic SC';
     color: #151D4B; }
     #work h3:last-child {
-      margin-right: 0; }
-  #work #websites {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    font-family: 'Amatic SC';
-    color: #151D4B;
-    background-color: #FFF; }
-    #work #websites:last-child {
       margin-right: 0; }
   #work #work-title {
     color: #272634; }
@@ -471,7 +458,6 @@ h3 {
         -webkit-filter: grayscale(0%); }
     #work .flex-boxes .flex-box {
       align-self: stretch;
-      border-radius: 3px;
       display: block;
       flex: 2 1 18em;
       position: relative;
@@ -483,6 +469,7 @@ h3 {
         visibility: hidden;
         position: relative;
         margin-top: 0px;
+        margin-left: 0px;
         font-family: 'Amatic SC';
         background-color: #333333;
         width: 100%;
@@ -519,21 +506,20 @@ h3 {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #272634;
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  background-color: #272634; }
   #random::after {
     clear: both;
     content: "";
     display: block; }
-  #random #random-title {
+  #random h2 {
+    color: #FFF; }
+  #random p {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%;
-    font-family: 'Pacifico';
-    color: white; }
-    #random #random-title:last-child {
+    width: 82.94039%;
+    margin-left: 8.5298%; }
+    #random p:last-child {
       margin-right: 0; }
   #random .icon-container {
     float: left;
@@ -545,16 +531,7 @@ h3 {
     text-align: center; }
     #random .icon-container:last-child {
       margin-right: 0; }
-    @media (min-width: 500px) and (max-width: 767px) {
-      #random .icon-container {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 48.82117%;
-        margin-right: 0px; }
-        #random .icon-container:last-child {
-          margin-right: 0; } }
-    @media (min-width: 320px) and (max-width: 499px) {
+    @media (min-width: 320px) and (max-width: 767px) {
       #random .icon-container {
         float: left;
         display: block;
@@ -566,38 +543,23 @@ h3 {
     #random .icon-container .random-icons {
       height: 75px;
       width: 75px; }
-  #random p {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    margin-left: 8.5298%;
-    font-family: 'Arimo';
-    font-size: 25px;
-    color: white;
-    text-align: center; }
-    #random p:last-child {
-      margin-right: 0; }
 
 .footer {
-  background: #DCDCDC;
-  padding: 1em 1.618em;
+  background: #333333;
+  padding: 2em 1.618em;
   width: 100%; }
-  .footer .footer-logo {
-    margin-bottom: .75em;
-    text-align: center; }
-    .footer .footer-logo img {
-      height: 2em; }
+  .footer h2 {
+    color: #FFF;
+    padding-top: 0px; }
   .footer .footer-links {
-    display: flex;
-    flex-wrap: wrap;
+    text-align: center;
     justify-content: center;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     font-family: 'Arimo'; }
   .footer ul {
     flex-basis: 13em;
     flex-shrink: 0;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     padding: 0; }
   .footer li {
     line-height: 1em;
@@ -614,7 +576,7 @@ h3 {
     margin-bottom: 0.4em; }
   .footer hr {
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 0 auto 1em;
+    margin: 0 auto 2em;
     width: 12em; }
   .footer p {
     color: rgba(255, 255, 255, 0.4);
