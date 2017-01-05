@@ -8,19 +8,19 @@ html {
   font-family: 'Amatic SC';
   font-style: normal;
   font-weight: 400;
-  src: url("http://localhost:3000/krhefley.github.io/assets/css/fonts/Amatic_SC/AmaticSC-Regular.ttf") format("truetype"); }
+  src: url("fonts/Amatic_SC/AmaticSC-Regular.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Pacifico';
   font-style: normal;
   font-weight: 400;
-  src: url("http://localhost:3000/krhefley.github.io/assets/css/fonts/Pacifico/Pacifico-Regular.ttf") format("truetype"); }
+  src: url("fonts/Pacifico/Pacifico-Regular.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Arimo';
   font-style: normal;
   font-weight: 400;
-  src: url("http://localhost:3000/krhefley.github.io/assets/css/fonts/Arimo/Arimo-Regular.ttf") format("truetype"); }
+  src: url("fonts/Arimo/Arimo-Regular.ttf") format("truetype"); }
 
 head {
   margin-bottom: 10px; }
@@ -489,6 +489,7 @@ p {
       #work .flex-boxes .flex-box p {
         visibility: hidden;
         font-weight: bold;
+        font-family: 'Arimo';
         color: #151D4B;
         font-size: 50px;
         background-color: #FFF;

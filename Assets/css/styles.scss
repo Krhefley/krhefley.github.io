@@ -1,5 +1,5 @@
-	@import "/Users/krhefley/Documents/Sites/krhefley.github.io/assets/css/bourbon/_bourbon.scss";
-	@import "/Users/krhefley/Documents/Sites/krhefley.github.io/assets/css/neat/_neat.scss";
+	@import "bourbon/_bourbon.scss";
+	@import "neat/_neat.scss";
 
 
 	$large: 1024px;
@@ -35,7 +35,7 @@
 		font-family: 'Amatic SC';
 		font-style: normal;
 		font-weight: 400;
-		src: url('http://localhost:3000/krhefley.github.io/assets/css/fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype');
+		src: url('fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype');
 	}
 
 
@@ -43,14 +43,14 @@
 		font-family: 'Pacifico';
 		font-style: normal;
 		font-weight: 400;
-		src: url('http://localhost:3000/krhefley.github.io/assets/css/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+		src: url('fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
 	}
 
 	@font-face {
 		font-family: 'Arimo';
 		font-style: normal;
 		font-weight: 400;
-		src: url('http://localhost:3000/krhefley.github.io/assets/css/fonts/Arimo/Arimo-Regular.ttf') format('truetype');
+		src: url('fonts/Arimo/Arimo-Regular.ttf') format('truetype');
 	}
 
 	//variables
@@ -633,6 +633,7 @@
 		
 		visibility: hidden;
 		font-weight: bold;
+		font-family: 'Arimo';
 		color: $blue;
 		font-size: 50px;
 		background-color: #FFF;
