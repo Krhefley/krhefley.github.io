@@ -8,7 +8,11 @@ head {
   margin-bottom: 10px; }
 
 body {
-  margin: 0px; }
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
 
 section {
   width: 100%;
@@ -395,7 +399,7 @@ canvas {
 
 .separator {
   height: 200px;
-  background: url("http://localhost:3000/krhefley.github.io/assets/images/redrockslinear.jpg") no-repeat center fixed;
+  background: url("Assets/images/redrockslinear.jpg") no-repeat center fixed;
   background-size: cover;
   background-attachment: fixed; }
 
@@ -427,7 +431,7 @@ canvas {
       content: "";
       display: block; }
     #work .flex-boxes #desert-gypsy {
-      background: url("http://localhost:3000/krhefley.github.io/assets/images/desertgypsy.png");
+      background: url("Assets/images/desertgypsy.png");
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
@@ -440,7 +444,7 @@ canvas {
         filter: none;
         -webkit-filter: grayscale(0%); }
     #work .flex-boxes #massage {
-      background: url("http://localhost:3000/krhefley.github.io/assets/images/M&Mmassage.png");
+      background: url("Assets/images/M&Mmassage.png");
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
@@ -453,7 +457,7 @@ canvas {
         filter: none;
         -webkit-filter: grayscale(0%); }
     #work .flex-boxes #castironed {
-      background: url("http://localhost:3000/krhefley.github.io/assets/images/castironed.png");
+      background: url("Assets/images/castironed.png");
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
@@ -466,7 +470,7 @@ canvas {
         filter: none;
         -webkit-filter: grayscale(0%); }
     #work .flex-boxes #kiyik {
-      background: url("http://localhost:3000/krhefley.github.io/assets/images/kiyik.png");
+      background: url("Assets/images/kiyik.png");
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
