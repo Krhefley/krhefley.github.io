@@ -1,4 +1,4 @@
-
+$(document).ready(function(){ 
 $(window).on("load resize",function(e) {
   var more = document.getElementById("js-centered-more");
 
@@ -31,8 +31,48 @@ $(window).on("load resize",function(e) {
   });
 });
 
-new WOW().init();
+//show-hide nav bar on scroll
+var prev = 0;
+var $window = $(window);
+var nav = $('.centered-navigation');
 
+$window.on('scroll', function(){
+  var scrollTop = $window.scrollTop();
+  nav.toggleClass('hidden', scrollTop > prev);
+  prev = scrollTop;
+});
+
+  $("canvas.snow").let_it_snow({
+    speed: 2,
+    interaction: false,
+    size: 1,
+    count: 100,
+    opacity: 0.8,
+    color: "#ffffff",
+    windPower: 0,
+    image: false
+  });
+
+
+
+//wow.js initialization
+  new WOW().init();
+
+
+  
+ 
+
+});
+
+
+
+
+
+
+
+
+
+  
 
 
 

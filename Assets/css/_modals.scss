@@ -1,0 +1,99 @@
+
+
+.modal{
+	margin-top: 70px;
+	h2 {
+		font-size: 35px;
+		font-family: 'Pacifico';
+		text-align: center;
+		color: $purple;;
+		padding-top: 0px;
+	}
+
+	.link {
+		font-size: 24px;
+		width: 30%;
+		font-weight: bolder;
+		color: white;
+		font-family: 'Amatic SC';
+		padding: 10px;
+		background-color: saturate($teal, 30%);
+		margin-right: auto;
+		margin-left: auto;
+
+		@include frodo {
+    	width: 100%;
+    }
+		
+	}
+
+	.modalImage {
+    width: 53%;
+    margin-left: auto;
+    margin-right: auto;
+   
+
+    img {
+    	width: 100%;
+    	height: auto;
+    }
+
+    @include frodo {
+    	float: none;
+    	margin-right: auto;
+    	margin-left: auto;
+    }
+}
+
+
+	a {
+		text-decoration: none;
+	}
+
+	p {
+		font-family: 'Arimo';
+		color: $purple;
+		font-size: 16px;
+		font-weight: bold;
+		margin: 0px;
+		padding-bottom: 10px;
+		
+
+	}
+
+
+
+
+	.toolsBoxContainer {
+		text-align: center;
+		width: 100%;
+		margin: 0px;
+		display: inline-block;
+	
+	}
+
+	.toolsBox {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    font-family: 'Amatic SC';
+    font-weight: 400;
+    letter-spacing: 0px;
+    background-color: $dark-gray;
+    margin:5px 0px 10px 0px;
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+
+    @include frodo {
+    	width: 40%;
+    }
+}
+
+}
+
+
+
+
+

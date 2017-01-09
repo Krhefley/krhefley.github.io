@@ -8,11 +8,13 @@
   	<link rel="stylesheet" href="Assets/css/jquery.modal.css" type="text/css" media="screen"/>
   	<script type="text/javascript" src="Assets/JS/jquery-3.1.1.js"></script>
     <script src="Assets/JS/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="Assets/JS/jquery.let_it_snow.js"></script>
     <script src="Assets/JS/wow.min.js"></script>
     <script src="Assets/JS/portfolio.js "></script>   
   </head>
 
   <body>
+  <div class="header">
     <div class="centered-navigation" role="banner">
     <div class="centered-navigation-wrapper">
       <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">
@@ -22,23 +24,29 @@
   		</a>
       <nav role="navigation">
         <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-          <li class="nav-link"><a href="#about">About</a></li>
+        <li class="nav-link"><a href="#home">Home</a></li>
           <li class="nav-link"><a href="#skills">Skills</a></li>
           <li class="nav-link"><a href="#work">Work</a></li>
-          <li class="nav-link"><a href="#random">Random</a></li>
-          <li class="nav-link"><a href="#contact">Contact</a></li>
+          <li class="nav-link"><a href="#about">About</a></li>
+          <li class="nav-link"><a href="#connect">Connect</a></li>
         </ul>
       </nav>
     </div>
   </div>
+  </div>
 
 <!--intro-->
-    <section id="intro">
+
+    <canvas class="snow" id="home">
       <div id="text-container">
   			<h1>Ricay Hefley</h1>
-  			<h3>Designer. Coder.</h3>
+  			<h3>Design & Development</h3>
+        <p></p>
       </div>
   	</section>
+</canvas>
+
+   
 
 <!--skills-->
   <section id="skills">
@@ -60,6 +68,10 @@
     <i class="devicon-gulp-plain icons wow fadeIn" data-wow-delay="0.5s"></i>
     </div>
   </section>
+
+<!--redrockspic-->
+<div class="separator">
+</div>
 
 <!--work-->
   <section id="work">
@@ -85,61 +97,64 @@
     </div>
  <h3>Projects</h3>
   <div class="flex-boxes">
-    <a href="#tribute-modal" rel="modal:open" class="flex-box projects wow fadeInLeft" data-wow-delay="0.5s" id="tribute">
-     <p>+</p>
+    <a href="#tribute-modal" rel="modal:open" class="flex-box projects wow fadeIn" data-wow-delay="0.5s" id="tribute">
+    <h4 class="caption-project">Tribute Page</h4>
       </a>
-    <a href="#portfolio-modal" rel="modal:open"  class="flex-box projects wow fadeInLeft" id="portfolio">
-    <p>+</p>
+    <a href="#portfolio-modal" rel="modal:open"  class="flex-box projects wow fadeIn" data-wow-delay="0.5s" id="portfolio">
+    <h4 class="caption-project">Portfolio</h4>
     </a>
     
-    <a href="#quote-modal"  rel="modal:open" class="flex-box projects wow fadeInRight" id="quote-machine">
-     <p>+</p>
+    <a href="#quote-modal"  rel="modal:open" class="flex-box projects wow fadeIn" data-wow-delay="0.5s"  id="quote-machine">
+     <h4 class="caption-project">Quote Machine</h4>
     </a>
-    <a href="#weather-modal" rel="modal:open"  class="flex-box projects wow fadeInRight" data-wow-delay="0.5s" id="weather">
-    <p>+</p>
+    <a href="#weather-modal" rel="modal:open"  class="flex-box projects wow fadeIn" data-wow-delay="0.5s" id="weather">
+    <h4 class="caption-project">Local Weather App</h4>
     </a>   
-    <a href="#wiki-modal" rel="modal:open" class="flex-box projects wow fadeInLeft" data-wow-delay="0.5s" id="wiki">
-     <p>+</p>
+    <a href="#wiki-modal" rel="modal:open" class="flex-box projects wow fadeIn" data-wow-delay="0.5s" id="wiki">
+     <h4 class="caption-project">Wikipedia Viewer</h4>
     </a>
-    <a href="#calc-modal" rel="modal:open"  class="flex-box projects wow fadeInLeft"  id="calc">
-     <p>+</p>
+    <a href="#calc-modal" rel="modal:open"  class="flex-box projects wow fadeIn" data-wow-delay="0.5s" id="calc">
+     <h4 class="caption-project">Javascript Calculator</h4>
     </a>
-    <a href="#timer-modal"  rel="modal:open" class="flex-box projects wow fadeInRight" id="clock">
-      <p>+</p>  
+    <a href="#timer-modal"  rel="modal:open" class="flex-box projects wow fadeIn" data-wow-delay="0.5s" id="clock">
+     <h4 class="caption-project">Pomodoro Timer</h4>
     </a>
-    <a href="#twitch-modal" rel="modal:open" class="flex-box projects wow fadeInRight"  data-wow-delay="0.5s" id="twitch">
-     <p>+</p>
+    <a href="#twitch-modal" rel="modal:open" class="flex-box projects wow fadeIn"  data-wow-delay="0.5s" id="twitch">
+    <h4 class="caption-project">Twitch.TV Viewer</h4>
     </a>
    </div>
   </section>
 
+<!--redrockspic-->
+<div class="separator">
+</div>
    
 
-  <section id="random">
+  <section id="about">
   		<h2 class="wow fadeInUp">About Me</h2> 
       <p class="wow fadeInUp">I have a background in finance but have been in the tech industry for 4 years. I have been a Quality Analyst, a Business Analyst a Customer Care Representative and a business owner. Focusing on my development skills for the last year, I'm looking to write the code rather than just test it. I enjoy creating responsive design, working with animation and finding unique solutions to problems.
   		<div class="icon-container">
-  		<img src="http://localhost:3000/krhefley.github.io/assets/images/baking.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
+  		<img src="http://localhost:3000/krhefley.github.io/Assets/images/baking.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
   		<p>Baking</p>
   		</div>
   		<div class="icon-container">
-  		<img src="http://localhost:3000/krhefley.github.io/assets/images/jiujitsu.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
+  		<img src="http://localhost:3000/krhefley.github.io/Assets/images/jiujitsu.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
   		<p>Jiu jitsu</p>
   		</div>
   		<div class="icon-container">
-  		<img src="http://localhost:3000/krhefley.github.io/assets/images/muaythai.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
+  		<img src="http://localhost:3000/krhefley.github.io/Assets/images/muaythai.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
   		<p>Muay Thai</p>
   		</div>
    		<div class="icon-container">
-  		<img src="http://localhost:3000/krhefley.github.io/assets/images/gardening.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
+  		<img src="http://localhost:3000/krhefley.github.io/Assets/images/gardening.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
   		<p>Gardening</p>
   		</div>
   		<div class="icon-container">
-  		<img src="http://localhost:3000/krhefley.github.io/assets/images/camping.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
+  		<img src="http://localhost:3000/krhefley.github.io/Assets/images/camping.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
   		<p>Camping</p>
   		</div>
   		<div class="icon-container">
-  		<img src="http://localhost:3000/krhefley.github.io/assets/images/language.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
+  		<img src="http://localhost:3000/krhefley.github.io/Assets/images/language.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
   		<p>Languages</p>
   		</div>
   </section>
@@ -147,204 +162,204 @@
 
   <div id="gypsy-modal" class="modal" style="display:none;">
       <h2>The Desert Gypsy</h2> 
-      <p>This project was an Ecommerce implementation using the Shopify platform. As a part of this project, I took product photos, created and styled non-templated pages, customized site to reflect Desert Gypsy branding and created training materials. </p>
-      <ul>Tools Used:
-       <li>Liquid</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Photoshop</li>
-       <li>Mailchimp</li>
-      </ul>
+       <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/desertgypsysite.png">
+       </div>
+      <p>This project was an Ecommerce implementation using the Shopify platform. As a part of this project, I took product photos, created and styled non-templated pages, customized site to reflect Desert Gypsy branding and created training materials. </p>  
+   <div class=toolsBoxContainer>
+       <div class=toolsBox>Shopify</div>
+       <div class=toolsBox>Liquid</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Photoshop</div>
+       <div class=toolsBox>Mailchimp</div>
+       </div>  
+       <a href="https://www.thedesertgypsy.com" target="_blank"><h3 class="link">Launch Website</h3></a> 
     </div>
 
    <div id="massage-modal" class="modal" style="display:none;">
       <h2>M&M Massage Studio</h2> 
+      <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/M&Mmassagesite.png">
+       </div
       <p>This project was for a small Massage studio looking for a new site after changing from a purely-hosted solution. I used Wordpress with the Genesis framework to create a simple, clean website for the client. The colors and photos reflect the branding of M&M Massage Studio.</p>
-      <ul>Tools Used:
-       <li>Wordpress</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Genesis</li>
-       <li>Photoshop</li>
-      </ul>
+      <div class=toolsBoxContainer>
+       <div class=toolsBox>Wordpress</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Photoshop</div>
+       </div>  
+       <a href="https://www.mandmmassagestudio.com" target="_blank"><h3 class="link">Launch Website</h3></a> 
     </div>
-
 
    <div id="castironed-modal" class="modal" style="display:none;">
       <h2>Castironed</h2> 
+       <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/castironedsite.png">
+       </div>
       <p>Castironed was a blog project. I used Wordpress to put together a blog that was a step up form the ordinary Wordpress format.</p>
-      <ul>Tools Used:
-       <li>Wordpress</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Photoshop</li>
-      </ul>
+       <div class=toolsBoxContainer>
+       <div class=toolsBox>Wordpress</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Photoshop</div>
+       </div> 
+        <a href="http://www.castironed.com" target="_blank"><h3 class="link">Launch Website</h3></a> 
     </div>
 
    <div id="kiyik-modal" class="modal" style="display:none;">
       <h2>Kiyik</h2> 
+       <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/kiyiksite.png">
+       </div>
        <p>Kiyik is a site for small agency focused on SEO-friendly web-design. I used Wordpress and customized a theme.</p>
-      <ul>Tools Used:
-       <li>Wordpress</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Photoshop</li>
-      </ul>
-
+       <div class=toolsBoxContainer>
+       <div class=toolsBox>Wordpress</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Photoshop</div>
+       </div>
+        <a href="http://www.kiyik.co" target="_blank"><h3 class="link">Launch Website</h3></a> 
     </div>
 
    <div id="tribute-modal" class="modal" style="display:none;">
       <h2>Tribute Page</h2> 
-         <p>Created as part of the Free Code Camp Basic Front-End Design Curriculum, this is a simple tribute page.</p>
-      <ul>Tools Used:
-       <li>Bootstrap</li>
-       <li>CSS</li>
-       <li>HTML</li>
-      </ul>
+      <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/jimmy.png">
+      </div>
+      <p>Created as part of the Free Code Camp Basic Front-End Design Curriculum, this is a simple tribute page.</p>
+      <div class=toolsBoxContainer>
+       <div class=toolsBox>Bootstrap</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <a href="http://codepen.io/Krhefley/full/pEdkaL/" target="_blank"><h3 class="link">Launch Codepen</h3></a> 
+      </div>
 
-      <ul>User Stories:
-       <li>I can view a tribute page with an image and text.</li>
-       <li>I can click on a link that will take me to an external website with further information on the topic.</li>
-      </ul>
+      
     </div>
 
    <div id="portfolio-modal" class="modal" style="display:none;">
       <h2>Portfolio</h2> 
+       <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/portfolio.png">
+       </div>
       <p>Created as part of the Free Code Camp Basic Front-End Design Curriculum, this is a Portfolio page. </p>
-
-      <ul>Tools Used:
-       <li>Bootstrap</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Jquery</li>
-       <li>Animate.CSS</li>
-       <li>Font Awesome</li>
-      </ul>
-
-      <ul>User Stories:
-       <li>I can access all of the portfolio webpage's content just by scrolling.</li>
-       <li>I can click different buttons that will take me to the portfolio creator's different social media pages.</li>
-       <li>I can see thumbnail images of different projects the portfolio creator has built.</li>
-       <li>I navigate to different sections of the webpage by clicking buttons in the navigation.</li>
-      </ul>
+      <div class=toolsBoxContainer>
+       <div class=toolsBox>Bootstrap</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Jquery</div>
+       <div class=toolsBox>Animate.CSS</div>
+       <div class=toolsBox>Font Awesome</div>
+       </div>
+      <a href="http://codepen.io/Krhefley/full/pEdkaL/" target="_blank"><h3 class="link">Launch Codepen</h3></a> 
+     
     </div>
 
    <div id="quote-modal" class="modal" style="display:none;">
-      <h2>Random Quote Machine</h2> 
-       <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this is a random quote machine. I used the Forismatic quote API and built in tweet functionality.</p>
-
-      <ul>Tools Used:
-       <li>Bootstrap</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Jquery</li>
-       <li>JSONP</li>
-       <li>API</li>
-      </ul>
-
-      <ul>User Stories:
-       <li>I can click a button to show me a new random quote.</li>
-       <li> I can press a button to tweet out a quote.</li>
-      </ul>
+      <h2>Random Quote Machine</h2>
+       <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/quotemachine.png">
+       </div>
+         <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this is a random quote machine. I used the Forismatic quote API and built in tweet functionality.</p>         
+     <div class=toolsBoxContainer>
+       <div class=toolsBox>Bootstrap</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Jquery</div>
+      <div class=toolsBox>JSONP</div>
+       <div class=toolsBox>API</div>
+    </div>
+    <a href="http://codepen.io/Krhefley/full/pEdkaL/" target="_blank"><h3 class="link">Launch Codepen</h3></a>    
     </div>
 
    <div id="weather-modal" class="modal" style="display:none;">
       <h2>Local Weather App</h2> 
-      <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this is a local weather app. I use one API to obtain user longitude and latitude which I then feed into a separate API request that sends local weather information.</p>
-
-      <ul>Tools Used:
-       <li>Bootstrap</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Jquery</li>
-       <li>JSONP</li>
-       <li>API</li>
-      </ul>
-
-       <ul>User Stories:
-       <li>I can see the weather in my current location.</li>
-       <li>I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.</li>
-       <li> I can push a button to toggle between Fahrenheit and Celsius.</li>
-      </ul>
-    </div>
-
+       <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/weatherapp.png">
+       </div>
+      <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this is a local weather app. I use one API to obtain user longitude and latitude which I then feed into a separate API request that sends local weather information.</p> 
+      <div class=toolsBoxContainer>
+      <div class=toolsBox>Bootstrap</div>
+       <div class=toolsBox>CSS</div>
+      <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Jquery</div>
+       <div class=toolsBox>JSONP</div>
+       <div class=toolsBox>API</div>
+      </div>
+      <a href="http://codepen.io/Krhefley/full/LRXwkG/" target="_blank"><h3 class="link">Launch Codepen</h3></a> 
     </div>
    
-    <div id="wiki-modal" class="modal" style="display:none;">
+    <div id="wiki-modal" class="modal" style="display:none;">   
       <h2>Wikipedia Viewer</h2> 
-      <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this is a wikipedia viewer. A user can enter a topic into the search box or click a button for a random article. </p>
-        <ul>Tools Used:
-       <li>Bootstrap</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Jquery</li>
-       <li>Ajax</li>
-       <li>API</li>
-      </ul>
-
-       <ul>User Stories:
-       <li>I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.</li>
-       <li>I can click a button to see a random Wikipedia entry.</li>
-      </ul>
+       <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/wiki.png">
+       </div>       
+      <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this is a wikipedia viewer. A user can enter a topic into the search box or click a button for a random article. </p> 
+     <div class=toolsBoxContainer>
+       <div class=toolsBox>Bootstrap</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Jquery</div>
+       <div class=toolsBox>Ajax</div>
+       <div class=toolsBox>API</div>
+      </div>
+      <a href="http://codepen.io/Krhefley/full/LRXwkG/" target="_blank"><h3 class="link">Launch Codepen</h3></a>
     </div> 
+
      <div id="calc-modal" class="modal" style="display:none;">
       <h2>Javascript Calculator</h2> 
-       <p>Created as part of the Free Code Camp Advanced Front-End Design Curriculum, this is a javascript calculator.  </p>
-        <ul>Tools Used:
-       <li>Foundation</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Javascript</li>
-      </ul>
+         <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/calculator.png">
+       </div>      
+        <p>Created as part of the Free Code Camp Advanced Front-End Design Curriculum, this is a javascript calculator.</p> 
+       <div class=toolsBoxContainer>
+       <div class=toolsBox>Foundation</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Javascript</div>
+       </div>
+       <a href="http://codepen.io/Krhefley/full/yameGg/" target="_blank"><h3 class="link">Launch Codepen</h3></a>
 
-       <ul>User Stories:
-       <li> I can add, subtract, multiply and divide two numbers.</li>
-       <li> I can clear the input field with a clear button.</li>
-       <li> I can keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output.</li>
-      </ul>
     </div>
+
      <div id="timer-modal" class="modal" style="display:none;">
       <h2>Pomodoro Timer</h2> 
-       <p>Created as part of the Free Code Camp Advanced Front-End Design Curriculum, this is a Pomodoro Timer.  The pomodoro timer is a productivity tool that posits a user is more productive with short bursts of work, followed by a short break. The default setting is 25 minutes of work and a 5 minute break. The user can alter this using plus or minus buttons.</p>
-
-        <ul>Tools Used:
-       <li>Bootstrap</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Jquery</li>
-      </ul>
-
-       <ul>User Stories:
-       <li> I can start a 25 minute pomodoro, and the timer will go off once 25 minutes has elapsed.</li>
-       <li> I can reset the clock for my next pomodoro.</li>
-       <li> I can customize the length of each pomodoro.</li>
-      </ul>
+         <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/clock.png">
+       </div>    
+          <p>Created as part of the Free Code Camp Advanced Front-End Design Curriculum, this is a Pomodoro Timer.  The pomodoro timer is a productivity tool that has a user work for 25 minutes and break for 5 minutes as a default. The user can alter this using plus or minus buttons.</p>
+      <div class=toolsBoxContainer>
+       <div class=toolsBox>Bootstrap</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Jquery</div>
+      </div>
+       <a href="http://codepen.io/Krhefley/full/oYXapG/" target="_blank"><h3 class="link">Launch Codepen</h3></a>
     </div>
+
      <div id="twitch-modal" class="modal" style="display:none;">
       <h2>Twitch API</h2> 
+        <div class=modalImage>
+       <img src="http://localhost:3000/krhefley.github.io/assets/images/twitch.png">
+       </div>
         <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this page links to Twitch TV. It display active streamers, those not streaming and any accounts with are unavailable.</p>
-
-        <ul>Tools Used:
-       <li>Bootstrap</li>
-       <li>CSS</li>
-       <li>HTML</li>
-       <li>Javascript</li>
-       <li>Jquery</li>
+      <div class=toolsBoxContainer>
+       <div class=toolsBox>Bootstrap</div>
+       <div class=toolsBox>CSS</div>
+       <div class=toolsBox>HTML</div>
+       <div class=toolsBox>Javascript</div>
+       <div class=toolsBox>Jquery</div>
       </ul>
-
-       <ul>User Stories:
-       <li> I can see whether Free Code Camp is currently streaming on Twitch.tv.</li>
-       <li> I can click the status output and be sent directly to the Free Code Camp's Twitch.tv channel.</li>
-       <li> If a Twitch user is currently streaming, I can see additional details about what they are streaming.</li>
-       <li>I will see a placeholder notification if a streamer has closed their Twitch account (or the account never existed). You can verify this works by adding brunofin and comster404 to your array of Twitch streamers.</li>
-      </ul>
+     </div>
+      <a href="http://codepen.io/Krhefley/full/JbXmLj/" target="_blank"><h3 class="link">Launch Codepen</h3></a>
     </div>
  
 
 
-  <footer class="footer" id="contact" role="contentinfo">
+  <footer class="footer" id="connect" role="contentinfo">
     <div class="footer-links">
-    <h2>Contact</h2>
+    <h2>Connect</h2>
       <ul>
         <li><a href="krhefley@gmail.com">Email</a></li>
         <li><a href="javascript:void(0)">Phone</a></li>
@@ -359,7 +374,7 @@
 
     <p>Copyright 2016, Ricay Hefley</p>
   </footer>
-
+ 
   </body>
   </html>
 

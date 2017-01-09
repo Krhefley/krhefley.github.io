@@ -1,0 +1,115 @@
+
+	//INTRODUCTION SECTION
+
+	canvas {
+		display: block;
+	}
+	#home {
+		@include outer-container;
+		background: url('http://localhost:3000/krhefley.github.io/assets/images/ricay_rock.jpg') no-repeat center fixed;
+		background-size: cover;
+		background-attachment: fixed;
+		height: 100vh;
+
+		#text-container {
+			@include span-columns(4);
+			@include shift(1);
+			
+			margin-top: 20%;
+			
+
+			h3 {
+				color: $light-gray;
+			}
+
+			@include legolas {
+				@include span-columns(12);
+				@include shift(0);
+				margin-top: 8%;
+			}
+
+			@include frodo {
+				@include span-columns(12);
+				@include shift(0);
+				margin-top: 12%;
+			}
+
+		}
+
+	}
+	
+
+
+//skills section
+	#skills {
+		@include outer-container;
+		background-color: lighten($purple, 10%);
+		padding-top: 20px;	
+
+		p {
+			@include span-columns(10);
+			@include shift(1);
+		}
+
+		#languages {
+			@include span-columns(12);
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 100px;
+		}
+
+		.icons {
+			color: #FFF;
+			font-size: 75px;
+			text-align: center;
+			padding: 30px;
+			margin-top: 10px !important;
+			border: 1px white;
+			border-radius: 100px;
+
+		}
+
+    }
+
+
+
+    //About Section
+     #about{
+	@include outer-container;
+	background-color: lighten($purple, 10%);
+	padding-top: 60px;
+	padding-bottom: 50px;
+
+	h2 {
+	
+	padding-top: 60px;
+    }
+
+	p{
+		@include span-columns(10);
+			@include shift(1);
+	}
+
+	.icon-container {
+		@include span-columns(2);
+		margin-top: 40px;
+		color: white;
+		text-align: center;			
+
+		@include frodo {
+			@include span-columns(6);
+			margin-right: 0px;
+
+		}
+
+		.random-icons {
+			height: 75px;
+			width: 75px;
+			color: $teal;
+
+		}
+	}
+}
+
+
+	

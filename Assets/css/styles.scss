@@ -1,353 +1,33 @@
 	@import "bourbon/_bourbon.scss";
 	@import "neat/_neat.scss";
-
-
-	$large: 1024px;
-	$medium: 768px;
-	$tiny: 320px;
-
-	//responsive handling
-	@mixin sauron {
-		@media (min-width: #{$large}) {
-			@content;
-		}
-	}
-
-	@mixin legolas {
-		@media (min-width: #{$medium}) and (max-width: #{$large - 1px}) {
-			@content;
-		}
-	}
-
-	@mixin frodo {
-		@media (min-width: #{$tiny}) and (max-width: #{$medium - 1px}) {
-			@content;
-		}
-	}
-
-
-
-
-
-
-	//fonts
-	@font-face {
-		font-family: 'Amatic SC';
-		font-style: normal;
-		font-weight: 400;
-		src: url('fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype');
-	}
-
-
-	@font-face {
-		font-family: 'Pacifico';
-		font-style: normal;
-		font-weight: 400;
-		src: url('fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
-	}
-
-	@font-face {
-		font-family: 'Arimo';
-		font-style: normal;
-		font-weight: 400;
-		src: url('fonts/Arimo/Arimo-Regular.ttf') format('truetype');
-	}
-
-	//variables
-	$blue: #151D4B;
-	$teal: #25E5C8;
-	$purple: #272634;
-	$light-gray: #DCDCDC;
-	$max-width: 2000px;
-	$dark-gray: rgb(51, 51, 51);
-
-	//components
-	head {
-		margin-bottom: 10px;
-	}
-
-	body {
-		margin: 0px;
-	}
-
-	section {
-		width: 100%;
-		height: auto;
-	}
-
-
-
-	h1{
-		font-size: 70px;
-		font-family: 'Pacifico';
-		margin: 0;
-		color: $purple;
-	}
-
-	h2{
-		font-size: 64px;
-		text-align: center;
-		font-family: 'Pacifico';
-		margin: 0px;
-		padding-top: 60px;
-
-
-	}
-
-	h3 {
-		color: $purple;
-		font-size: 40px;
-		text-align: center;
-		font-family: 'Amatic SC';
-		margin: 0px;
-	}
-
-	h4 {
-		@include span-columns(10);
-		@include shift(1);
-		font-weight: normal;
-		color: #FFF;
-		font-size: 25px;
-		font-family: 'Arimo';	    
-		margin-top: 10px;
-		text-align: center;
-
-	}
-
-	p {
-		font-size: 28px;
-		color: #FFF;
-		font-family: 'Amatic SC';
-		text-align: center;
-	}
-
-
-	//Navigation Menu
-	.centered-navigation {
-		$base-border-radius: 3px !default;
-		$dark-gray: #333 !default;
-		$large-screen: 53.75em !default;
-		$base-font-color: $blue !default;
-		$centered-navigation-padding: 1em;
-		$centered-navigation-logo-height: 2em;
-		$centered-navigation-background: $light-gray;
-		$centered-navigation-color: transparentize($base-font-color, 0.3);
-		$centered-navigation-color-hover: $base-font-color;
-		$centered-navigation-height: 60px;
-		$centered-navigation-item-padding: 1em;
-		$centered-navigation-submenu-padding: 1em;
-		$centered-navigation-submenu-width: 12em;
-		$centered-navigation-item-nudge: 2.2em;
-		$horizontal-bar-mode: $large-screen;
-
-		background-color: $centered-navigation-background;
-		border-bottom: 1px solid darken($centered-navigation-background, 6%);
-		min-height: $centered-navigation-height;
-		width: 100%;
-		z-index: 9999;
-		position: fixed;
-
-
-
-	// Mobile view
-
-	#mobile-menu {
-		width: 35px;
-		height: 5px;
-		margin: 5px 0;
-		background-color: $blue;
-	}
-
-	.mobile-logo {
-		display: inline;
-		float: left;
-		max-height: $centered-navigation-height;
-		padding-left: $centered-navigation-padding;
-
-		img {
-			max-height: $centered-navigation-height;
-			opacity: 0.6;
-			padding: 0.8em 0;
-		}
-
-		@include media($horizontal-bar-mode) {
-			display: none; 
-		}
-	}
-
-	.centered-navigation-mobile-menu {
-		color: $centered-navigation-color;
-		display: block;
-		float: right;
-		line-height: $centered-navigation-height;
-		margin: 10px 0px 0px 0px;
-		padding-right: $centered-navigation-submenu-padding;
-		text-decoration: none;
-		text-transform: uppercase;
-
-		@include media ($horizontal-bar-mode) {
-			display: none;
-		}
-
-		&:focus,
-		&:hover {
-			color: $centered-navigation-color-hover;
-		}
-	}
-
-	// Nav menu
-	.centered-navigation-wrapper {
-		@include outer-container;
-		@include clearfix;
-		position: relative;
-		z-index: 999;
-	}
-
-	ul.centered-navigation-menu {
-		clear: both;
-		display: none;
-		margin: 0 auto;
-		overflow: visible;
-		padding: 0;
-		-webkit-transform-style: preserve-3d; 
-		width: 100%;
-		z-index: 99999;
-
-		&.show {
-			display: block;
-		}
-
-		@include media ($horizontal-bar-mode) {
-			display: block;
-			text-align: center;
-		}
-	}
-
-	// The nav items
-	.nav-link:first-child {
-		@include media($horizontal-bar-mode) {
-			margin-left: $centered-navigation-item-nudge;
-		}
-	}
-
-	ul li.nav-link {
-		background: $centered-navigation-background;
-		display: block;
-		line-height: $centered-navigation-height;
-		overflow: hidden;
-		padding-right: $centered-navigation-submenu-padding;
-		text-align: right;
-		width: 100%;
-		z-index: 9999;
-
-		a {
-			color: $centered-navigation-color;
-			display: inline-block;
-			outline: none;
-			text-decoration: none;
-			font-weight: bold;
-			font-family: 'Amatic SC';
-			font-size: 32px;
-
-			&:focus,
-			&:hover {
-				color: $centered-navigation-color-hover;
-			}
-		}
-
-		@include media($horizontal-bar-mode) {
-			background: transparent;
-			display: inline;
-			line-height: $centered-navigation-height;
-
-			a {
-				padding-right: $centered-navigation-item-padding;
-			}
-		}
-	}
-
-}
-
-	//INTRODUCTION SECTION
-	#intro {
-		@include outer-container;
-		background: url('http://localhost:3000/krhefley.github.io/assets/images/ricay_rock.jpg') no-repeat center fixed;
-		background-size: cover;
-		height: 100vh;
-
-		#text-container {
-			@include span-columns(4);
-			@include shift(8);
-			margin-top: 5%;
-			margin-bottom: 28%;
-
-			@include legolas {
-				@include span-columns(12);
-				@include shift(0);
-				margin-top: 8%;
-			}
-
-			@include frodo {
-				@include span-columns(12);
-				@include shift(0);
-				margin-top: 12%;
-			}
-
-		}
-
-	}
-	//skills section
-	#skills {
-		@include outer-container;
-		background-color: $purple;
-
-
-		#skills-title {
-			color: #FFF;
-		}
-
-		p {
-			@include span-columns(10);
-			@include shift(1);
-		}
-
-		#languages {
-			@include span-columns(12);
-			text-align: center;
-			margin-top: 100px;
-			margin-bottom: 80px;
-		}
-
-		.icons {
-			color: #fff;
-			font-size: 80px;
-			text-align: center;
-			padding: 30px;
-			margin-top: 10px !important;
-			border: 1px white;
-
-		}
-
+	@import "base";
+	@import "typography";
+	@import "modules";
+	@import 'modals';
+	@import "section";
+
+
+    .separator {
+     height: 200px;
+      background: url('http://localhost:3000/krhefley.github.io/assets/images/redrockslinear.jpg') no-repeat center fixed;
+	background-size: cover;
+	background-attachment: fixed;
     }
 
+  
 	//work
 	#work {
 		@include outer-container;
 		background-color: #FFF;
-		padding-top: 60px;
+		padding-top: 40px;
 		padding-bottom: 50px;
 
 	  h2 {
 	  	padding-top: 0px;
+	  	color: lighten($purple, 10%);
 	  }
 
-		h3 {
-			@include span-columns(12);
-			font-family: 'Amatic SC';
-			color: $blue;
-
-		}
-
+		
 
 		#work-title {
 			color: $purple;
@@ -374,14 +54,8 @@
 			flex-wrap: wrap;
 			justify-content: center;
 			text-align: center;
+			
 
-         
-
-			.projects {
-				min-height: 200px;
-				max-height: 200px;
-
-			}
 
 			#desert-gypsy {
 				background: url("http://localhost:3000/krhefley.github.io/assets/images/desertgypsy.png");
@@ -443,145 +117,114 @@
 			}
 
 			#tribute {
-				background: url("http://localhost:3000/krhefley.github.io/assets/images/Jimmy.png");
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-				filter: gray; /* IE6-9 */
-				-webkit-filter: grayscale(100%);
-				&:hover {
-					filter: none;
-					-webkit-filter: grayscale(0%);
-				}
+				background-color: $purple;
+				border: 1px solid $purple;
 
+				&:hover {
+					background-color: #FFF;
+					
+					
+					.caption-project {
+					color: $purple;
+					}
 			}
+
+		}
 
 
 			#portfolio {
-				background: url("http://localhost:3000/krhefley.github.io/assets/images/portfolio.png");
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-				filter: gray; /* IE6-9 */
-				-webkit-filter: grayscale(100%);
+				background-color: lighten($purple, 5%);
+				border: 1px solid $purple;
 				&:hover {
-					filter: none;
-					-webkit-filter: grayscale(0%);
-				}
+					background-color: #FFF;
+					
+					
+					.caption-project {
+					color: $purple;
+					}
 
+				}
 			}
 
 
 			#quote-machine {
-				background: url("http://localhost:3000/krhefley.github.io/assets/images/quotemachine.png");
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-				filter: gray; /* IE6-9 */
-				-webkit-filter: grayscale(100%);
+				background-color: lighten($purple, 25%);
 				&:hover {
-					filter: none;
-					-webkit-filter: grayscale(0%);
+					background-color: #FFF;
+					border: 1px solid $purple;
+					
+					.caption-project {
+					color: $purple;
+					}
 				}
-
 			}
 
 			#weather{
-				background: url("http://localhost:3000/krhefley.github.io/assets/css/images/quotemachine.png");
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-				filter: gray; /* IE6-9 */
-				-webkit-filter: grayscale(100%);
+				background-color: darken($light-gray, 30%);
 				&:hover {
-					filter: none;
-					-webkit-filter: grayscale(0%);
-				}
+					background-color: #FFF;
+					border: 1px solid $purple;
+					
+					.caption-project {
+					color: $purple;
+				}	}
 			}
 
 			#wiki{
-				background: url("http://localhost:3000/krhefley.github.io/assets/images/wiki.png");
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-				filter: gray; /* IE6-9 */
-				-webkit-filter: grayscale(100%);
+				background-color: darken($light-gray, 30%);
 				&:hover {
-					filter: none;
-					-webkit-filter: grayscale(0%);
+					background-color: #FFF;
+					border: 1px solid $purple;
+					
+					.caption-project {
+					color: $purple;
+					}
 				}
 
 			}
 
-			#weather{
-				background: url("http://localhost:3000/krhefley.github.io/assets/images/weatherapp.png");
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-				filter: gray; /* IE6-9 */
-				-webkit-filter: grayscale(100%);
-				&:hover {
-					filter: none;
-					-webkit-filter: grayscale(0%);
-				}
-
-
-			}
 
 			#calc{
-				background: url("http://localhost:3000/krhefley.github.io/assets/images/calculator.png");
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-				filter: gray; /* IE6-9 */
-				-webkit-filter: grayscale(100%);
+				background-color: lighten($purple, 25%);
 				&:hover {
-					filter: none;
-					-webkit-filter: grayscale(0%);
+					background-color: #FFF;
+					border: 1px solid $purple;
+					
+					.caption-project {
+					color: $purple;
+					}
 				}
 
 			}
 			#clock{
-				background: url("http://localhost:3000/krhefley.github.io/assets/images/clock.png");
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-				filter: gray; /* IE6-9 */
-				-webkit-filter: grayscale(100%);
+				background-color: lighten($purple, 5%);
 				&:hover {
-					filter: none;
-					-webkit-filter: grayscale(0%);
+					background-color: #FFF;
+					border: 1px solid $purple;
+					
+					.caption-project {
+					color: $purple;
+					}
 				}
 			}
 
 			#twitch{
-				background: url("http://localhost:3000/krhefley.github.io/assets/images/twitch.png"); 
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-				filter: gray; /* IE6-9 */
-				-webkit-filter: grayscale(100%);
+				background-color:  $purple;
+				border: 1px solid $purple;
 				&:hover {
-					filter: none;
-					-webkit-filter: grayscale(0%);
+					background-color: #FFF;
+					
+					
+					.caption-project {
+					color: $purple;
+					}
 				}
 
 			}
+		
 
-
-			.flex-box {
-				align-self: stretch;
-				
-	
+	.flex-box {
+	align-self: stretch;
 	display: block;
 	flex: 2 1 18em;
 	position: relative;
@@ -591,17 +234,20 @@
 	transition: all 0.2s ease-in-out;
 
 
+
+
 	.caption {
 		visibility: hidden;
 		position: relative;
+		font-weight: bold;
 		margin-top: 0px;
 		margin-left: 0px;
 		font-family: 'Amatic SC';
-		background-color: #333333;
+		background-color: #FFF;
 		width: 100%;
 		text-align: center;
 		font-size: 40px;
-		color: #FFF;
+		color: $teal;
 		margin-bottom: 40%;
 		display: block;
 		transition: all 0.2s ease-in-out;
@@ -629,14 +275,26 @@
 		font-size: 2.5em;
 	}
 
+		.caption-project {
+		position: relative;
+		font-family: 'Amatic SC';
+		width: 100%;
+		text-align: center;
+		font-size: 40px;
+		color: #FFF;
+		display: block;
+		margin: 0px;
+		transition: all 0.2s ease-in-out;
+	}
+
 	p {
 		
 		visibility: hidden;
 		font-weight: bold;
 		font-family: 'Arimo';
-		color: $blue;
+		color: #FFF;
+		background-color: $teal;
 		font-size: 50px;
-		background-color: #FFF;
 		margin-top: 20px;
 		border-radius: 300px;
 		padding-top: 10px;
@@ -646,149 +304,11 @@
 		position: relative;
 		display: inline-block;
 		transition: all 0.2s ease-in-out;
-
+	}
 
 	}
   }
-} 
-
-
 }
-
-
-
-
-
-
-#random {
-	@include outer-container;
-	background-color: $purple;
-
-	h2 {
-		color: #FFF;
-	}
-
-	p{
-		@include span-columns(10);
-			@include shift(1);
-	}
-
-	.icon-container {
-		@include span-columns(2);
-		margin-top: 40px;
-		color: white;
-		text-align: center;			
-
-		@include frodo {
-			@include span-columns(6);
-			margin-right: 0px;
-
-		}
-
-		.random-icons {
-			height: 75px;
-			width: 75px;
-
-		}
-	}
-
-}
-
-
-.footer {
-	$base-spacing: 2em !default;
-	$action-color: $dark-gray !default;
-	$medium-screen: 40em !default;
-	$large-screen: 53.75em !default;
-	$footer-background: $dark-gray;
-	$footer-color: white;
-	$footer-link-color: transparentize($footer-color, 0.6);
-	$footer-disclaimer-color: transparentize($footer-color, 0.6);
-
-	background: $footer-background;
-	padding: ($base-spacing) $gutter;
-	width: 100%;
-h2 {
-	color: #FFF;
-	padding-top: 0px;
-}
-
-
-	.footer-links {
-		;
-		text-align: center;
-		justify-content: center;
-		margin-bottom: $base-spacing;
-		font-family: 'Arimo';
-	}
-
-	ul {
-		flex-basis: 13em;
-		flex-shrink: 0;
-		margin-bottom: $base-spacing;
-		padding: 0;
-	}
-
-	li {
-		line-height: 1em;
-		list-style: none;
-		text-align: center;
-	}
-
-	li a {
-		color: $footer-link-color;
-		text-decoration: none;
-
-		&:focus,
-		&:hover {
-			color: transparentize($footer-color, 0);
-		}
-	}
-
-	li h3 {
-		color: $footer-color;
-		font-size: 1em;
-		margin-bottom: 0.4em;
-	}
-
-	hr {
-		border: 1px solid transparentize($footer-disclaimer-color, 0.3);
-		margin: 0 auto $base-spacing;
-		width: 12em;
-	}
-
-	p {
-		color: $footer-disclaimer-color;
-		font-size: 0.9em;
-		font-family: 'Arimo';
-		line-height: 1.5em;
-		margin: auto;
-		max-width: 35em;
-		text-align: center;
-	}
-}
-
-
-.modal{
-	h2 {
-		font-size: 30px;
-		font-family: 'Pacifico';
-		text-align: center;
-		color: $blue;
-
-	}
-
-	p {
-		font-family: 'Arimo';
-		color: $blue;
-	}
-
-	ul, li {
-		font-family: 'Arimo';
-		color: $blue;
-	}
-}
-
 
 
 
