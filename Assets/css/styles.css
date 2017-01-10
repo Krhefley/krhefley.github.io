@@ -281,7 +281,7 @@ canvas {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background: url("http://localhost:3000/krhefley.github.io/assets/images/ricay_rock.jpg") no-repeat center fixed;
+  background: url("krhefley.github.io/assets/images/ricay_rock.jpg") no-repeat center fixed;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
