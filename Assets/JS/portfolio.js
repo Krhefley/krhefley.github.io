@@ -42,7 +42,7 @@ $window.on('scroll', function(){
   prev = scrollTop;
 });
 
-  $("canvas.snow").let_it_snow({
+  /*$("canvas.snow").let_it_snow({
     speed: 2,
     interaction: false,
     size: 1,
@@ -51,7 +51,7 @@ $window.on('scroll', function(){
     color: "#ffffff",
     windPower: 0,
     image: false
-  });
+  });*/
 
 
 

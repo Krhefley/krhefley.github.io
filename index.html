@@ -8,18 +8,16 @@
     <meta name="viewport" content="width=device-width" />
   	<link rel="stylesheet" href="Assets/css/styles.css">
     <link rel="stylesheet" href="Assets/css/animate.css" type="text/css"/>
-    <link rel="stylesheet" href="Assets/css/devicon-master/devicon.css" type="text/css"/>
   	<link rel="stylesheet" href="Assets/css/jquery.modal.css" type="text/css" media="screen"/>
   	<script type="text/javascript" src="Assets/JS/jquery-3.1.1.js"></script>
     <script src="Assets/JS/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript" src="Assets/JS/jquery.let_it_snow.js"></script>
     <script src="Assets/JS/wow.min.js"></script>
     <script src="Assets/JS/portfolio.js "></script>   
   </head>
 
   <body>
   <div class="header">
-    <div class="centered-navigation" role="banner">
+   <!--<div class="centered-navigation" role="banner">
     <div class="centered-navigation-wrapper">
       <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">
       	<div id="mobile-menu"></div>
@@ -36,24 +34,26 @@
         </ul>
       </nav>
     </div>
-  </div>
+  </div>-->
   </div>
 
 <!--intro-->
 
-    <canvas class="snow" id="home">
+    <section class="snow" id="home">
       <div id="text-container">
   			<h1>Ricay Hefley</h1>
-  			<h3>Design & Development</h3>
+  			<!--<h3>Design & Development</h3>-->
         <p></p>
       </div>
+      <div class="button-container">
+      <a href="#work"><img src="http://localhost:3000/krhefley.github.io/assets/images/circled chevron down-50.png"></a>
+      </div>
   	</section>
-</canvas>
 
    
 
 <!--skills-->
-  <section id="skills">
+ <!-- <section id="skills">
   <h2 id="skills-title" class="wow fadeInUp">Skills</h2>
     <p class="wow fadeInUp">I have experience working with HTML, CSS, Bootstrap, SASS, Jquery, AJAX, JSON and Javascript. I've worked with sites built in Wordpress, Shopify and from scratch. I'm familiar with Git version control, Gulp and Github. I'm currently learning React, Node.JS, D3 and MongoDB.</p>
     <div id="languages">
@@ -71,31 +71,33 @@
     <i class="devicon-git-plain-wordmark icons wow fadeIn" data-wow-delay="0.5s"></i>
     <i class="devicon-gulp-plain icons wow fadeIn" data-wow-delay="0.5s"></i>
     </div>
-  </section>
+  </section>-->
 
 <!--redrockspic-->
-<div class="separator">
-</div>
+<!--<div class="separator">
+</div>-->
 
 <!--work-->
   <section id="work">
-  <h2>Work</h2>
+  <!--<h2>Work</h2>-->
+   <p class="wow fadeInUp">I have a background in finance but have been in the tech industry for 4 years. I have been a Quality Analyst, a Business Analyst a Customer Care Representative and a business owner. Focusing on my development skills for the last year, I'm looking to write the code rather than just test it. I enjoy creating responsive design, working with animation and finding unique solutions to problems.</p>
+
   <h3>Websites</h3>
   <div class="flex-boxes">
-   <a href="#gypsy-modal"  rel="modal:open" class="flex-box wow fadeInLeft" data-wow-delay="0.5s"  id="desert-gypsy">
-     <p>+</p>
+   <a href="http://localhost:3000/krhefley.github.io/desert-gypsy.html"  class="flex-box wow fadeInLeft" data-wow-delay="0.5s"  id="desert-gypsy">
+    
      <h4 class="caption">The Desert Gypsy</h4>
     </a>
-    <a href="#massage-modal" rel="modal:open" class="flex-box wow fadeInLeft" id="massage">
-     <p>+</p>
+    <a href="http://localhost:3000/krhefley.github.io/massage.html" class="flex-box wow fadeInLeft" id="massage">
+   
      <h4 class="caption">M&M Massage Studio</h4>
     </a>
-    <a href="#castironed-modal" rel="modal:open" class="flex-box wow fadeInRight" id="castironed">
-    <p>+</p>
+    <a href="http://localhost:3000/krhefley.github.io/castironed.html" class="flex-box wow fadeInRight" id="castironed">
+    
     <h4 class="caption">Castironed</h4>
     </a>
-    <a href="#kiyik-modal" rel="modal:open" class="flex-box wow fadeInRight" id="kiyik" data-wow-delay="0.5s" >
-    <p>+</p>
+    <a href="http://localhost:3000/krhefley.github.io/kiyik.html" class="flex-box wow fadeInRight" id="kiyik" data-wow-delay="0.5s" >
+ 
     <h4 class="caption">Kiyik</h4>
     </a>
     </div>
@@ -129,14 +131,13 @@
    </div>
   </section>
 
-<!--redrockspic-->
-<div class="separator">
-</div>
+<!--<div class="separator">
+</div>-->
    
 
-  <section id="about">
+  <!--<section id="about">
   		<h2 class="wow fadeInUp">About Me</h2> 
-      <p class="wow fadeInUp">I have a background in finance but have been in the tech industry for 4 years. I have been a Quality Analyst, a Business Analyst a Customer Care Representative and a business owner. Focusing on my development skills for the last year, I'm looking to write the code rather than just test it. I enjoy creating responsive design, working with animation and finding unique solutions to problems.
+      <p class="wow fadeInUp">I have a background in finance but have been in the tech industry for 4 years. I have been a Quality Analyst, a Business Analyst a Customer Care Representative and a business owner. Focusing on my development skills for the last year, I'm looking to write the code rather than just test it. I enjoy creating responsive design, working with animation and finding unique solutions to problems.</p>
   		<div class="icon-container">
   		<img src="Assets/images/baking.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
   		<p>Baking</p>
@@ -161,10 +162,10 @@
   		<img src="Assets/images/language.svg" class="random-icons wow rotateIn data-wow-duration="2s" "> <br>
   		<p>Languages</p>
   		</div>
-  </section>
+  </section>-->
    
 
-  <div id="gypsy-modal" class="modal" style="display:none;">
+  <!--<div id="gypsy-modal" class="modal" style="display:none;">
       <h2>The Desert Gypsy</h2> 
        <div class=modalImage>
        <img src="Assets/images/desertgypsysite.png">
@@ -224,7 +225,7 @@
        <div class=toolsBox>Photoshop</div>
        </div>
         <a href="http://www.kiyik.co" target="_blank"><h3 class="link">Launch Website</h3></a> 
-    </div>
+    </div>-->
 
    <div id="tribute-modal" class="modal" style="display:none;">
       <h2>Tribute Page</h2> 

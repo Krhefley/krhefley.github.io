@@ -27,6 +27,10 @@
 	  	color: lighten($purple, 10%);
 	  }
 
+	  p {
+	  	color: #000;
+	  }
+
 		
 
 		#work-title {
@@ -62,13 +66,7 @@
 				background-position: top;
 				background-repeat: no-repeat;
 				background-size: cover;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-				filter: gray; /* IE6-9 */
-				-webkit-filter: grayscale(100%);
-				&:hover {
-					filter: none;
-					-webkit-filter: grayscale(0%);
-				}
+			
 			}
 
 			#massage {
@@ -116,12 +114,12 @@
 				}
 			}
 
-			#tribute {
-				background-color: $purple;
+		   .projects {
+		   		background-color: #FFF;
 				border: 1px solid $purple;
 
 				&:hover {
-					background-color: #FFF;
+					background-color: $dark-gray;
 					
 					
 					.caption-project {
@@ -132,95 +130,6 @@
 		}
 
 
-			#portfolio {
-				background-color: lighten($purple, 5%);
-				border: 1px solid $purple;
-				&:hover {
-					background-color: #FFF;
-					
-					
-					.caption-project {
-					color: $purple;
-					}
-
-				}
-			}
-
-
-			#quote-machine {
-				background-color: lighten($purple, 25%);
-				&:hover {
-					background-color: #FFF;
-					border: 1px solid $purple;
-					
-					.caption-project {
-					color: $purple;
-					}
-				}
-			}
-
-			#weather{
-				background-color: darken($light-gray, 30%);
-				&:hover {
-					background-color: #FFF;
-					border: 1px solid $purple;
-					
-					.caption-project {
-					color: $purple;
-				}	}
-			}
-
-			#wiki{
-				background-color: darken($light-gray, 30%);
-				&:hover {
-					background-color: #FFF;
-					border: 1px solid $purple;
-					
-					.caption-project {
-					color: $purple;
-					}
-				}
-
-			}
-
-
-			#calc{
-				background-color: lighten($purple, 25%);
-				&:hover {
-					background-color: #FFF;
-					border: 1px solid $purple;
-					
-					.caption-project {
-					color: $purple;
-					}
-				}
-
-			}
-			#clock{
-				background-color: lighten($purple, 5%);
-				&:hover {
-					background-color: #FFF;
-					border: 1px solid $purple;
-					
-					.caption-project {
-					color: $purple;
-					}
-				}
-			}
-
-			#twitch{
-				background-color:  $purple;
-				border: 1px solid $purple;
-				&:hover {
-					background-color: #FFF;
-					
-					
-					.caption-project {
-					color: $purple;
-					}
-				}
-
-			}
 		
 
 	.flex-box {
@@ -247,7 +156,7 @@
 		width: 100%;
 		text-align: center;
 		font-size: 40px;
-		color: $teal;
+		color: $dark-gray;
 		margin-bottom: 40%;
 		display: block;
 		transition: all 0.2s ease-in-out;
@@ -281,7 +190,7 @@
 		width: 100%;
 		text-align: center;
 		font-size: 40px;
-		color: #FFF;
+		color: $purple;
 		display: block;
 		margin: 0px;
 		transition: all 0.2s ease-in-out;

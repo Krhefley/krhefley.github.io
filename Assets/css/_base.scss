@@ -5,8 +5,8 @@
 	
 //variables
 	$blue: #151D4B;
-	$teal: #008080;
-	$purple: #272634;
+	$teal: #F5D04C;
+	$purple: #F5D04C;
 	$light-gray: #DCDCDC;
 	$max-width: 2000px;
 	$dark-gray: rgb(51, 51, 51);
@@ -52,10 +52,10 @@
 
 
 	h1{
-		font-size: 70px;
+		font-size: 38px;
 		font-family: 'Pacifico';
 		margin: 0;
-		color: $light-gray;
+		color: $purple;
 	}
 
 	h2{
@@ -70,7 +70,7 @@
 	}
 
 	h3 {
-		color: lighten($purple, 10%);
+		color: $dark-gray;
 		font-size: 40px;
 		text-align: center;
 		font-family: 'Amatic SC';
