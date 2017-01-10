@@ -169,7 +169,7 @@ p {
   filter: gray;
   /* IE6-9 */
   -webkit-filter: grayscale(100%);
-  padding: 2em 1.618em;
+  padding: 1em 1.618em;
   width: 100%; }
   .footer h2 {
     color: #FFF;
@@ -177,12 +177,12 @@ p {
   .footer .footer-links {
     text-align: center;
     justify-content: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     font-family: 'Arimo'; }
   .footer ul {
-    flex-basis: 13em;
+    flex-basis: 8em;
     flex-shrink: 0;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     padding: 0; }
   .footer li {
     line-height: 1em;
@@ -199,7 +199,7 @@ p {
     margin-bottom: 0.4em; }
   .footer hr {
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 0 auto 2em;
+    margin: 0 auto 1em;
     width: 12em; }
   .footer p {
     color: rgba(255, 255, 255, 0.4);

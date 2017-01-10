@@ -134,7 +134,7 @@
 
 
 .footer {
-	$base-spacing: 2em !default;
+	$base-spacing: 1em !default;
 	$action-color: $dark-gray !default;
 	$medium-screen: 40em !default;
 	$large-screen: 53.75em !default;
@@ -150,6 +150,7 @@
 				-webkit-filter: grayscale(100%);
 	padding: ($base-spacing) $gutter;
 	width: 100%;
+
 h2 {
 	color: #FFF;
 	padding-top: 0px;
@@ -165,7 +166,7 @@ h2 {
 	}
 
 	ul {
-		flex-basis: 13em;
+		flex-basis: 8em;
 		flex-shrink: 0;
 		margin-bottom: $base-spacing;
 		padding: 0;
