@@ -135,13 +135,13 @@
 
 .footer {
 	$base-spacing: 1em !default;
-	$action-color: $dark-gray !default;
+	$action-color: #FFF !default;
 	$medium-screen: 40em !default;
 	$large-screen: 53.75em !default;
 	$footer-background: $dark-gray;
 	$footer-color: white;
-	$footer-link-color: transparentize($footer-color, 0.6);
-	$footer-disclaimer-color: transparentize($footer-color, 0.6);
+	$footer-link-color:  #FFF;
+	$footer-disclaimer-color: #FFF;
 
 	background: url('http://localhost:3000/krhefley.github.io/assets/images/redrockslinear.jpg');
 	background-size: cover;
@@ -158,7 +158,7 @@ h2 {
 
 
 	.footer-links {
-		;
+		
 		text-align: center;
 		justify-content: center;
 		margin-bottom: $base-spacing;
@@ -170,17 +170,22 @@ h2 {
 		flex-shrink: 0;
 		margin-bottom: $base-spacing;
 		padding: 0;
+		margin-top: 0px;
 	}
 
 	li {
 		line-height: 1em;
 		list-style: none;
 		text-align: center;
+		padding: 2px;
+		width: 3%;
+		display: inline-block;
 	}
 
 	li a {
 		color: $footer-link-color;
 		text-decoration: none;
+		font-size: 20px;
 
 		&:focus,
 		&:hover {
@@ -194,11 +199,7 @@ h2 {
 		margin-bottom: 0.4em;
 	}
 
-	hr {
-		border: 1px solid transparentize($footer-disclaimer-color, 0.3);
-		margin: 0 auto $base-spacing;
-		width: 12em;
-	}
+
 
 	p {
 		color: $footer-disclaimer-color;

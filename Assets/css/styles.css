@@ -22,7 +22,8 @@ h1 {
   font-size: 38px;
   font-family: 'Pacifico';
   margin: 0;
-  color: #F5D04C; }
+  color: #F5D04C;
+  text-align: center; }
 
 h2 {
   font-size: 64px;
@@ -183,26 +184,27 @@ p {
     flex-basis: 8em;
     flex-shrink: 0;
     margin-bottom: 1em;
-    padding: 0; }
+    padding: 0;
+    margin-top: 0px; }
   .footer li {
     line-height: 1em;
     list-style: none;
-    text-align: center; }
+    text-align: center;
+    padding: 2px;
+    width: 3%;
+    display: inline-block; }
   .footer li a {
-    color: rgba(255, 255, 255, 0.4);
-    text-decoration: none; }
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px; }
     .footer li a:focus, .footer li a:hover {
       color: white; }
   .footer li h3 {
     color: white;
     font-size: 1em;
     margin-bottom: 0.4em; }
-  .footer hr {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 0 auto 1em;
-    width: 12em; }
   .footer p {
-    color: rgba(255, 255, 255, 0.4);
+    color: #FFF;
     font-size: 0.9em;
     font-family: 'Arimo';
     line-height: 1.5em;
@@ -281,7 +283,7 @@ canvas {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background: url("assets/images/ricay_rock.jpg") no-repeat center fixed;
+  background: url("http://localhost:3000/krhefley.github.io/assets/images/ricay_rock.jpg") no-repeat center fixed;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
@@ -338,8 +340,11 @@ canvas {
     #home .button-container a {
       display: inline-block;
       position: absolute;
-      bottom: 5%;
-      color: #FFF; }
+      bottom: 5%; }
+      #home .button-container a .fa, #home .button-container a .fa-chevron-down {
+        background-color: transparent;
+        font-size: 40px;
+        color: #FFF; }
 
 #skills {
   max-width: 2000px;
@@ -430,6 +435,110 @@ canvas {
   background-size: cover;
   background-attachment: fixed; }
 
+.content {
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .content::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .content:last-child {
+    margin-right: 0; }
+
+.box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-left: 12.79471%;
+  background-color: #F5D04C;
+  margin-top: 5%;
+  margin-bottom: 0px;
+  padding: 10px; }
+  .box:last-child {
+    margin-right: 0; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .box {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin-right: 2%; }
+      .box:last-child {
+        margin-right: 0; } }
+
+.content {
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .content::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .content:last-child {
+    margin-right: 0; }
+
+.mockups {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-right: 0px;
+  text-align: left;
+  margin-top: 10px; }
+  .mockups:last-child {
+    margin-right: 0; }
+  .mockups img {
+    width: 100%;
+    margin: 0px; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .mockups {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .mockups:last-child {
+        margin-right: 0; } }
+
+#desertgypsyabout {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-left: 12.79471%;
+  float: none;
+  display: inline-block;
+  margin-top: 15px; }
+  #desertgypsyabout:last-child {
+    margin-right: 0; }
+  #desertgypsyabout .screenshot {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    #desertgypsyabout .screenshot:last-child {
+      margin-right: 0; }
+
+button {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  background-color: transparent; }
+  button:last-child {
+    margin-right: 0; }
+
 #work {
   max-width: 2000px;
   margin-left: auto;
@@ -445,7 +554,14 @@ canvas {
     padding-top: 0px;
     color: #f8dd7c; }
   #work p {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%;
     color: #000; }
+    #work p:last-child {
+      margin-right: 0; }
   #work #work-title {
     color: #F5D04C; }
   #work .flex-boxes {
@@ -460,7 +576,7 @@ canvas {
       content: "";
       display: block; }
     #work .flex-boxes #desert-gypsy {
-      background: url("http://localhost:3000/krhefley.github.io/Assets/images/desertgypsy.png");
+      background: url("http://localhost:3000/krhefley.github.io/Assets/images/desert-gypsy-mockups.png");
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover; }
@@ -468,41 +584,17 @@ canvas {
       background: url("http://localhost:3000/krhefley.github.io/Assets/images/M&Mmassage.png");
       background-position: top;
       background-repeat: no-repeat;
-      background-size: cover;
-      filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-      /* Firefox 3.5+ */
-      filter: gray;
-      /* IE6-9 */
-      -webkit-filter: grayscale(100%); }
-      #work .flex-boxes #massage:hover {
-        filter: none;
-        -webkit-filter: grayscale(0%); }
+      background-size: cover; }
     #work .flex-boxes #castironed {
       background: url("http://localhost:3000/krhefley.github.io/Assets/images/castironed.png");
       background-position: top;
       background-repeat: no-repeat;
-      background-size: cover;
-      filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-      /* Firefox 3.5+ */
-      filter: gray;
-      /* IE6-9 */
-      -webkit-filter: grayscale(100%); }
-      #work .flex-boxes #castironed:hover {
-        filter: none;
-        -webkit-filter: grayscale(0%); }
+      background-size: cover; }
     #work .flex-boxes #kiyik {
-      background: url("http://localhost:3000/krhefley.github.io/Assets/images/kiyik.png");
+      background: url("http://localhost:3000/krhefley.github.io/Assets/images/kiyik_mockups.png");
       background-position: top;
       background-repeat: no-repeat;
-      background-size: cover;
-      filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-      /* Firefox 3.5+ */
-      filter: gray;
-      /* IE6-9 */
-      -webkit-filter: grayscale(100%); }
-      #work .flex-boxes #kiyik:hover {
-        filter: none;
-        -webkit-filter: grayscale(0%); }
+      background-size: cover; }
     #work .flex-boxes .projects {
       background-color: #FFF;
       border: 1px solid #F5D04C; }
@@ -513,7 +605,7 @@ canvas {
     #work .flex-boxes .flex-box {
       align-self: stretch;
       display: block;
-      flex: 2 1 18em;
+      flex: 2 1 30em;
       position: relative;
       margin: 0.4em;
       padding: 2em 2em 3em 2em;

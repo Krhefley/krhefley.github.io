@@ -6,7 +6,7 @@
 	}
 	#home {
 		@include outer-container;
-		background: url('assets/images/ricay_rock.jpg') no-repeat center fixed;
+		background: url('http://localhost:3000/krhefley.github.io/assets/images/ricay_rock.jpg') no-repeat center fixed;
 		background-size: cover;
 		background-attachment: fixed;
 		height: 100vh;
@@ -51,13 +51,19 @@
 			display: inline-block;
 			position: absolute;
 			bottom: 5%;
+			
+		
+
+		.fa, .fa-chevron-down {
+			background-color: transparent;
+			font-size: 40px;
 			color: #FFF;
 		}
 	}
 
 	}
 	
-
+}
 
 //skills section
 	#skills {
