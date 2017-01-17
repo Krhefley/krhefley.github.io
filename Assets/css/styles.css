@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box; }
 
@@ -6,6 +7,9 @@ html {
 
 head {
   margin-bottom: 10px; }
+
+html {
+  min-height: 100%; }
 
 body {
   width: 100%;
@@ -18,13 +22,6 @@ section {
   width: 100%;
   height: auto; }
 
-h1 {
-  font-size: 38px;
-  font-family: 'Pacifico';
-  margin: 0;
-  color: #F5D04C;
-  text-align: center; }
-
 h2 {
   font-size: 64px;
   color: #FFF;
@@ -34,10 +31,10 @@ h2 {
   padding-top: 60px; }
 
 h3 {
-  color: #333333;
+  color: #F5D04C;
   font-size: 40px;
   text-align: center;
-  font-family: 'Amatic SC';
+  font-family: 'Rock Salt';
   margin: 0px; }
 
 h4 {
@@ -75,26 +72,66 @@ p {
   font-weight: 400;
   src: url("fonts/Arimo/Arimo-Regular.ttf") format("truetype"); }
 
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Fjalla_One/FjallaOne-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Bungee Shade';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Bungee_Shade/BungeeShade-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Monoton/Monoton-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Abel/Abel-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Rock Salt';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Rock_Salt/RockSalt.ttf") format("truetype"); }
+
 .centered-navigation {
-  background-color: transparent;
-  border-bottom: 1px solid transparent;
-  min-height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  min-height: 50px;
   width: 100%;
-  position: fixed;
   z-index: 9999;
-  left: 0;
-  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1); }
-  .centered-navigation #mobile-menu {
-    width: 35px;
-    height: 5px;
-    margin: 5px 0;
-    background-color: #FFF; }
+  position: fixed; }
+  .centered-navigation .mobile-logo {
+    display: inline;
+    float: left;
+    max-height: 50px;
+    padding-left: 1em; }
+    .centered-navigation .mobile-logo img {
+      max-height: 50px;
+      opacity: 0.6;
+      padding: 0.8em 0; }
+    @media screen and (min-width: 53.75em) {
+      .centered-navigation .mobile-logo {
+        display: none; } }
   .centered-navigation .centered-navigation-mobile-menu {
     color: #333333;
     display: block;
     float: right;
-    line-height: 60px;
-    margin: 10px 0px 0px 0px;
+    line-height: 50px;
+    margin: 0;
     padding-right: 1em;
     text-decoration: none;
     text-transform: uppercase; }
@@ -102,7 +139,7 @@ p {
       .centered-navigation .centered-navigation-mobile-menu {
         display: none; } }
     .centered-navigation .centered-navigation-mobile-menu:focus, .centered-navigation .centered-navigation-mobile-menu:hover {
-      color: rgba(51, 51, 51, 0.7); }
+      color: #333333; }
   .centered-navigation .centered-navigation-wrapper {
     max-width: 2000px;
     margin-left: auto;
@@ -134,42 +171,128 @@ p {
         text-align: center; } }
   @media screen and (min-width: 53.75em) {
     .centered-navigation .nav-link:first-child {
-      margin-left: 2.2em; } }
+      margin-left: 1.9em; } }
   .centered-navigation ul li.nav-link {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.9);
     display: block;
-    line-height: 60px;
+    line-height: 50px;
     overflow: hidden;
-    padding-right: 1em;
     text-align: right;
     width: 100%;
-    z-index: 9999; }
+    z-index: 9999;
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 22px; }
     .centered-navigation ul li.nav-link a {
       color: #333333;
       display: inline-block;
       outline: none;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: 'Amatic SC';
-      font-size: 32px; }
+      text-decoration: none; }
       .centered-navigation ul li.nav-link a:focus, .centered-navigation ul li.nav-link a:hover {
-        color: rgba(51, 51, 51, 0.7); }
+        color: #333333; }
     @media screen and (min-width: 53.75em) {
       .centered-navigation ul li.nav-link {
         background: transparent;
         display: inline;
-        line-height: 60px; }
+        line-height: 50px; }
         .centered-navigation ul li.nav-link a {
           padding-right: 1em; } }
+  .centered-navigation li.logo.nav-link {
+    display: none;
+    line-height: 0; }
+    @media screen and (min-width: 53.75em) {
+      .centered-navigation li.logo.nav-link {
+        display: inline; } }
+  .centered-navigation .logo img {
+    margin-bottom: -0.66667em;
+    max-height: 2em;
+    opacity: 0.9; }
+  .centered-navigation li.more.nav-link {
+    padding-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      .centered-navigation li.more.nav-link {
+        padding-right: 1em; } }
+    .centered-navigation li.more.nav-link > ul > li:first-child a {
+      padding-top: 1em; }
+    .centered-navigation li.more.nav-link a {
+      margin-right: 1em; }
+    .centered-navigation li.more.nav-link > a {
+      padding-right: 0.6em; }
+    .centered-navigation li.more.nav-link > a::after {
+      position: absolute;
+      top: auto;
+      right: -0.4em;
+      bottom: auto;
+      left: auto;
+      color: #333333;
+      content: "\25BE"; }
+  .centered-navigation li.more {
+    overflow: visible;
+    padding-right: 0; }
+    .centered-navigation li.more a {
+      padding-right: 1em; }
+    .centered-navigation li.more > a {
+      padding-right: 1.6em;
+      position: relative; }
+      @media screen and (min-width: 53.75em) {
+        .centered-navigation li.more > a {
+          margin-right: 1em; } }
+      .centered-navigation li.more > a::after {
+        content: "›";
+        font-size: 1.2em;
+        position: absolute;
+        right: 0.5em; }
+    .centered-navigation li.more:focus > .submenu,
+    .centered-navigation li.more:hover > .submenu {
+      display: block; }
+    @media screen and (min-width: 53.75em) {
+      .centered-navigation li.more {
+        padding-right: 1em;
+        position: relative; } }
+  .centered-navigation ul.submenu {
+    display: none;
+    padding-left: 0; }
+    @media screen and (min-width: 53.75em) {
+      .centered-navigation ul.submenu {
+        left: -1em;
+        position: absolute;
+        top: 1.5em; } }
+    @media screen and (min-width: 53.75em) {
+      .centered-navigation ul.submenu .submenu.fly-out-right {
+        left: 11.8em;
+        top: 0; } }
+    @media screen and (min-width: 53.75em) {
+      .centered-navigation ul.submenu .submenu.fly-out-left {
+        left: -11.8em;
+        top: 0; } }
+    .centered-navigation ul.submenu li {
+      display: block;
+      padding-right: 0; }
+      @media screen and (min-width: 53.75em) {
+        .centered-navigation ul.submenu li {
+          line-height: 38.46154px; }
+          .centered-navigation ul.submenu li:first-child > a {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px; }
+          .centered-navigation ul.submenu li:last-child > a {
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            padding-bottom: 0.7em; } }
+      .centered-navigation ul.submenu li a {
+        background-color: rgba(247, 247, 247, 0.9);
+        display: inline-block;
+        text-align: right;
+        text-decoration: none;
+        width: 100%; }
+        @media screen and (min-width: 53.75em) {
+          .centered-navigation ul.submenu li a {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding-left: 1em;
+            text-align: left;
+            width: 12em; } }
 
 .footer {
-  background: url("http://localhost:3000/krhefley.github.io/assets/images/redrockslinear.jpg");
+  background: url("http://localhost:3000/krhefley.github.io/assets/images/footer.jpg");
   background-size: cover;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-  /* Firefox 3.5+ */
-  filter: gray;
-  /* IE6-9 */
-  -webkit-filter: grayscale(100%);
   padding: 1em 1.618em;
   width: 100%; }
   .footer h2 {
@@ -194,7 +317,7 @@ p {
     width: 3%;
     display: inline-block; }
   .footer li a {
-    color: #FFF;
+    color: #F5D04C !important;
     text-decoration: none;
     font-size: 20px; }
     .footer li a:focus, .footer li a:hover {
@@ -276,63 +399,76 @@ p {
       .modal .toolsBox {
         width: 40%; } }
 
-canvas {
-  display: block; }
-
 #home {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background: url("http://localhost:3000/krhefley.github.io/assets/images/ricay_rock.jpg") no-repeat center fixed;
-  background-size: cover;
+  background: url("http://localhost:3000/krhefley.github.io/assets/images/PROFILE_WALL.jpg") no-repeat center center fixed;
   background-attachment: fixed;
-  height: 100vh;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-  /* Firefox 3.5+ */
-  filter: gray;
-  /* IE6-9 */
-  -webkit-filter: grayscale(100%); }
+  background-size: cover; }
   #home::after {
     clear: both;
     content: "";
     display: block; }
-  #home #text-container {
+  @media (min-width: 320px) and (max-width: 767px) {
+    #home {
+      background: none;
+      background-color: #333333; } }
+  #home .mobile-image {
+    display: none; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #home .mobile-image {
+        padding-top: 20%;
+        margin-bottom: 10%;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        height: 300px;
+        width: 300px; }
+        #home .mobile-image img {
+          width: 100%; } }
+  #home #intro-text {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%;
-    margin-top: 3%;
-    text-align: center; }
-    #home #text-container:last-child {
+    width: 40.29137%;
+    margin-left: 51.17883%;
+    margin-top: 4%; }
+    #home #intro-text:last-child {
       margin-right: 0; }
-    #home #text-container h3 {
-      color: #FFF; }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      #home #text-container {
+    @media (min-width: 320px) and (max-width: 767px) {
+      #home #intro-text {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%;
         margin-left: 0%;
         margin-top: 8%; }
-        #home #text-container:last-child {
+        #home #intro-text:last-child {
           margin-right: 0; } }
-    @media (min-width: 320px) and (max-width: 767px) {
-      #home #text-container {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 100%;
-        margin-left: 0%;
-        margin-top: 12%; }
-        #home #text-container:last-child {
-          margin-right: 0; } }
+    #home #intro-text h1 {
+      font-size: 40px;
+      font-family: 'Rock Salt';
+      margin: 0;
+      color: #F5D04C;
+      text-align: center; }
+    #home #intro-text h3 {
+      margin-top: 5%;
+      color: #FFF;
+      font-size: 28px;
+      font-family: 'Abel';
+      font-weight: bold; }
+    #home #intro-text p {
+      color: #FFF;
+      font-size: 28px;
+      font-family: 'Abel';
+      margin-top: 0px;
+      font-weight: bold; }
   #home .button-container {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
-    margin-left: 34.11922%;
+    width: 100%;
     text-align: center;
     margin-top: 20%; }
     #home .button-container:last-child {
@@ -340,11 +476,15 @@ canvas {
     #home .button-container a {
       display: inline-block;
       position: absolute;
-      bottom: 5%; }
+      bottom: 5%;
+      margin-left: -1%; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        #home .button-container a {
+          display: none; } }
       #home .button-container a .fa, #home .button-container a .fa-chevron-down {
         background-color: transparent;
         font-size: 40px;
-        color: #FFF; }
+        color: #F5D04C; }
 
 #skills {
   max-width: 2000px;
@@ -428,12 +568,6 @@ canvas {
       height: 75px;
       width: 75px;
       color: #F5D04C; }
-
-.separator {
-  height: 200px;
-  background: url("http://localhost:3000/krhefley.github.io/assets/images/redrockslinear.jpg") no-repeat center fixed;
-  background-size: cover;
-  background-attachment: fixed; }
 
 .content {
   max-width: 2000px;
@@ -543,9 +677,9 @@ button {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #FFF;
-  padding-top: 40px;
-  padding-bottom: 50px; }
+  background-color: #333333;
+  padding-bottom: 50px;
+  padding-top: 60px; }
   #work::after {
     clear: both;
     content: "";
@@ -553,17 +687,56 @@ button {
   #work h2 {
     padding-top: 0px;
     color: #f8dd7c; }
-  #work p {
+  #work .projects-container {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 82.94039%;
+    width: 40.29137%;
     margin-left: 8.5298%;
-    color: #000; }
-    #work p:last-child {
+    margin-right: 1%; }
+    #work .projects-container:last-child {
       margin-right: 0; }
-  #work #work-title {
-    color: #F5D04C; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #work .projects-container {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%; }
+        #work .projects-container:last-child {
+          margin-right: 0; } }
+    #work .projects-container:last-child {
+      margin-right: 1%;
+      margin-left: 0%; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        #work .projects-container:last-child {
+          margin-left: 8.5298%; } }
+    #work .projects-container .projects {
+      background-color: #FFF;
+      max-height: 200px;
+      margin-top: 10px;
+      border-radius: 15px;
+      text-decoration: none;
+      margin-right: 5px; }
+      #work .projects-container .projects h4 {
+        position: relative;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 40px;
+        font-family: 'Yanone Kaffeesatz';
+        background-color: #FFF;
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        color: #333333;
+        border: 1px;
+        border-radius: 10px;
+        display: block;
+        transition: all 0.2s ease-in-out; }
+        #work .projects-container .projects h4:hover {
+          background-color: rgba(245, 208, 76, 0.9); }
   #work .flex-boxes {
     align-items: stretch;
     clear: both;
@@ -576,86 +749,47 @@ button {
       content: "";
       display: block; }
     #work .flex-boxes #desert-gypsy {
-      background: url("http://localhost:3000/krhefley.github.io/Assets/images/desert-gypsy-mockups.png");
-      background-position: top;
+      background: url("http://localhost:3000/krhefley.github.io/Assets/images/desertgypsysite.png");
+      background-position: center center;
       background-repeat: no-repeat;
       background-size: cover; }
     #work .flex-boxes #massage {
-      background: url("http://localhost:3000/krhefley.github.io/Assets/images/M&Mmassage.png");
-      background-position: top;
+      background: url("http://localhost:3000/krhefley.github.io/Assets/images/mandmmassagesite.png");
+      background-position: center center;
       background-repeat: no-repeat;
       background-size: cover; }
     #work .flex-boxes #castironed {
-      background: url("http://localhost:3000/krhefley.github.io/Assets/images/castironed.png");
-      background-position: top;
+      background: url("http://localhost:3000/krhefley.github.io/Assets/images/castironedsite.png");
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
     #work .flex-boxes #kiyik {
-      background: url("http://localhost:3000/krhefley.github.io/Assets/images/kiyik_mockups.png");
-      background-position: top;
+      background: url("http://localhost:3000/krhefley.github.io/Assets/images/kiyiksite.png");
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
-    #work .flex-boxes .projects {
-      background-color: #FFF;
-      border: 1px solid #F5D04C; }
-      #work .flex-boxes .projects:hover {
-        background-color: #333333; }
-        #work .flex-boxes .projects:hover .caption-project {
-          color: #F5D04C; }
     #work .flex-boxes .flex-box {
       align-self: stretch;
       display: block;
       flex: 2 1 30em;
+      min-height: 400px;
       position: relative;
       margin: 0.4em;
       padding: 2em 2em 3em 2em;
       text-decoration: none;
-      transition: all 0.2s ease-in-out; }
-      #work .flex-boxes .flex-box .caption {
+      transition: all 0.2s ease-in-out;
+      border: 1px solid transparent;
+      border-radius: 15px; }
+      #work .flex-boxes .flex-box p {
         visibility: hidden;
-        position: relative;
-        font-weight: bold;
-        margin-top: 0px;
-        margin-left: 0px;
-        font-family: 'Amatic SC';
-        background-color: #FFF;
+        margin-top: 100px;
+        color: #F5D04C;
+        background-color: rgba(51, 51, 51, 0.9);
+        font-size: 30px;
         width: 100%;
-        text-align: center;
-        font-size: 40px;
-        color: #333333;
-        margin-bottom: 40%;
-        display: block;
-        transition: all 0.2s ease-in-out; }
-      #work .flex-boxes .flex-box:focus p, #work .flex-boxes .flex-box:hover p {
-        visibility: visible; }
-      #work .flex-boxes .flex-box:focus .caption, #work .flex-boxes .flex-box:hover .caption {
+        font-family: 'Rock Salt'; }
+      #work .flex-boxes .flex-box:hover p {
         visibility: visible; }
       #work .flex-boxes .flex-box .flex-title {
         color: #FFF;
         font-size: 2.5em; }
-      #work .flex-boxes .flex-box .caption-project {
-        position: relative;
-        font-family: 'Amatic SC';
-        width: 100%;
-        text-align: center;
-        font-size: 40px;
-        color: #F5D04C;
-        display: block;
-        margin: 0px;
-        transition: all 0.2s ease-in-out; }
-      #work .flex-boxes .flex-box p {
-        visibility: hidden;
-        font-weight: bold;
-        font-family: 'Arimo';
-        color: #FFF;
-        background-color: #F5D04C;
-        font-size: 50px;
-        margin-top: 20px;
-        border-radius: 300px;
-        padding-top: 10px;
-        padding-right: 30px;
-        padding-bottom: 15px;
-        padding-left: 30px;
-        position: relative;
-        display: inline-block;
-        transition: all 0.2s ease-in-out; }

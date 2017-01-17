@@ -7,13 +7,6 @@
 	@import "section";
 
 
-    .separator {
-     height: 200px;
-      background: url('http://localhost:3000/krhefley.github.io/assets/images/redrockslinear.jpg') no-repeat center fixed;
-	background-size: cover;
-	background-attachment: fixed;
-    }
-
 
     //boxes
 
@@ -86,29 +79,70 @@
 	//work
 	#work {
 		@include outer-container;
-		background-color: #FFF;
-		padding-top: 40px;
+		background-color: $dark-gray;
 		padding-bottom: 50px;
+		padding-top: 60px;
 
 	  h2 {
 	  	padding-top: 0px;
 	  	color: lighten($purple, 10%);
 	  }
 
-	  p {
-	  	@include span-columns(10);
+	  .projects-container {
+	  	@include span-columns(5);
 	  	@include shift(1);
-	  	color: #000;
+	    margin-right: 1%;
+	  	@include frodo {
+    	@include span-columns(10);
+    	}
 
-	  }
+    	&:last-child {
+    margin-right: 1%;
+    @include shift(0);
 
-		
+    @include frodo {
+    	@include shift(1);
+    	}
+}
+	  
 
-		#work-title {
-			color: $purple;
-		}
+	    .projects {
+		   	background-color: #FFF;
+			max-height: 200px;
+			margin-top: 10px;
+			border-radius: 15px;
+			text-decoration: none;
+			margin-right: 5px;
 
 
+
+
+		h4{
+		position: relative;
+		font-weight: bold;
+		margin-top: 10px;
+		margin-bottom: 0px;
+		margin-left: 5px;
+		margin-right: 5px;
+		padding:40px;
+		font-family: 'Yanone Kaffeesatz';
+		background-color: #FFF;
+		width: 100%;
+		text-align: center;
+		font-size: 40px;
+		color: $dark-gray;
+		border: 1px;
+		border-radius: 10px;
+		display: block;
+		transition: all 0.2s ease-in-out;	
+		&:hover {
+				background-color: transparentize($purple, 0.1)
+			}
+
+	}  
+
+				}
+			}
 
 		.flex-boxes {
 			$base-border-radius: 3px !default;
@@ -129,20 +163,22 @@
 			flex-wrap: wrap;
 			justify-content: center;
 			text-align: center;
-			
+
+
 
 
 			#desert-gypsy {
-				background: url("http://localhost:3000/krhefley.github.io/Assets/images/desert-gypsy-mockups.png");
-				background-position: top;
+				background: url("http://localhost:3000/krhefley.github.io/Assets/images/desertgypsysite.png");
+				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
+
 			
 			}
 
 			#massage {
-				background: url("http://localhost:3000/krhefley.github.io/Assets/images/M&Mmassage.png");
-				background-position: top;
+				background: url("http://localhost:3000/krhefley.github.io/Assets/images/mandmmassagesite.png");
+				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
 				
@@ -151,8 +187,8 @@
 			}
 
 			#castironed {
-				background: url("http://localhost:3000/krhefley.github.io/Assets/images/castironed.png");
-				background-position: top;
+				background: url("http://localhost:3000/krhefley.github.io/Assets/images/castironedsite.png");
+				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
 				
@@ -160,27 +196,13 @@
 			}
 
 			#kiyik {
-				background: url("http://localhost:3000/krhefley.github.io/Assets/images/kiyik_mockups.png");
-				background-position: top;
+				background: url("http://localhost:3000/krhefley.github.io/Assets/images/kiyiksite.png");
+				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
-				
 			}
 
-		   .projects {
-		   		background-color: #FFF;
-				border: 1px solid $purple;
 
-				&:hover {
-					background-color: $dark-gray;
-					
-					
-					.caption-project {
-					color: $purple;
-					}
-			}
-
-		}
 
 
 		
@@ -189,48 +211,35 @@
 	align-self: stretch;
 	display: block;
 	flex: 2 1 30em;
+	min-height:400px;
 	position: relative;
 	margin: $flex-box-gutter;
 	padding: 2em 2em 3em 2em;
 	text-decoration: none;
 	transition: all 0.2s ease-in-out;
+	border: 1px solid transparent;
+	border-radius: 15px;
 
 
 
-
-
-	.caption {
-		visibility: hidden;
-		position: relative;
-		font-weight: bold;
-		margin-top: 0px;
-		margin-left: 0px;
-		font-family: 'Amatic SC';
-		background-color: #FFF;
-		width: 100%;
-		text-align: center;
-		font-size: 40px;
-		color: $dark-gray;
-		margin-bottom: 40%;
-		display: block;
-		transition: all 0.2s ease-in-out;
+	p {
+    visibility: hidden;
+    margin-top: 100px;
+    color: $purple;
+	background-color: transparentize($dark-gray, 0.1);
+	font-size: 30px;
+	width: 100%;
+	font-family: 'Rock Salt';
+	
 	}
 
 
+	 &:hover {
+	 	p {
+	 		visibility: visible;
+	 	}
+	 }
 
-	&:focus,
-	&:hover {
-		p {
-			visibility: visible;
-
-
-		}
-		.caption {
-			visibility: visible;
-		}
-
-
-	}  
 
 
 	.flex-title {
@@ -238,41 +247,11 @@
 		font-size: 2.5em;
 	}
 
-		.caption-project {
-		position: relative;
-		font-family: 'Amatic SC';
-		width: 100%;
-		text-align: center;
-		font-size: 40px;
-		color: $purple;
-		display: block;
-		margin: 0px;
-		transition: all 0.2s ease-in-out;
-	}
 
-	p {
-		
-		visibility: hidden;
-		font-weight: bold;
-		font-family: 'Arimo';
-		color: #FFF;
-		background-color: $teal;
-		font-size: 50px;
-		margin-top: 20px;
-		border-radius: 300px;
-		padding-top: 10px;
-		padding-right: 30px;
-		padding-bottom: 15px;
-		padding-left: 30px;
-		position: relative;
-		display: inline-block;
-		transition: all 0.2s ease-in-out;
-	}
 
 	}
-  }
 }
-
+}
 
 
 

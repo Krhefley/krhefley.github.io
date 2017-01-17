@@ -31,27 +31,47 @@ $(window).on("load resize",function(e) {
   });
 });
 
-//show-hide nav bar on scroll
-var prev = 0;
-var $window = $(window);
-var nav = $('.centered-navigation');
 
-$window.on('scroll', function(){
-  var scrollTop = $window.scrollTop();
-  nav.toggleClass('hidden', scrollTop > prev);
-  prev = scrollTop;
+
+  $(window).scroll(function() {
+    var scrollPos = $(window).scrollTop(),
+      navbar = $('header');
+      link=$('a');
+      border=$('')
+    if (scrollPos > 20) {
+      navbar.css('background-color', '#FFF');
+      link.css('color', '#333333')
+    } else {
+      navbar.css('background-color', 'rgba(255, 255, 255, 0.9)');
+      link.css('color', '#333333')
+    }
 });
 
-  /*$("canvas.snow").let_it_snow({
-    speed: 2,
-    interaction: false,
-    size: 1,
-    count: 100,
-    opacity: 0.8,
-    color: "#ffffff",
-    windPower: 0,
-    image: false
-  });*/
+
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+
 
 
 
