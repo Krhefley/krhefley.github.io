@@ -7,6 +7,35 @@
 	@import "section";
 
 
+   //button
+   .back {
+   	width: 8%;
+   	text-align: center;
+   	margin-right: auto;
+   	margin-left: auto;
+   	float: none;
+   	border: 2px solid $dark-gray;
+   	font-size: 28px;
+   	font-family: 'Yanone Kaffeesatz';
+   	font-weight: bold;
+   	margin-top: 40px;
+   margin-bottom: 20px;
+   display: block;
+
+   @include frodo {
+   	width: 15%;
+   }
+
+   &:hover {
+   	background-color: $purple;
+   }
+
+ 	a{
+ 		text-decoration: none;
+ 	}
+   }
+
+
 
     //boxes
 
@@ -18,16 +47,20 @@
 
     .box {
     	@include span-columns(4);
-    	@include shift (1.5);
-    	background-color: $purple;
-    	margin-top: 5%;
-    	margin-bottom: 0px;
+    	@include shift(0.5);
+    	color: $dark-gray;
+    	text-align: center;
+    	background-color: transparent;
+    	margin-top: 6%;    	
     	padding: 10px;
+    	font-family: 'Yanone Kaffeesatz';
+    	border: 1px solid transparent;
+    	border-radius: 15px;
+
     	
-
-
     	@include frodo {
     		@include span-columns(12);
+    		@include shift(0);
     		margin-right: 2%;
     	}
     }
@@ -41,7 +74,7 @@
     .mockups {
     	@include span-columns(6);
     	margin-right: 0px;
-    	text-align: left;
+    	text-align: center;
     	margin-top: 10px;
 
     	img {
@@ -56,13 +89,13 @@
 
      #desertgypsyabout {
     	@include span-columns(12);
-    	@include shift(1.5);
     	float: none;
     	display: inline-block;
     	margin-top: 15px;
+    	margin-bottom: 20px;
 
-    	.screenshot {
-    		@include span-columns(3);
+    	img {
+    		width: 100%;
     	}
     }
 
