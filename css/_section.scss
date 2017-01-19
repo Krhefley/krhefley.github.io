@@ -4,7 +4,7 @@
 	#home {
 
 		@include outer-container;
-		background: url('#{$assetpath}/PROFILE_WALL.jpg') no-repeat center center fixed;
+		background: url('http://localhost/krhefley.github.io/images/PROFILE_WALL.jpg') no-repeat center center fixed;
 		background-attachment: fixed;
 		background-size: cover;
 
