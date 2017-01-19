@@ -201,7 +201,7 @@
 
 
 			#desert-gypsy {
-				background: url("http://www.ricayhefley.com/Assets/images/desertgypsysite.png");
+				background: url("#{$assetpath}/desertgypsysite.png");
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -210,7 +210,7 @@
 			}
 
 			#massage {
-				background: url("http://www.ricayhefley.com/Assets/images/mandmmassagesite.png");
+				background: url("#{$assetpath}/mandmmassagesite.png");
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -220,7 +220,7 @@
 			}
 
 			#castironed {
-				background: url("http://www.ricayhefley.com/Assets/images/castironedsite.png");
+				background: url("#{$assetpath}/castironedsite.png");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -229,7 +229,7 @@
 			}
 
 			#kiyik {
-				background: url("http://www.ricayhefley.com/Assets/images/kiyiksite.png");
+				background: url("#{$assetpath}/kiyiksite.png");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
