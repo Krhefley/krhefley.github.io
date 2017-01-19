@@ -328,10 +328,20 @@ h2 {
 		display: inline-block;
 	}
 
+  .fa {
+    margin: 5px;
+
+  }
+
+   @include frodo {
+      margin: 2px;
+    }
+
 	li a {
 		color: $purple !important;
 		text-decoration: none;
 		font-size: 20px;
+
 
 		&:focus,
 		&:hover {
