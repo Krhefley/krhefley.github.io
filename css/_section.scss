@@ -3,7 +3,7 @@
 	#home {
 
 		@include outer-container;
-		background: url('images/PROFILE_WALL.jpg') no-repeat center center fixed;
+		background: url('../images/PROFILE_WALL.jpg') no-repeat center center fixed;
 		background-attachment: fixed;
 		background-size: cover;
 
