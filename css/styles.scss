@@ -2,7 +2,7 @@
 	@import "neat/_neat";
 	@import "base";
 	@import "typography";
-	@import "modules";
+	@import "navfoot";
 	@import 'modals';
 	@import "section";
 
@@ -16,7 +16,7 @@
    	float: none;
    	border: 2px solid $dark-gray;
    	font-size: 28px;
-   	font-family: 'Yanone Kaffeesatz';
+   	font-family: 'Abel';
    	font-weight: bold;
    	margin-top: 40px;
    margin-bottom: 20px;
@@ -27,7 +27,7 @@
    }
 
    &:hover {
-   	background-color: $purple;
+   	background-color: $yellow;
    }
 
  	a{
@@ -53,7 +53,7 @@
     	background-color: transparent;
     	margin-top: 6%;    	
     	padding: 10px;
-    	font-family: 'Yanone Kaffeesatz';
+    	font-family: 'Abel';
     	border: 1px solid transparent;
     	border-radius: 15px;
 
@@ -109,182 +109,8 @@
   
 
   
-	//work
-	#work {
-		@include outer-container;
-		background-color: $dark-gray;
-		padding-bottom: 50px;
-		padding-top: 60px;
-
-	  h2 {
-	  	padding-top: 0px;
-	  	color: lighten($purple, 10%);
-	  }
-
-	  .projects-container {
-	  	@include span-columns(5);
-	  	@include shift(1);
-	    margin-right: 1%;
-	  	@include frodo {
-    	@include span-columns(10);
-    	}
-
-    	&:last-child {
-    margin-right: 1%;
-    @include shift(0);
-
-    @include frodo {
-    	@include shift(1);
-    	}
-}
-	  
-
-	    .projects {
-		   	background-color: #FFF;
-			max-height: 200px;
-			margin-top: 10px;
-			border-radius: 15px;
-			text-decoration: none;
-			margin-right: 5px;
-
-
-
-
-		h4{
-		position: relative;
-		font-weight: bold;
-		margin-top: 10px;
-		margin-bottom: 0px;
-		margin-left: 5px;
-		margin-right: 5px;
-		padding:40px;
-		font-family: 'Yanone Kaffeesatz';
-		background-color: #FFF;
-		width: 100%;
-		text-align: center;
-		font-size: 40px;
-		color: $dark-gray;
-		border: 1px;
-		border-radius: 10px;
-		display: block;
-		transition: all 0.2s ease-in-out;	
-		&:hover {
-				background-color: transparentize($purple, 0.1)
-			}
-
-	}  
-
-				}
-			}
-
-		.flex-boxes {
-			$base-border-radius: 3px !default;
-			$base-background-color: white !default;
-			$dark-gray: #333 !default;
-			$light-gray: #DDD !default;
-			$base-font-color: $dark-gray !default;
-			$flex-box-border-color: $light-gray;
-			$flex-box-border: 1px solid $flex-box-border-color;
-			$flex-box-gutter: 0.4em;
-			$flex-box-width: 30em;
-
-
-			@include clearfix;
-			align-items: stretch;
-			clear: both;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			text-align: center;
-
-
-
-
-			#desert-gypsy {
-				background: url("images/desertgypsysite.png");
-				background-position: center center;
-				background-repeat: no-repeat;
-				background-size: cover;
-
-			
-			}
-
-			#massage {
-				background: url("images/mandmmassagesite.png");
-				background-position: center center;
-				background-repeat: no-repeat;
-				background-size: cover;
-				
-
-
-			}
-
-			#castironed {
-				background: url("images/castironedsite.png");
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-				
-
-			}
-
-			#kiyik {
-				background: url("images/kiyiksite.png");
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-			}
-
-
-
-
-		
-
-	.flex-box {
-	align-self: stretch;
-	display: block;
-	flex: 2 1 30em;
-	min-height:400px;
-	position: relative;
-	margin: $flex-box-gutter;
-	padding: 2em 2em 3em 2em;
-	text-decoration: none;
-	transition: all 0.2s ease-in-out;
-	border: 1px solid transparent;
-	border-radius: 15px;
-
-
-
-	p {
-    visibility: hidden;
-    margin-top: 100px;
-    color: $purple;
-	background-color: transparentize($dark-gray, 0.1);
-	font-size: 30px;
-	width: 100%;
-	font-family: 'Rock Salt';
 	
-	}
 
-
-	 &:hover {
-	 	p {
-	 		visibility: visible;
-	 	}
-	 }
-
-
-
-	.flex-title {
-		color: #FFF;
-		font-size: 2.5em;
-	}
-
-
-
-	}
-}
-}
 
 
 

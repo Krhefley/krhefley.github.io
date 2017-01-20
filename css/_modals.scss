@@ -4,9 +4,9 @@
 	margin-top: 70px;
 	h2 {
 		font-size: 35px;
-		font-family: 'Pacifico';
+		font-family: 'Rock Salt';
 		text-align: center;
-		color: $purple;;
+		color: $dark-gray;
 		padding-top: 0px;
 	}
 
@@ -14,13 +14,12 @@
 		font-size: 24px;
 		width: 30%;
 		font-weight: bolder;
-		color: white;
-		font-family: 'Amatic SC';
+		color: #FFF;
+		background-color: $yellow;
+		font-family: 'Abel';
 		padding: 10px;
-		background-color: saturate($teal, 30%);
 		margin-right: auto;
 		margin-left: auto;
-
 		@include frodo {
     	width: 100%;
     }
@@ -51,8 +50,8 @@
 	}
 
 	p {
-		font-family: 'Arimo';
-		color: $purple;
+		font-family: 'Abel';
+		color: $dark-gray;
 		font-size: 16px;
 		font-weight: bold;
 		margin: 0px;
@@ -60,9 +59,6 @@
 		
 
 	}
-
-
-
 
 	.toolsBoxContainer {
 		text-align: center;
@@ -77,7 +73,7 @@
     font-size: 20px;
     font-weight: bold;
     padding: 5px;
-    font-family: 'Amatic SC';
+    font-family: 'Abel';
     font-weight: 400;
     letter-spacing: 0px;
     background-color: $dark-gray;

@@ -4,17 +4,15 @@
 
 	
 //variables
-	$blue: #151D4B;
-	$teal: #F5D04C;
-	$purple: #F5D04C;
+	$yellow: #F5D04C;
 	$light-gray: #DCDCDC;
 	$max-width: 2000px;
-	$dark-gray: rgb(51, 51, 51);
+	$dark-gray: #333333;
 	
 
 
 
-	//responsive handling
+//responsive handling
 	@mixin sauron {
 		@media (min-width: #{$large}) {
 			@content;
@@ -34,7 +32,7 @@
 	}
 
 	//components
-	head {
+head {
 		margin-bottom: 10px;
 	}
 
@@ -54,16 +52,13 @@ min-height: 100%;
 		width: 100%;
 		height: auto;
 	}
-
-
-
 	
 
 	h2{
 		font-size: 64px;
 		color: #FFF;
 		text-align: center;
-		font-family: 'Pacifico';
+		font-family: 'Rock Salt';
 		margin: 0px;
 		padding-top: 60px;
 
@@ -71,7 +66,7 @@ min-height: 100%;
 	}
 
 	h3 {
-		color: $purple;
+		color: $yellow;
 		font-size: 40px;
 		text-align: center;
 		font-family: 'Rock Salt';
@@ -82,7 +77,7 @@ min-height: 100%;
 		font-weight: normal;
 		color: #FFF;
 		font-size: 25px;
-		font-family: 'Arimo';	    
+		font-family: 'Abel';	    
 		margin-top: 10px;
 		text-align: center;
 
@@ -91,10 +86,8 @@ min-height: 100%;
 	p {
 		font-size: 28px;
 		color: #FFF;
-		font-family: 'Amatic SC';
+		font-family: 'Abel';
 		text-align: center;
 	}
 
-   .hidden {
-   	display: none;
-   }
+   
