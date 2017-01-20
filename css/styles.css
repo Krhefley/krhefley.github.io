@@ -268,7 +268,7 @@ p {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background: url("images/PROFILE_WALL.jpg") no-repeat center center fixed;
+  background: url("http://ricayhefley.com/images/PROFILE_WALL.jpg") no-repeat center center fixed;
   background-attachment: fixed;
   background-size: cover; }
   #home::after {
@@ -428,22 +428,22 @@ p {
       content: "";
       display: block; }
     #work .flex-boxes #desert-gypsy {
-      background: url("images/desertgypsysite.png");
+      background: url("http://ricayhefley.com/images/desertgypsysite.png");
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover; }
     #work .flex-boxes #massage {
-      background: url("images/mandmmassagesite.png");
+      background: url("http://ricayhefley.com/images/mandmmassagesite.png");
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover; }
     #work .flex-boxes #castironed {
-      background: url("images/castironedsite.png");
+      background: url("http://ricayhefley.com/images/castironedsite.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
     #work .flex-boxes #kiyik {
-      background: url("images/kiyiksite.png");
+      background: url("http://ricayhefley.com/images/kiyiksite.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
