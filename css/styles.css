@@ -268,7 +268,7 @@ p {
     display: inline-block; }
     @media (min-width: 320px) and (max-width: 767px) {
       .modal .toolsBox {
-        width: 40%; } }
+        width: 90%; } }
 
 #home {
   max-width: 2000px;
@@ -477,6 +477,9 @@ p {
         font-size: 30px;
         width: 100%;
         font-family: 'Rock Salt'; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        #work .flex-boxes .flex-box {
+          visibility: visible; } }
       #work .flex-boxes .flex-box:hover p {
         visibility: visible; }
       #work .flex-boxes .flex-box .flex-title {
