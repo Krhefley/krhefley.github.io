@@ -3,6 +3,7 @@
 	#home {
 
 		@include outer-container;
+
 		background: url('http://localhost:3000/krhefley.github.io/images/PROFILE_WALL.jpg') no-repeat center center fixed;
 		background-attachment: fixed;
 		background-size: cover;
@@ -210,6 +211,7 @@
 			}
 
 			#massage {
+
 				background: url("http://localhost:3000/krhefley.github.io/images/mandmmassagestudio.png");
 				background-position: center center;
 				background-repeat: no-repeat;
@@ -220,6 +222,7 @@
 			}
 
 			#castironed {
+
 				background: url("http://localhost:3000/krhefley.github.io/images/castironedsite.png");
 				background-position: center;
 				background-repeat: no-repeat;

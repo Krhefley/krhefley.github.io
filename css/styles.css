@@ -158,7 +158,8 @@ p {
   .centered-navigation .logo img {
     margin-bottom: -0.66667em;
     max-height: 2em;
-    opacity: 0.9; }
+    opacity: 0.9;
+    padding-bottom: 2px; }
 
 .footer {
   background: url("http://localhost:3000/krhefley.github.io/images/footer.jpg");
@@ -524,15 +525,14 @@ p {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 40.29137%;
-  margin-left: 4.2649%;
+  width: 48.82117%;
   color: #333333;
   text-align: center;
   background-color: transparent;
   margin-top: 5%;
   padding: 10px;
   font-family: 'Abel';
-  font-size: 26px;
+  font-size: 22px;
   border: 1px solid transparent;
   border-radius: 15px; }
   .box:last-child {

@@ -53,15 +53,15 @@
     }
 
     .box {
-    	@include span-columns(5);
-    	@include shift(0.5);
+    	@include span-columns(6);
+    
     	color: $dark-gray;
     	text-align: center;
     	background-color: transparent;
     	margin-top: 5%;    	
     	padding: 10px;
     	font-family: 'Abel';
-      font-size: 26px;
+      font-size: 22px;
     	border: 1px solid transparent;
     	border-radius: 15px;
 

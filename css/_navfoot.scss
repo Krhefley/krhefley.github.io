@@ -141,6 +141,7 @@
   li.logo.nav-link {
     display: none;
     line-height: 0;
+
  
 
     @include media($horizontal-bar-mode) {
@@ -152,6 +153,7 @@
     margin-bottom: -$centered-navigation-logo-height / 3;
     max-height: $centered-navigation-logo-height;
     opacity: 0.9;
+    padding-bottom: 2px;
   }
 
 }
@@ -180,8 +182,7 @@ h2 {
 }
 
 
-	.footer-links {
-		
+	.footer-links {	
 		text-align: center;
 		justify-content: center;
 		margin-bottom: $base-spacing;
