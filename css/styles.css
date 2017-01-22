@@ -325,18 +325,27 @@ p {
       margin: 0;
       color: #F5D04C;
       text-align: center; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        #home #intro-text h1 {
+          font-size: 32px; } }
     #home #intro-text h3 {
       margin-top: 5%;
       color: #FFF;
       font-size: 28px;
       font-family: 'Abel';
       font-weight: bold; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        #home #intro-text h3 {
+          font-size: 20px; } }
     #home #intro-text p {
       color: #FFF;
       font-size: 28px;
       font-family: 'Abel';
       margin-top: 0px;
       font-weight: bold; }
+      @media (min-width: 320px) and (max-width: 767px) {
+        #home #intro-text p {
+          font-size: 20px; } }
   #home .button-container {
     float: left;
     display: block;
@@ -346,6 +355,9 @@ p {
     margin-top: 20%; }
     #home .button-container:last-child {
       margin-right: 0; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #home .button-container {
+        display: none; } }
     #home .button-container a {
       display: inline-block;
       position: absolute;
@@ -372,7 +384,7 @@ p {
     display: block; }
   @media (min-width: 320px) and (max-width: 767px) {
     #work {
-      padding-top: 20px; } }
+      padding-top: 0px; } }
   #work h2 {
     padding-top: 0px;
     color: #f8dd7c; }
@@ -424,6 +436,10 @@ p {
         border-radius: 10px;
         display: block;
         transition: all 0.2s ease-in-out; }
+        @media (min-width: 320px) and (max-width: 767px) {
+          #work .projects-container .projects h4 {
+            font-size: 22px;
+            font-weight: bold; } }
         #work .projects-container .projects h4:hover {
           background-color: rgba(245, 208, 76, 0.9); }
   #work .flex-boxes {
@@ -477,9 +493,9 @@ p {
         font-size: 30px;
         width: 100%;
         font-family: 'Rock Salt'; }
-      @media (min-width: 320px) and (max-width: 767px) {
-        #work .flex-boxes .flex-box {
-          visibility: visible; } }
+        @media (min-width: 320px) and (max-width: 767px) {
+          #work .flex-boxes .flex-box p {
+            display: none; } }
       #work .flex-boxes .flex-box:hover p {
         visibility: visible; }
       #work .flex-boxes .flex-box .flex-title {
