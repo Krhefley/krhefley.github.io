@@ -274,7 +274,7 @@ p {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background: url("http://ricayhefley.com/PROFILE_WALL.jpg") no-repeat center center fixed;
+  background: url("http://ricayhefley.com/images/PROFILE_WALL.jpg") no-repeat center center fixed;
   background-attachment: fixed;
   background-size: cover; }
   #home::after {
@@ -435,7 +435,7 @@ p {
       content: "";
       display: block; }
     #work .flex-boxes #desert-gypsy {
-      background: url("http://ricayhefley.com/desertgypsysite.png");
+      background: url("http://ricayhefley.com/images/desertgypsysite.png");
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover; }
