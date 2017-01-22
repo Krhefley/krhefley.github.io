@@ -70,7 +70,7 @@
 				color: #FFF;
 				font-size: 28px;
 				font-family: 'Abel';
-				font-weight: bold;
+				
 				@include frodo {
 					font-size: 20px;
 				}
@@ -81,7 +81,7 @@
 				font-size: 28px;
 				font-family: 'Abel';
 				margin-top: 0px;
-				font-weight: bold;
+				
 				@include frodo {
 					font-size: 20px;
 				}

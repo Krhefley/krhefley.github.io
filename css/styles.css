@@ -175,21 +175,23 @@ p {
     margin-bottom: 1em;
     font-family: 'Abel'; }
   .footer .fa {
-    font-size: 28px;
+    font-size: 20px;
+    text-align: center;
+    padding: 0px 4px 0px 4px;
     font-weight: bold; }
+    .footer .fa:hover {
+      color: #FFF; }
   .footer ul {
     flex-basis: 8em;
     flex-shrink: 0;
     margin-bottom: 1em;
-    padding: 0;
-    margin-top: 0px; }
+    padding: 0px;
+    margin-top: 0px;
+    text-align: center; }
   .footer li {
     line-height: 1em;
     list-style: none;
     text-align: center;
-    padding: 2px;
-    margin: 10px;
-    width: 3%;
     display: inline-block; }
   .footer li a {
     color: #F5D04C !important;
@@ -332,8 +334,7 @@ p {
       margin-top: 5%;
       color: #FFF;
       font-size: 28px;
-      font-family: 'Abel';
-      font-weight: bold; }
+      font-family: 'Abel'; }
       @media (min-width: 320px) and (max-width: 767px) {
         #home #intro-text h3 {
           font-size: 20px; } }
@@ -341,8 +342,7 @@ p {
       color: #FFF;
       font-size: 28px;
       font-family: 'Abel';
-      margin-top: 0px;
-      font-weight: bold; }
+      margin-top: 0px; }
       @media (min-width: 320px) and (max-width: 767px) {
         #home #intro-text p {
           font-size: 20px; } }
@@ -503,24 +503,27 @@ p {
         font-size: 2.5em; }
 
 .back {
-  width: 15%;
+  width: 10%;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
   float: none;
   border: 2px solid #333333;
+  border-radius: 10px;
   font-size: 28px;
   font-family: 'Abel';
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 20px;
-  display: block; }
+  display: block;
+  background-color: transparent; }
   @media (min-width: 320px) and (max-width: 767px) {
     .back {
       width: 40%; } }
   .back:hover {
     background-color: #F5D04C;
-    text-decoration: none; }
+    text-decoration: none;
+    border-color: #F5D04C; }
   .back a {
     text-decoration: none;
     color: #333333; }
@@ -551,7 +554,7 @@ p {
   color: #333333;
   text-align: center;
   background-color: transparent;
-  margin-top: 5%;
+  margin-top: 6%;
   padding: 10px;
   font-family: 'Abel';
   font-size: 22px;
@@ -569,6 +572,36 @@ p {
       margin-right: 2%; }
       .box:last-child {
         margin-right: 0; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .box {
+      width: 100%; } }
+
+.link {
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  text-align: center;
+  background-color: #F5D04C;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  font-family: 'Abel';
+  font-size: 24px; }
+  .link::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .link:last-child {
+    margin-right: 0; }
+  .link a {
+    text-decoration: none;
+    font-color: #333333; }
+    .link a:focus, .link a:active, .link a:visited {
+      color: #333333;
+      text-decoration: none; }
 
 .content {
   max-width: 2000px;
@@ -584,50 +617,47 @@ p {
     display: block; }
   .content:last-child {
     margin-right: 0; }
-
-.mockups {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  margin-right: 0px;
-  text-align: center;
-  margin-top: 10px; }
-  .mockups:last-child {
-    margin-right: 0; }
-  .mockups img {
+  .content .mockups {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-right: 0px;
+    text-align: center;
+    margin-top: 10px; }
+    .content .mockups:last-child {
+      margin-right: 0; }
+    .content .mockups img {
+      width: 100%;
+      margin: 0px; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      .content .mockups {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .content .mockups:last-child {
+          margin-right: 0; } }
+  .content .about {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
     width: 100%;
-    margin: 0px; }
-  @media (min-width: 320px) and (max-width: 767px) {
-    .mockups {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
+    float: none;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 20px; }
+    .content .about:last-child {
+      margin-right: 0; }
+    .content .about img {
       width: 100%; }
-      .mockups:last-child {
-        margin-right: 0; } }
-
-.about {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  float: none;
-  display: inline-block;
-  margin-top: 15px;
-  margin-bottom: 20px; }
-  .about:last-child {
-    margin-right: 0; }
-  .about img {
-    width: 100%; }
-
-button {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  text-align: center;
-  font-size: 20px;
-  background-color: transparent; }
-  button:last-child {
-    margin-right: 0; }
+  .content button {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    background-color: transparent; }
+    .content button:last-child {
+      margin-right: 0; }
