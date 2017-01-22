@@ -168,7 +168,7 @@
 	$footer-link-color:  #FFF;
 	$footer-disclaimer-color: #FFF;
 
-	background: url('images/footer.jpg');
+	background: url('http://localhost:3000/krhefley.github.io/images/footer.jpg');
 	background-size: cover;
 	padding: ($base-spacing) $gutter;
 	width: 100%;
@@ -188,6 +188,11 @@ h2 {
 		font-family: 'Abel';
 	}
 
+  .fa {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
 	ul {
 		flex-basis: 8em;
 		flex-shrink: 0;
@@ -201,7 +206,7 @@ h2 {
 		list-style: none;
 		text-align: center;
 		padding: 2px;
-    margin: 5px;
+    margin: 10px;
 		width: 3%;
 		display: inline-block;
 	}
@@ -217,7 +222,8 @@ h2 {
 
 	p {
 		color: $footer-disclaimer-color;
-		font-size: 0.9em;
+		font-size: 22px;
+    font-weight: bold;
 		font-family: 'Abel';
 		line-height: 1.5em;
 		margin: auto;

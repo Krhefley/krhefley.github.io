@@ -9,7 +9,7 @@
 
    //button
    .back {
-   	width: 8%;
+   	width: 15%;
    	text-align: center;
    	margin-right: auto;
    	margin-left: auto;
@@ -23,18 +23,25 @@
    display: block;
 
    @include frodo {
-   	width: 15%;
+   	width: 40%;
    }
 
    &:hover {
    	background-color: $yellow;
+    text-decoration: none; 
    }
 
  	a{
  		text-decoration: none;
- 	}
-   }
+    color: $dark-gray;
 
+ &:focus, &:active, &:visited {
+ color: $dark-gray;
+ text-decoration: none;
+ 	}
+ }
+
+}
 
 
     //boxes
@@ -46,14 +53,15 @@
     }
 
     .box {
-    	@include span-columns(4);
+    	@include span-columns(5);
     	@include shift(0.5);
     	color: $dark-gray;
     	text-align: center;
     	background-color: transparent;
-    	margin-top: 6%;    	
+    	margin-top: 5%;    	
     	padding: 10px;
     	font-family: 'Abel';
+      font-size: 26px;
     	border: 1px solid transparent;
     	border-radius: 15px;
 
@@ -87,7 +95,7 @@
     	}
     }
 
-     #desertgypsyabout {
+     .about {
     	@include span-columns(12);
     	float: none;
     	display: inline-block;

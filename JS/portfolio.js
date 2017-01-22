@@ -1,4 +1,3 @@
-$(document).ready(function(){ 
 $(window).on("load resize",function(e) {
   var more = document.getElementById("js-centered-more");
 
@@ -82,7 +81,7 @@ $(window).on("load resize",function(e) {
   
  
 
-});
+
 
 
 

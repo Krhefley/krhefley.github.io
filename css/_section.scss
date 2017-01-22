@@ -3,7 +3,7 @@
 	#home {
 
 		@include outer-container;
-		background: url('images/PROFILE_WALL.jpg') no-repeat center center fixed;
+		background: url('http://localhost:3000/krhefley.github.io/images/PROFILE_WALL.jpg') no-repeat center center fixed;
 		background-attachment: fixed;
 		background-size: cover;
 
@@ -37,10 +37,11 @@
 		@include span-columns(5);
 		@include shift(6.0);
 		margin-top: 4%;
+		text-align: center;
 
 		@include frodo {
 		@include span-columns(10);
-		@include shift(0);
+		@include shift(1);
 		text-align: center;
 		margin-top: 8%;
 			
@@ -200,7 +201,7 @@
 
 
 			#desert-gypsy {
-				background: url("images/desertgypsysite.png");
+				background: url("http://localhost:3000/krhefley.github.io/images/desertgypsysite.png");
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -209,7 +210,7 @@
 			}
 
 			#massage {
-				background: url("images/mandmmassagesite.png");
+				background: url("http://localhost:3000/krhefley.github.io/images/mandmmassagestudio.png");
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -219,7 +220,7 @@
 			}
 
 			#castironed {
-				background: url("images/castironedsite.png");
+				background: url("http://localhost:3000/krhefley.github.io/images/castironedsite.png");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -228,7 +229,7 @@
 			}
 
 			#kiyik {
-				background: url("images/kiyiksite.png");
+				background: url("http://localhost:3000/krhefley.github.io/images/kiyiksite.png");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover;
