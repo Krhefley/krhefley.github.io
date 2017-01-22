@@ -11,7 +11,11 @@
 		@include frodo {	
 			background: none;
 			background-color: #333333;
+			
+
 		}
+
+
 
 		.mobile-image {
 			display: none;
@@ -56,6 +60,9 @@
 		margin: 0;
 		color: $yellow;
 		text-align: center;
+		@include frodo {
+					font-size: 32px;
+				}
 	    }
 
 			h3 {
@@ -64,6 +71,9 @@
 				font-size: 28px;
 				font-family: 'Abel';
 				font-weight: bold;
+				@include frodo {
+					font-size: 20px;
+				}
 			}
 
 			p {
@@ -72,6 +82,9 @@
 				font-family: 'Abel';
 				margin-top: 0px;
 				font-weight: bold;
+				@include frodo {
+					font-size: 20px;
+				}
 			}
 
 
@@ -82,6 +95,10 @@
 			@include span-columns(12);
 			text-align: center;
 			margin-top: 20%;
+			@include frodo {
+				display: none;
+			}
+			
 
 		a {
 			display: inline-block;
@@ -118,7 +135,8 @@
 		padding-top: 60px;
 
 		@include frodo {
-			padding-top: 20px;
+			padding-top: 0px;
+
 		}
 
 	  h2 {
@@ -173,9 +191,17 @@
 		border-radius: 10px;
 		display: block;
 		transition: all 0.2s ease-in-out;	
+
+		@include frodo {
+				font-size: 22px;
+				font-weight: bold;
+			}
+
 		&:hover {
 				background-color: transparentize($yellow, 0.1)
 			}
+
+
 
 
 
@@ -272,11 +298,13 @@
 	font-size: 30px;
 	width: 100%;
 	font-family: 'Rock Salt';
-	}
 
 	@include frodo {
-		visibility: visible;
+		display: none;
 	}
+	}
+
+	
 
 
 	 &:hover {
