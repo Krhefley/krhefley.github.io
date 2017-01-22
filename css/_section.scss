@@ -177,6 +177,8 @@
 				background-color: transparentize($yellow, 0.1)
 			}
 
+
+
 	}  
 
 				}
@@ -270,7 +272,10 @@
 	font-size: 30px;
 	width: 100%;
 	font-family: 'Rock Salt';
-	
+	}
+
+	@include frodo {
+		visibility: visible;
 	}
 
 
