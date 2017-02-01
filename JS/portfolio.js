@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
 $(window).resize(function() {
   var more = document.getElementById("js-navigation-more");
   if ($(more).length > 0) {
@@ -32,10 +32,7 @@ $(document).ready(function() {
   });
 }); 
 
-
-
-
-   $(document).ready(function() {
+$(document).ready(function() {
     $('#pagepiling').pagepiling({
         menu: '#myMenu',
         direction: 'horizontal',
@@ -50,46 +47,22 @@ $(document).ready(function() {
         navigation: false,
         normalScrollElements: null,
         normalScrollElementTouchThreshold: 5,
-        touchSensitivity: 3,
+        touchSensitivity: 5,
         keyboardScrolling: true,
         sectionSelector: '.section',
-        animateAnchor: true,
+        animateAnchor: false,
 
         //events
         onLeave: function(index, nextIndex, direction){},
         afterLoad: function(anchorLink, index){},
         afterRender: function(){},
     });
-})
+});
 
 
 
 
 
-
-
-  // Add smooth scrolling to all links
-  /*$(".smooth").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "" || this.hash !== "-modal") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 1000, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });*/
 
 
 
