@@ -7,258 +7,151 @@
     <meta name="description" content="I am passionate about creating intuitive user experiences through research and design. View my work and connect with me here.">
     <meta name="viewport" content="width=device-width" />
     <html lang="en-US">
-    <link rel="icon" type="image/png" href="images/rh_logo_border.png">
+    <link rel="icon" type="image/png" href="images/fav.png">
   	<link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="css/jquery.pagepiling.css" type="text/css"/>
   	<link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
   	<script type="text/javascript" src="JS/jquery-3.1.1.js"></script>
+    <script src="JS/jquery.pagepiling.js" type="text/javascript" charset="utf-8"></script>
     <script src="JS/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="JS/wow.min.js"></script>
-    <script src="JS/portfolio.js "></script>   
-  </head>
+    <script src="JS/portfolio.js "></script> 
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90721124-1', 'auto');
+  ga('send', 'pageview');
+
+</script>  
+</head>
 
 <body>
-<header class="centered-navigation" role="banner">
-  <div class="centered-navigation-wrapper">
-    <a href="http://www.ricayhefley.com" class="mobile-logo">
-      <img src="images/rh_logo_border.png" alt="Logo image">
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="http://localhost:3000/krhefley.github.io" class="logo">
+      <img src="http://localhost:3000/krhefley.github.io/images/logo2.png" alt="Logo Image">
     </a>
-    <a href="http://www.ricayhefley.com" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
-      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-        <li class="nav-link"><a href="#work" class="smooth">WORK</a></li>
-        <li class="nav-link logo">
-          <a href="http://www.ricayhefley.com" class="logo smooth">
-            <img src="images/rh_logo_border.png" alt="Logo image">
-          </a>
-        </li>
-        <li class="nav-link"><a href="#connect" class="smooth">CONNECT</a></li>
+      <ul id="myMenu" class="navigation-menu show">
+       <li class="nav-link" data-menuanchor="home"><a href="http://localhost:3000/krhefley.github.io/#home">HOME</a></li>
+        <li class="nav-link" data-menuanchor="about"><a href="http://localhost:3000/krhefley.github.io/#about">ABOUT</a></li>
+        <li class="nav-link" data-menuanchor="process"><a href="http://localhost:3000/krhefley.github.io/#process">PROCESS</a></li>
+        <li class="nav-link" data-menuanchor="work"><a href="http://localhost:3000/krhefley.github.io/#work">WORK</a></li>
+        <li class="nav-link" data-menuanchor="skills"><a href="http://localhost:3000/krhefley.github.io/#skills">SKILLS</a></li>
+        <li class="nav-link" data-menuanchor="connect"><a href="http://localhost:3000/krhefley.github.io/#connect">CONNECT</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 
-<!--intro-->
-
-  <section id="home">
-  <div class="mobile-image">
-    <img src="images/Ricay_Mobile.png" alt="mobile-sized photo of Ricay Hefley">
+<div id="pagepiling">
+  <div class="section" id="intro-page" data-anchor="home">
+    <h1>HELLO!<br> I'M RICAY HEFLEY.</h1>
+    <h3>Front-End Developer & UX Designer</h3>
   </div>
- 
-    <div id="intro-text">
-      <h3>Hello, I am Ricay Hefley!</h3>
-      <h1  class="wow flipInX" data-wow-delay="0.5s" id="ux-title">UI & UX Designer</h1>
-      <p>A Texan, now living in Denver, Colorado. I’m passionate about creating better user experiences through research, design and development. I have a strong background in software testing, business analysis, web development and client relations. I love working with people who inspire and projects that challenge. 
 
+ 
+ <div class="section pp-scrollable" id="about-page" data-anchor="about">
+  <div id="picture">
+    <img src="http://localhost:3000/krhefley.github.io/images/ricay_mobile.png">
+  </div>
+    <div id="about-me-text">
+      <p>A Texan, now living in Denver, Colorado. I’m passionate about creating better user experiences through research, design, and development. I have a strong background in software testing, business analysis, web development and client relations. I love working with people who inspire and projects that challenge. 
       When not tinkering with web design & development, you can find me hiking, camping, baking, gardening or practicing muay thai.</p>
     </div>
-    <div class='button-container'>
-      <a href="#work" class="smooth"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
-      </div>
-  	</section>
-
-   
-<!--work-->
-<section id="work">
-  <h3>Websites</h3>
-  <div class="flex-boxes">
-      <a href="desert-gypsy.html" class="flex-box wow fadeInUp"   id="desert-gypsy">
-          <p>The Desert Gypsy</p>
-      </a>
-    <a href="massage.html" class="flex-box wow fadeInUp" id="massage">
-    <p>M&M Massage Studio</p>
-    </a>
-    <a href="castironed.html" class="flex-box wow fadeInUp" id="castironed">
-    <p>Castironed</p>
-    </a>
-    <a href="kiyik.html" class="flex-box wow fadeInUp" id="kiyik"  >
-    <p>Kiyik</p>
-    </a>
+    <div class="quote">
+    <blockquote>"Design is not just what it looks like and feels like. Design is how it works.” Steve Jobs</blockquote>
     </div>
+</div>
 
-    
- <h3>Projects</h3>
- <div class="projects-container">
-    <a href="#tribute-modal" rel="modal:open" class="projects wow fadeIn" data-wow-delay="0.5s">
-        <h4>Tribute Page</h4>
-      </a>
-    <a href="#portfolio-modal" rel="modal:open"  class="projects wow fadeIn" data-wow-delay="0.5s">
-    <h4>Portfolio</h4>
-    </a>
-    <a href="#quote-modal"  rel="modal:open" class="projects wow fadeIn" data-wow-delay="0.5s">
-     <h4>Quote Machine</h4>
-    </a>
-    <a href="#weather-modal" rel="modal:open"  class="projects wow fadeIn" data-wow-delay="0.5s">
-    <h4>Local Weather App</h4>
-    </a> 
-    </div>
-    <div class="projects-container">  
-    <a href="#wiki-modal" rel="modal:open" class="projects wow fadeIn" data-wow-delay="0.5s">
-     <h4>Wikipedia Viewer</h4>
-    </a>
-    <a href="#calc-modal" rel="modal:open"  class="projects wow fadeIn" data-wow-delay="0.5s">
-     <h4>Javascript Calculator</h4>
-    </a>
-    <a href="#timer-modal"  rel="modal:open" class="projects wow fadeIn" data-wow-delay="0.5s">
-     <h4>Pomodoro Timer</h4>
-    </a>
-    <a href="#twitch-modal" rel="modal:open" class="projects wow fadeIn"  data-wow-delay="0.5s">
-    <h4>Twitch.TV Viewer</h4>
-  </a>
+  <div class="section pp-scrollable" id="process-page" data-anchor="process">
+  <h2>PROCESS</h2>
+  <p class="process-paragraph">A good UX/UI design process is highly iterative. I complete the steps below several times before reaching the desired design.</p>
+   <ul class="list">
+    <li class="process-item"><h3>Assess</h3>
+     <i class="fa fa-comments" aria-hidden="true"></i>
+     <p>I consider this to be the most crucial phase in both web development and UX design. This is when I begin to extrapolate user needs through interviews, persona creation, surveys, introspection and user testing. Through frequent user interaction, I ensure that my assumptions for design and development remain valid.</p>
+     </li>
+    <li class="process-item"><h3>Design</h3>
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+     <p>The fun phase of the project begins. Using sketching, wireframing and prototypes of various fidelities, I begin to ideate and reify a solution. This phase is highly iterative -- I loop back through the assess phase several times. With user-centered design as the driving force this is when the project starts to take shape.</p>
+     </li>
+    <li class="process-item"><h3>Build</h3>
+    <i class="fa fa-code" aria-hidden="true"></i>
+     <p>In this phase, the building begins! Using front-end technologies I build and customize the product to match the intended design. Continuing meetings with stakeholders help to keep the project on track and ensure the product is coming along as envisioned. Intense developer testing is followed by user testing to verify usability.</p>
+     </li>
+   </ul>
   </div>
-  </section>
 
-
-
-   <div id="tribute-modal" class="modal" style="display:none;">
-      <h2>Tribute Page</h2> 
-      <div class=modalImage>
-       <img src="images/Jimmy.png" alt="image of Jimmy Carter Tribute page">
+  <div class="section pp-scrollable" id="work-page" data-anchor="work">
+  <h2>WORK</h2>
+    <ul class="list">
+    <li class="work-item">
+     <div class="site-image">
+     <a href="http://localhost:3000/krhefley.github.io/desert-gypsy.html""> <img src="http://localhost:3000/krhefley.github.io/images/desertgypsysite.png"></a>
+     <h4>The Desert Gypsy</h4>
+      </div>     
+     </li>
+    <li class="work-item"> 
+     <div class="site-image">
+     <a href="http://localhost:3000/krhefley.github.io/kiyik.html">  <img src="http://localhost:3000/krhefley.github.io/images/kiyiksite.png"></a>
+      <h4>Kiyik</h4> 
+      </div>    
+     </li>
+    <li class="work-item"> 
+     <div class="site-image">
+      <a href="http://localhost:3000/krhefley.github.io/castironed.html"><img src="http://localhost:3000/krhefley.github.io/images/castironedsite.png"></a>
+      <h4>Castironed</h4> 
+      </div>    
+     </li>
+    <li class="work-item">
+     <div class="site-image">
+      <a href="http://localhost:3000/krhefley.github.io/massage.html"><img src="http://localhost:3000/krhefley.github.io/images/mandmmassagesite.png"></a>
+      <h4>M&M Massage Studio</h4>
       </div>
-      <p>Created as part of the Free Code Camp Basic Front-End Design Curriculum, this is a simple tribute page.</p>
-      <div class=toolsBoxContainer>
-       <div class=toolsBox>Bootstrap</div>
-       <div class=toolsBox>CSS</div>
-       <div class=toolsBox>HTML</div>
-       <a href="http://codepen.io/Krhefley/full/ORbbPk/" target="_blank"><h3 class="link">Launch Codepen</h3></a> 
-      </div>
-
       
-    </div>
+     </li>
+   </ul>
+  </div>
 
-   <div id="portfolio-modal" class="modal" style="display:none;">
-      <h2>Portfolio</h2> 
-       <div class=modalImage>
-       <img src="images/portfolio.png" alt="image of personal portfolio page">
-       </div>
-      <p>Created as part of the Free Code Camp Basic Front-End Design Curriculum, this is a Portfolio page. </p>
-      <div class=toolsBoxContainer>
-       <div class=toolsBox>Bootstrap</div>
-       <div class=toolsBox>CSS</div>
-       <div class=toolsBox>HTML</div>
-       <div class=toolsBox>Jquery</div>
-       <div class=toolsBox>Animate.CSS</div>
-       <div class=toolsBox>Font Awesome</div>
-       </div>
-      <a href="http://codepen.io/Krhefley/full/ozBbpN/" target="_blank"><h3 class="link">Launch Codepen</h3></a> 
-     
-    </div>
+ <div class="section pp-scrollable" id="skills-page" data-anchor="skills">
+   <h2>SKILLS</h2>
+   <p>I like to keep my design and development skills sharp. I enjoy learning so I am always on the lookout for new learning opportunities. I’m currently working my way through the User-Experience Research & Design MicroMasters course offered by the University of Michigan through EdX. Furthermore, I am learning various front-end and back-end languages through Free Code Camp. I've completed several projects which you can view on Codepen below.<br><br>
+   I've worked with HTML, CSS, Javascript, jQuery, SASS, SQL, Bootstrap, Bourbon/Neat, Git, Github, Gulp, APIs, Sketch, Photoshop, Illustrator, Google Analytics & Adwords among others. <br><br>
+   </p>
+   <div class='buttons'>
+   <button type="button" class="skills-button">
+      <a href="http://codepen.io/Krhefley/" class="button-a" target="_blank">Launch Codepen</a>
+  </button>
+    <button type="button" class="skills-button">
+      <a href="https://github.com/krhefley" class="button-a" target="_blank">Launch Github</a>
+  </button>
+</div>
+  </div>
 
-   <div id="quote-modal" class="modal" style="display:none;">
-      <h2>Random Quote Machine</h2>
-       <div class=modalImage>
-       <img src="images/quotemachine.png" alt="image Random Quote Machine page">
-       </div>
-         <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this is a random quote machine. I used the Forismatic quote API and built in tweet functionality.</p>         
-     <div class=toolsBoxContainer>
-       <div class=toolsBox>Bootstrap</div>
-       <div class=toolsBox>CSS</div>
-       <div class=toolsBox>HTML</div>
-       <div class=toolsBox>Jquery</div>
-      <div class=toolsBox>JSONP</div>
-       <div class=toolsBox>API</div>
-    </div>
-    <a href="http://codepen.io/Krhefley/full/pEdkaL/" target="_blank"><h3 class="link">Launch Codepen</h3></a>    
-    </div>
+ <div class="section" id="connect-page" data-anchor="connect">
+ <h2>CONNECT</h2>
+ <p>I am always open to full-time or freelance opportunities.<br> If you would like to work together, please reach out using a method below.</p>
+<div class="icons">
+<a href="mailto:me@ricayhefley.com"><i class="fa fa-envelope-o fa-4" aria-hidden="true"></i></a>
+<a href="http://codepen.io/Krhefley/" target="_blank"><i class="fa fa-codepen fa-4" aria-hidden="true"></i></a>
+<a href="https://github.com/krhefley" target="_blank"><i class="fa fa-github fa-4" aria-hidden="true"></i></a>
+<a href="https://www.linkedin.com/in/ricayhefley/" target="_blank"><i class="fa fa-linkedin fa-4" aria-hidden="true"></i></a>
+</div>
+ <p class='copyright'>Ricay Hefley © 2017</p>
+</div>
+</div>
 
-   <div id="weather-modal" class="modal" style="display:none;">
-      <h2>Local Weather App</h2> 
-       <div class=modalImage>
-       <img src="images/weatherapp.png" alt="image Local Weather Application">
-       </div>
-      <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this is a local weather app. I use one API to obtain user longitude and latitude which I then feed into a separate API request that sends local weather information.</p> 
-      <div class=toolsBoxContainer>
-      <div class=toolsBox>Bootstrap</div>
-       <div class=toolsBox>CSS</div>
-      <div class=toolsBox>HTML</div>
-       <div class=toolsBox>Jquery</div>
-       <div class=toolsBox>JSONP</div>
-       <div class=toolsBox>API</div>
-      </div>
-      <a href="http://codepen.io/Krhefley/full/dpkLjW/" target="_blank"><h3 class="link">Launch Codepen</h3></a> 
-    </div>
-   
-    <div id="wiki-modal" class="modal" style="display:none;">   
-      <h2>Wikipedia Viewer</h2> 
-       <div class=modalImage>
-       <img src="images/wiki.png" alt="image Wikipedia viewer">
-       </div>       
-      <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this is a wikipedia viewer. A user can enter a topic into the search box or click a button for a random article. </p> 
-     <div class=toolsBoxContainer>
-       <div class=toolsBox>Bootstrap</div>
-       <div class=toolsBox>CSS</div>
-       <div class=toolsBox>HTML</div>
-       <div class=toolsBox>Jquery</div>
-       <div class=toolsBox>Ajax</div>
-       <div class=toolsBox>API</div>
-      </div>
-      <a href="http://codepen.io/Krhefley/full/LRXwkG/" target="_blank"><h3 class="link">Launch Codepen</h3></a>
-    </div> 
+  
 
-     <div id="calc-modal" class="modal" style="display:none;">
-      <h2>Javascript Calculator</h2> 
-         <div class=modalImage>
-       <img src="images/calculator.png" alt="image of javascript calculator">
-       </div>      
-        <p>Created as part of the Free Code Camp Advanced Front-End Design Curriculum, this is a javascript calculator.</p> 
-       <div class=toolsBoxContainer>
-       <div class=toolsBox>Foundation</div>
-       <div class=toolsBox>CSS</div>
-       <div class=toolsBox>HTML</div>
-       <div class=toolsBox>Javascript</div>
-       </div>
-       <a href="http://codepen.io/Krhefley/full/yameGg/" target="_blank"><h3 class="link">Launch Codepen</h3></a>
-
-    </div>
-
-     <div id="timer-modal" class="modal" style="display:none;">
-      <h2>Pomodoro Timer</h2> 
-         <div class=modalImage>
-       <img src="images/clock.png" alt="image of Pomodoro Clock project">
-       </div>    
-          <p>Created as part of the Free Code Camp Advanced Front-End Design Curriculum, this is a Pomodoro Timer.  The pomodoro timer is a productivity tool that has a user work for 25 minutes and break for 5 minutes as a default. The user can alter this using plus or minus buttons.</p>
-      <div class=toolsBoxContainer>
-       <div class=toolsBox>Bootstrap</div>
-       <div class=toolsBox>CSS</div>
-       <div class=toolsBox>HTML</div>
-       <div class=toolsBox>Jquery</div>
-      </div>
-       <a href="http://codepen.io/Krhefley/full/oYXapG/" target="_blank"><h3 class="link">Launch Codepen</h3></a>
-    </div>
-
-     <div id="twitch-modal" class="modal" style="display:none;">
-      <h2>Twitch API</h2> 
-        <div class=modalImage>
-       <img src="images/twitch.png" alt="image Twitch TV API project">
-       </div>
-        <p>Created as part of the Free Code Camp Intermediate Front-End Design Curriculum, this page links to Twitch TV. It displays active streamers, those not streaming and any accounts which are unavailable.</p>
-      <div class=toolsBoxContainer>
-       <div class=toolsBox>Bootstrap</div>
-       <div class=toolsBox>CSS</div>
-       <div class=toolsBox>HTML</div>
-       <div class=toolsBox>Javascript</div>
-       <div class=toolsBox>Jquery</div>
-      </ul>
-     </div>
-      <a href="http://codepen.io/Krhefley/full/JbXmLj/" target="_blank"><h3 class="link">Launch Codepen</h3></a>
-    </div>
  
-
-
-  <footer class="footer" id="connect" role="contentinfo">
-    <div class="footer-links">
-    <h2>Connect</h2>
-      <ul>
-        <li><a href="me@ricayhefley.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
-        <li><a href="https://github.com/Krhefley"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-        <li><a href="http://codepen.io/Krhefley/"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.freecodecamp.com/krhefley"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a></li>
-      </ul>    
-    </div>
-    <p>Copyright 2016, Ricay Hefley</p>
-  </footer>
  
   </body>
   </html>

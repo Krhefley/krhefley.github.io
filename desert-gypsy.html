@@ -7,7 +7,7 @@
     <html lang="en-US">
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="images/rh_logo_border.png">
+    <link rel="icon" type="image/png" href="images/fav.png">
     <link rel="stylesheet" href="css/animate.css" type="text/css"/>
     <link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -15,70 +15,73 @@
     <script src="JS/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="JS/wow.min.js"></script>
     <script src="JS/portfolio.js "></script>   
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90721124-1', 'auto');
+  ga('send', 'pageview');
+
+</script>  
   </head>
 
 
 
   <body>
- <header class="centered-navigation" role="banner">
-  <div class="centered-navigation-wrapper">
-    <a href="http://www.ricayhefley.com" class="mobile-logo">
-      <img src="images/rh_logo_border.png" alt="Logo image">
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="http://localhost:3000/krhefley.github.io" class="logo">
+      <img src="http://localhost:3000/krhefley.github.io/images/logo2.png" alt="Logo Image">
     </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
-      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-        <li class="nav-link logo">
-          <a href="http://www.ricayhefley.com" class="logo">
-           <img src="images/rh_logo_border.png" alt="Logo image">
-          </a>
-        </li>
-          </ul>
+      <ul id="myMenu" class="navigation-menu show">
+       <li class="nav-link" data-menuanchor="home"><a href="http://localhost:3000/krhefley.github.io/#home">HOME</a></li>
+        <li class="nav-link" data-menuanchor="about"><a href="http://localhost:3000/krhefley.github.io/#about">ABOUT</a></li>
+        <li class="nav-link" data-menuanchor="process"><a href="http://localhost:3000/krhefley.github.io/#process">PROCESS</a></li>
+        <li class="nav-link" data-menuanchor="work"><a href="http://localhost:3000/krhefley.github.io/#work">WORK</a></li>
+         <li class="nav-link" data-menuanchor="skills"><a href="http://localhost:3000/krhefley.github.io/#skills">SKILLS</a></li>
+        <li class="nav-link" data-menuanchor="connect"><a href="http://localhost:3000/krhefley.github.io/#connect">CONNECT</a></li>
+      </ul>
     </nav>
-      </div>
-</header>
+  </div>
+  </header>
 
 <div class="content">
  <div class="mockups">
  <a href="http://www.thedesertgypsy.com" target="_blank">
   <img src="images/desertgypsymac.png">
+  <button type="button" class="launch">
+<a href="http://www.thedesertgypsy.com">Launch Site</a>
+</button>
   </a>
   </div>
 
   <p class='box'>
-The Desert Gypsy’s owner wanted to bring her brick-and-mortar store online. The store specializes in authentic artisanal products from Mexico. Using Shopify’s template as a starting point, I created a website and brand that was unique to the store. <br><br>
+The Desert Gypsy’s owner wanted to bring her brick-and-mortar store online. The store specializes in authentic artisanal products from Mexico. Using Shopify’s template as a starting point, I created a website and brand that is unique to the store. I custom coded several pages from scratch to give the site a unique look.<br><br>
 
-Through prototyping, I created UI that was easily navigable by the user. I trained the staff on how to use the new eCommerce website by creating user guides. Additionally, I continually examine site analytics and user feedback to identify  roadblocks to conversion. <br><br>
+Through prototyping, I created UI that was easily navigable by the user. I trained the staff on how to use the new eCommerce website by creating user guides. Additionally, I continually examine site analytics and user feedback to identify roadblocks to conversion.<br><br>
 
-My Role: Prototyping, Design, Development, Product Photography, Training, SEO & Analytics 
+My Role: Design, Development, Product Photography, Training, SEO & Analytics
 </p>
 
 
-  
 
-
- 
   <div class="about">
   <img src="images/desertgypsyscreens.png">
   </div>
 </div>
 
 <button type="button" class="back">
-<a href="http://www.ricayhefley.com">BACK</a>
+<a href="http://localhost:3000/krhefley.github.io/#work">BACK</a>
 </button>
 
-<footer class="footer" id="connect" role="contentinfo">
-    <div class="footer-links">
-    <h2>Connect</h2>
+
   
-      <ul>
-        <li><a href="me@ricayhefley.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
-        <li><a href="https://github.com/Krhefley"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-        <li><a href="http://codepen.io/Krhefley/"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.freecodecamp.com/krhefley"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a></li>
-      </ul>    
-    </div>
-    <p>Copyright 2016, Ricay Hefley</p>
-  </footer>
+  <p class='copyright'>Ricay Hefley © 2017</p>
+ 
 
  
 
