@@ -3,21 +3,18 @@
   <html lang="en">
   <head>
     <meta charset ="utf-8">
-    <title>Ricay Hefley| Denver-based UX Designer</title>
+    <title>Ricay Hefley| Denver-based UX Designer & Front-End Developer</title>
     <meta name="description" content="I am passionate about creating intuitive user experiences through research and design. View my work and connect with me here.">
     <meta name="viewport" content="width=device-width" />
     <html lang="en-US">
     <link rel="icon" type="image/png" href="images/fav.png">
   	<link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animate.css" type="text/css"/>
-    <link rel="stylesheet" href="css/jquery.pagepiling.css" type="text/css"/>
-  	<link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
   	<script type="text/javascript" src="JS/jquery-3.1.1.js"></script>
-    <script src="JS/jquery.pagepiling.js" type="text/javascript" charset="utf-8"></script>
-    <script src="JS/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="JS/wow.min.js"></script>
-    <script src="JS/portfolio.js "></script> 
+    <script type="text/javascript" src="JS/wow.min.js"></script>
+    <script src="JS/smooth-scroll.js"></script>
+    <script type="text/javascript" src="JS/portfolio.js "></script> 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -31,6 +28,7 @@
 </head>
 
 <body>
+<div id="container">
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="http://localhost:3000/krhefley.github.io" class="logo">
@@ -39,79 +37,78 @@
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="myMenu" class="navigation-menu show">
-       <li class="nav-link" data-menuanchor="home"><a href="http://localhost:3000/krhefley.github.io/#home">HOME</a></li>
-        <li class="nav-link" data-menuanchor="about"><a href="http://localhost:3000/krhefley.github.io/#about">ABOUT</a></li>
-        <li class="nav-link" data-menuanchor="process"><a href="http://localhost:3000/krhefley.github.io/#process">PROCESS</a></li>
-        <li class="nav-link" data-menuanchor="work"><a href="http://localhost:3000/krhefley.github.io/#work">WORK</a></li>
-        <li class="nav-link" data-menuanchor="skills"><a href="http://localhost:3000/krhefley.github.io/#skills">SKILLS</a></li>
-        <li class="nav-link" data-menuanchor="connect"><a href="http://localhost:3000/krhefley.github.io/#connect">CONNECT</a></li>
+       <li class="nav-link " id="about-link"><a data-scroll href="http://localhost:3000/krhefley.github.io/#home">HOME</a></li>
+        <li class="nav-link"><a data-scroll href="http://localhost:3000/krhefley.github.io/#about">ABOUT</a></li>
+        <li class="nav-link"><a data-scroll href="http://localhost:3000/krhefley.github.io/#process">PROCESS</a></li>
+        <li class="nav-link"><a data-scroll href="http://localhost:3000/krhefley.github.io/#work">WORK</a></li>
+        <li class="nav-link "><a data-scroll href="http://localhost:3000/krhefley.github.io/#skills">SKILLS</a></li>
+        <li class="nav-link "><a data-scroll href="http://localhost:3000/krhefley.github.io/#connect">CONNECT</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 
-<div id="pagepiling">
-  <div class="section pp-scrollable" id="intro-page" data-anchor="home">
+  <section id="home">
     <h1>HELLO!<br> I'M RICAY HEFLEY.</h1>
     <h3>Front-End Developer & UX Designer</h3>
-  </div>
+  </section>
 
  
- <div class="section pp-scrollable" id="about-page" data-anchor="about">
-  <div id="picture">
-    <img src="http://localhost:3000/krhefley.github.io/images/ricay_mobile.png">
+ <section id="about">
+  <div id="picture" class = " wow fadeInLeft">
+    <img src="http://localhost:3000/krhefley.github.io/images/Ricay_Mobile.png">
   </div>
-    <div id="about-me-text">
+    <div id="about-me-text" class="wow fadeInRight">
       <p>A Texan, now living in Denver, Colorado. I’m passionate about creating better user experiences through research, design, and development. I have a strong background in software testing, business analysis, web development and client relations. I love working with people who inspire and projects that challenge. 
       When not tinkering with web design & development, you can find me hiking, camping, baking, gardening or practicing muay thai.</p>
     </div>
     <div class="quote">
     <blockquote>"Design is not just what it looks like and feels like. Design is how it works.” Steve Jobs</blockquote>
     </div>
-</div>
+</section>
 
-  <div class="section pp-scrollable" id="process-page" data-anchor="process">
-  <h2>PROCESS</h2>
+  <section id="process">
+  <h2 class="wow fadeInUp">PROCESS</h2>
   <p class="process-paragraph">A good UX/UI design process is highly iterative. I complete the steps below several times before reaching the desired design.</p>
    <ul class="list">
     <li class="process-item"><h3>Assess</h3>
-     <i class="fa fa-comments" aria-hidden="true"></i>
+     <i class="fa fa-comments wow rotateIn" aria-hidden="true"></i>
      <p>I consider this to be the most crucial phase in both web development and UX design. This is when I begin to extrapolate user needs through interviews, persona creation, surveys, introspection and user testing. Through frequent user interaction, I ensure that my assumptions for design and development remain valid.</p>
      </li>
     <li class="process-item"><h3>Design</h3>
-    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+    <i class="fa fa-pencil-square-o wow rotateIn" aria-hidden="true"></i>
      <p>The fun phase of the project begins. Using sketching, wireframing and prototypes of various fidelities, I begin to ideate and reify a solution. This phase is highly iterative -- I loop back through the assess phase several times. With user-centered design as the driving force this is when the project starts to take shape.</p>
      </li>
     <li class="process-item"><h3>Build</h3>
-    <i class="fa fa-code" aria-hidden="true"></i>
+    <i class="fa fa-code wow rotateIn" aria-hidden="true"></i>
      <p>In this phase, the building begins! Using front-end technologies I build and customize the product to match the intended design. Continuing meetings with stakeholders help to keep the project on track and ensure the product is coming along as envisioned. Intense developer testing is followed by user testing to verify usability.</p>
      </li>
    </ul>
-  </div>
+  </section>
 
-  <div class="section pp-scrollable" id="work-page" data-anchor="work">
-  <h2>WORK</h2>
+  <section id="work">
+  <h2 class="wow fadeInUp">WORK</h2>
     <ul class="list">
-    <li class="work-item">
+    <li class="work-item wow fadeIn">
      <div class="site-image">
-     <a href="http://localhost:3000/krhefley.github.io/desert-gypsy.html""> <img src="http://localhost:3000/krhefley.github.io/images/desertgypsysite.png"></a>
+     <a href="http://localhost:3000/krhefley.github.io/desert-gypsy.html"> <img src="http://localhost:3000/krhefley.github.io/images/desertgypsysite.png"></a>
      <h4>The Desert Gypsy</h4>
       </div>     
      </li>
-    <li class="work-item"> 
+    <li class="work-item wow fadeIn"> 
      <div class="site-image">
      <a href="http://localhost:3000/krhefley.github.io/kiyik.html">  <img src="http://localhost:3000/krhefley.github.io/images/kiyiksite.png"></a>
       <h4>Kiyik</h4> 
       </div>    
      </li>
-    <li class="work-item"> 
+    <li class="work-item wow fadeIn"> 
      <div class="site-image">
       <a href="http://localhost:3000/krhefley.github.io/castironed.html"><img src="http://localhost:3000/krhefley.github.io/images/castironedsite.png"></a>
       <h4>Castironed</h4> 
       </div>    
      </li>
-    <li class="work-item">
+    <li class="work-item wow fadeIn">
      <div class="site-image">
       <a href="http://localhost:3000/krhefley.github.io/massage.html"><img src="http://localhost:3000/krhefley.github.io/images/mandmmassagesite.png"></a>
       <h4>M&M Massage Studio</h4>
@@ -119,10 +116,10 @@
       
      </li>
    </ul>
-  </div>
+  </section>
 
- <div class="section pp-scrollable" id="skills-page" data-anchor="skills">
-   <h2>SKILLS</h2>
+ <section id="skills">
+   <h2 class="wow fadeInUp">SKILLS</h2>
    <p>I like to keep my design and development skills sharp. I enjoy learning so I am always on the lookout for new learning opportunities. I’m currently working my way through the User-Experience Research & Design MicroMasters course offered by the University of Michigan through EdX. Furthermore, I am learning various front-end and back-end languages through Free Code Camp. I've completed several projects which you can view on Codepen below.<br><br>
    I've worked with HTML, CSS, Javascript, jQuery, SASS, SQL, Bootstrap, Bourbon/Neat, Git, Github, Gulp, APIs, Sketch, Photoshop, Illustrator, Google Analytics & Adwords among others. <br><br>
    </p>
@@ -134,25 +131,23 @@
       <a href="https://github.com/krhefley" class="button-a" target="_blank">Launch Github</a>
   </button>
 </div>
-  </div>
+  </section>
 
- <div class="section pp-scrollable" id="connect-page" data-anchor="connect">
- <h2>CONNECT</h2>
+ <section id="connect">
+ <h2 class="wow fadeInUp">CONNECT</h2>
  <p>I am always open to full-time or freelance opportunities.<br> If you would like to work together, please reach out using a method below.</p>
 <div class="icons">
-<a href="mailto:me@ricayhefley.com"><i class="fa fa-envelope-o fa-4" aria-hidden="true"></i></a>
-<a href="http://codepen.io/Krhefley/" target="_blank"><i class="fa fa-codepen fa-4" aria-hidden="true"></i></a>
-<a href="https://github.com/krhefley" target="_blank"><i class="fa fa-github fa-4" aria-hidden="true"></i></a>
-<a href="https://www.linkedin.com/in/ricayhefley/" target="_blank"><i class="fa fa-linkedin fa-4" aria-hidden="true"></i></a>
-</div>
- <p class='copyright'>Ricay Hefley © 2017</p>
+<a href="mailto:me@ricayhefley.com"><i class="fa fa-envelope-o fa-4 wow rotateIn" aria-hidden="true"></i></a>
+<a href="http://codepen.io/Krhefley/" target="_blank"><i class="fa fa-codepen fa-4 wow rotateIn" aria-hidden="true"></i></a>
+<a href="https://github.com/krhefley" target="_blank"><i class="fa fa-github fa-4 wow rotateIn" aria-hidden="true"></i></a>
+<a href="https://www.linkedin.com/in/ricayhefley/" target="_blank"><i class="fa fa-linkedin fa-4 wow rotateIn" aria-hidden="true"></i></a>
+</div> 
+</section>
+<div id ="footer">
+    <p>Ricay Hefley © 2016</p>
 </div>
 </div>
 
-  
-
- 
- 
   </body>
   </html>
 

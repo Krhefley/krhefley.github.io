@@ -55,17 +55,21 @@ body {
  	min-height:100%;
     width: 100%;
     margin:0px;
-    padding: 0px;
+  
 
 }
 
-.section {
+section {
 
- height: 100vh;
+ min-height: 100vh;
  width: 100vw;
 
 }
 
+#container {
+   min-height:100%;
+   position:relative;
+}
 
 
 
@@ -82,10 +86,8 @@ text-align: center;
 color: $dark-gray;
 font-size: 90px;
 font-family: 'Oswald';
-
-@include frodo {
-	font-size: 70px;
-}
+margin-top: 0px;
+padding-top: 50px;
 
 }
 
@@ -115,6 +117,7 @@ margin-top: 0px;
   font-family: 'Raleway';
   text-align: center;
   font-size: 18px;
+  margin-top: 0px;
 
  }
 

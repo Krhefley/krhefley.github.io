@@ -13,12 +13,15 @@ html {
 body {
   min-height: 100%;
   width: 100%;
-  margin: 0px;
-  padding: 0px; }
+  margin: 0px; }
 
-.section {
-  height: 100vh;
+section {
+  min-height: 100vh;
   width: 100vw; }
+
+#container {
+  min-height: 100%;
+  position: relative; }
 
 h1 {
   text-align: center;
@@ -30,10 +33,9 @@ h2 {
   text-align: center;
   color: #333333;
   font-size: 90px;
-  font-family: 'Oswald'; }
-  @media (min-width: 320px) and (max-width: 767px) {
-    h2 {
-      font-size: 70px; } }
+  font-family: 'Oswald';
+  margin-top: 0px;
+  padding-top: 50px; }
 
 h3 {
   text-align: center;
@@ -54,7 +56,8 @@ p {
   color: #333333;
   font-family: 'Raleway';
   text-align: center;
-  font-size: 18px; }
+  font-size: 18px;
+  margin-top: 0px; }
 
 blockquote {
   text-align: center;
@@ -149,6 +152,9 @@ header.navigation {
     text-align: right;
     width: 100%;
     z-index: 9999; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      header.navigation ul li.nav-link {
+        background-color: #333 !important; } }
     header.navigation ul li.nav-link li.nav-link.active a {
       color: #F5D04C; }
     @media screen and (min-width: 53.75em) {
@@ -181,184 +187,177 @@ header.navigation {
         clear: none;
         float: right; } }
 
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* Height of the footer */
+  background: #000; }
+  #footer p {
+    padding-top: 20px; }
+
 .active a {
   color: #F5D04C !important; }
 
-#intro-page {
+#home {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   background-color: #000000;
   padding-top: 50px; }
-  #intro-page::after {
+  #home::after {
     clear: both;
     content: "";
     display: block; }
-  #intro-page h1 {
+  #home h1 {
     margin-bottom: 0px; }
-    @media (min-width: 320px) and (max-width: 767px) {
-      #intro-page h1 {
-        text-align: center;
-        margin-top: 8%;
-        font-size: 80px; } }
-  #intro-page h3 {
+  #home h3 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%;
     margin-left: 42.64902%;
-    margin-top: 20px;
     color: #00b7be;
     font-family: 'Damion';
     font-size: 35px; }
-    #intro-page h3:last-child {
+    #home h3:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #intro-page h3 {
+      #home h3 {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%;
         margin-left: 0%;
         text-align: center; }
-        #intro-page h3:last-child {
+        #home h3:last-child {
           margin-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #intro-page h3 {
+      #home h3 {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%;
         margin-left: 0%;
         text-align: center; }
-        #intro-page h3:last-child {
+        #home h3:last-child {
           margin-right: 0; } }
 
-#about-page {
+#about {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   background: #ececec;
-  padding-top: 100px !important; }
-  #about-page::after {
+  padding-top: 50px; }
+  #about::after {
     clear: both;
     content: "";
     display: block; }
-  #about-page #picture {
+  #about #picture {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%;
     margin-left: 8.5298%;
-    padding-bottom: 20px; }
-    #about-page #picture:last-child {
+    padding-bottom: 20px;
+    padding-top: 60px; }
+    #about #picture:last-child {
       margin-right: 0; }
-    #about-page #picture img {
-      width: 100%;
-      height: 100%; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #about-page #picture {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 82.94039%;
-        margin-left: 8.5298%;
-        padding-top: 100px; }
-        #about-page #picture:last-child {
-          margin-right: 0; } }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #about-page #picture {
+      #about #picture {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 65.88078%;
-        margin-left: 17.05961%;
-        padding-top: 60px; }
-        #about-page #picture:last-child {
+        margin-left: 17.05961%; }
+        #about #picture:last-child {
           margin-right: 0; } }
-  #about-page #about-me-text {
+    @media (min-width: 768px) and (max-width: 1024px) {
+      #about #picture {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%;
+        margin-left: 17.05961%; }
+        #about #picture:last-child {
+          margin-right: 0; } }
+    #about #picture img {
+      width: 100%;
+      height: 100%; }
+  #about #about-me-text {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    margin-left: 8.5298%; }
-    #about-page #about-me-text:last-child {
+    margin-left: 8.5298%;
+    padding-top: 60px; }
+    #about #about-me-text:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #about-page #about-me-text {
+      #about #about-me-text {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 82.94039%;
         margin-left: 8.5298%;
         text-align: center; }
-        #about-page #about-me-text:last-child {
+        #about #about-me-text:last-child {
           margin-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #about-page #about-me-text {
+      #about #about-me-text {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 82.94039%;
         margin-left: 8.5298%;
         text-align: center; }
-        #about-page #about-me-text:last-child {
+        #about #about-me-text:last-child {
           margin-right: 0; } }
-    #about-page #about-me-text p {
+    #about #about-me-text p {
       font-size: 22px;
       text-align: left;
       padding-top: 20px;
       padding-bottom: 20px;
-      color: #333333; }
+      color: #333333;
+      margin-top: 0px; }
       @media (min-width: 320px) and (max-width: 767px) {
-        #about-page #about-me-text p {
+        #about #about-me-text p {
           text-align: center; } }
       @media (min-width: 768px) and (max-width: 1024px) {
-        #about-page #about-me-text p {
+        #about #about-me-text p {
           text-align: center; } }
-  #about-page .quote {
+  #about .quote {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%;
     margin-left: 8.5298%;
     text-align: center; }
-    #about-page .quote:last-child {
+    #about .quote:last-child {
       margin-right: 0; }
-    @media (min-width: 320px) and (max-width: 767px) {
-      #about-page .quote {
-        padding-bottom: 120px; } }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #about-page .quote {
-        padding-bottom: 120px; } }
 
-#process-page {
+#process {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background: #00b7be;
-  padding-top: 30px; }
-  #process-page::after {
+  background: #FFF;
+  padding-top: 50px; }
+  #process::after {
     clear: both;
     content: "";
     display: block; }
-  #process-page h2 {
+  #process h2 {
     margin-bottom: 0px; }
-    @media (min-width: 320px) and (max-width: 767px) {
-      #process-page h2 {
-        padding-top: 100px; } }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #process-page h2 {
-        padding-top: 60px; } }
-  #process-page .process-paragraph {
+  #process .process-paragraph {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%;
     margin-left: 8.5298%; }
-    #process-page .process-paragraph:last-child {
+    #process .process-paragraph:last-child {
       margin-right: 0; }
-  #process-page .list {
+  #process .list {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -366,84 +365,73 @@ header.navigation {
     padding-left: 40px;
     padding-right: 40px;
     margin-top: 0px; }
-    #process-page .list:last-child {
+    #process .list:last-child {
       margin-right: 0; }
-    @media (min-width: 320px) and (max-width: 767px) {
-      #process-page .list {
-        padding-bottom: 100px; } }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #process-page .list {
-        padding-bottom: 100px; } }
-  #process-page .process-item {
+  #process .process-item {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%;
     text-align: center; }
-    #process-page .process-item:last-child {
+    #process .process-item:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #process-page .process-item {
+      #process .process-item {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%; }
-        #process-page .process-item:last-child {
+        #process .process-item:last-child {
           margin-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #process-page .process-item {
+      #process .process-item {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%; }
-        #process-page .process-item:last-child {
+        #process .process-item:last-child {
           margin-right: 0; } }
-    #process-page .process-item .fa {
+    #process .process-item .fa {
       font-size: 50px;
-      color: #FFF; }
+      color: #00b7be; }
 
-#work-page {
+#work {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   background: #ececec;
-  padding-top: 40px; }
-  #work-page::after {
+  padding-top: 50px; }
+  #work::after {
     clear: both;
     content: "";
     display: block; }
-  #work-page h2 {
-    margin-bottom: 0px; }
-    @media (min-width: 320px) and (max-width: 767px) {
-      #work-page h2 {
-        padding-top: 100px; } }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #work-page h2 {
-        padding-top: 60px; } }
-  #work-page p {
+  #work h2 {
+    margin-bottom: 0px;
+    margin-top: 0px; }
+  #work p {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%;
     margin-left: 17.05961%; }
-    #work-page p:last-child {
+    #work p:last-child {
       margin-right: 0; }
-  #work-page .list {
+  #work .list {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%; }
-    #work-page .list:last-child {
+    #work .list:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #work-page .list {
+      #work .list {
         padding-bottom: 120px;
         padding-left: 0px;
         padding-right: 0px; } }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #work-page .list {
+      #work .list {
         padding-bottom: 100px; } }
-  #work-page .work-item {
+  #work .work-item {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -453,85 +441,76 @@ header.navigation {
     margin-bottom: 25px;
     margin-right: 1px;
     margin-left: 1px; }
-    #work-page .work-item:last-child {
+    #work .work-item:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #work-page .work-item {
+      #work .work-item {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%;
         margin-bottom: 40px; }
-        #work-page .work-item:last-child {
+        #work .work-item:last-child {
           margin-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #work-page .work-item {
+      #work .work-item {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 48.82117%;
         margin-right: 0px;
         margin-bottom: 40px; }
-        #work-page .work-item:last-child {
+        #work .work-item:last-child {
           margin-right: 0; } }
     @media (min-width: 1025px) and (max-width: 1279px) {
-      #work-page .work-item {
+      #work .work-item {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 48.82117%;
         margin-right: 0px;
         margin-bottom: 40px; }
-        #work-page .work-item:last-child {
+        #work .work-item:last-child {
           margin-right: 0; } }
-    #work-page .work-item .site-image {
+    #work .work-item .site-image {
       width: 300px;
       height: 200px;
       margin-right: auto;
       margin-left: auto; }
-      #work-page .work-item .site-image:hover img {
+      #work .work-item .site-image:hover img {
         border-color: #F5D04C;
         cursor: pointer; }
-      #work-page .work-item .site-image img {
+      #work .work-item .site-image img {
         width: 100%;
         height: auto; }
-  #work-page .fa {
+  #work .fa {
     font-size: 50px;
     color: #FFF; }
 
-#skills-page {
+#skills {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background: #00b7be;
-  padding-top: 40px; }
-  #skills-page::after {
+  background: #FFF;
+  padding-top: 50px; }
+  #skills::after {
     clear: both;
     content: "";
     display: block; }
-  #skills-page h2 {
+  #skills h2 {
     margin-bottom: 0px; }
-    @media (min-width: 320px) and (max-width: 767px) {
-      #skills-page h2 {
-        padding-top: 100px; } }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #skills-page h2 {
-        padding-top: 60px; } }
-  #skills-page .buttons {
+  #skills .buttons {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
     text-align: center; }
-    #skills-page .buttons:last-child {
+    #skills .buttons:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #skills-page .buttons {
-        padding-bottom: 100px; } }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #skills-page .buttons {
-        padding-bottom: 100px; } }
-    #skills-page .buttons .skills-button {
+      #skills .buttons {
+        padding-bottom: 60px; } }
+    #skills .buttons .skills-button {
       border: none !important;
       border-radius: 10px;
       padding: 10px;
@@ -541,69 +520,70 @@ header.navigation {
       background-color: #F5D04C;
       margin-right: 20px; }
       @media (min-width: 320px) and (max-width: 767px) {
-        #skills-page .buttons .skills-button {
+        #skills .buttons .skills-button {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 65.88078%;
           margin-left: 17.05961%;
           margin-top: 20px; }
-          #skills-page .buttons .skills-button:last-child {
+          #skills .buttons .skills-button:last-child {
             margin-right: 0; } }
-      #skills-page .buttons .skills-button:last-child {
+      #skills .buttons .skills-button:last-child {
         padding-right: 22px;
         padding-left: 22px; }
-      #skills-page .buttons .skills-button:hover {
+      #skills .buttons .skills-button:hover {
         background-color: #333333;
         border-color: #ececec; }
-        #skills-page .buttons .skills-button:hover .button-a {
+        #skills .buttons .skills-button:hover .button-a {
           color: #ececec !important; }
-      #skills-page .buttons .skills-button .button-a {
+      #skills .buttons .skills-button .button-a {
         text-decoration: none;
         color: #333333 !important; }
-  #skills-page p {
+  #skills p {
     color: #333333;
     margin-left: 17.05961%;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    #skills-page p:last-child {
+    #skills p:last-child {
       margin-right: 0; }
 
-#connect-page {
-  background: #000; }
-  #connect-page h2 {
+#connect {
+  background: #000;
+  padding-top: 50px; }
+  #connect h2 {
     color: #00b7be;
-    margin-bottom: 0px; }
-  #connect-page p {
+    margin-bottom: 0px;
+    margin-top: 0px; }
+  #connect p {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%;
     margin-left: 17.05961%;
     color: #ececec; }
-    #connect-page p:last-child {
+    #connect p:last-child {
       margin-right: 0; }
-  #connect-page .icons {
+  #connect .icons {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
-    text-align: center; }
-    #connect-page .icons:last-child {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    #connect .icons:last-child {
       margin-right: 0; }
-    #connect-page .icons .fa {
+    #connect .icons .fa {
       color: #F5D04C;
       margin-right: 15px;
       margin-left: 15px;
       font-size: 50px; }
-      #connect-page .icons .fa:hover {
+      #connect .icons .fa:hover {
         color: #00b7be;
         cursor: pointer; }
-  #connect-page .copyright {
-    bottom: 0;
-    position: absolute; }
 
 .back {
   width: 10%;
@@ -614,7 +594,7 @@ header.navigation {
   border: 2px solid #333333;
   border-radius: 10px;
   font-size: 28px;
-  font-family: 'Abel';
+  font-family: 'Oswald';
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 40px;

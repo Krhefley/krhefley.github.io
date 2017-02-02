@@ -1,4 +1,6 @@
 
+
+$(document).ready(function() {
 $(window).resize(function() {
   var more = document.getElementById("js-navigation-more");
   if ($(more).length > 0) {
@@ -18,8 +20,8 @@ $(window).resize(function() {
   }
 });
 
-$(document).ready(function() {
-  var menuToggle = $("#js-mobile-menu").unbind();
+
+  var menuToggle = $("#js-mobile-menu").off();
   $("#myMenu").removeClass("show");
 
   menuToggle.on("click", function(e) {
@@ -30,34 +32,28 @@ $(document).ready(function() {
       }
     });
   });
-}); 
 
-$(document).ready(function() {
-    $('#pagepiling').pagepiling({
-        menu: '#myMenu',
-        direction: 'horizontal',
-        verticalCentered: true,
-        sectionsColor: [],
-        anchors: ['home', 'about', 'process', 'work', 'skills', 'connect'],
-        scrollingSpeed: 700,
-        easing: 'swing',
-        loopBottom: false,
-        loopTop: false,
-        css3: true,
-        navigation: false,
-        normalScrollElements: null,
-        normalScrollElementTouchThreshold: 5,
-        touchSensitivity: 5,
-        keyboardScrolling: true,
-        sectionSelector: '.section',
-        animateAnchor: false,
 
-        //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-    });
+$(function () {
+$(window).resize(function () {
+  if ($(window).width() <960) {
+  var navlink=$("li.nav-link").off();
+  $("#myMenu").removeClass("show");
+
+    navlink.on("click", function(e) {
+        $("#myMenu").removeAttr("style");
+  });
+};
+}).resize();
 });
+new WOW().init();
+smoothScroll.init();
+  
+});
+
+
+ 
+  
 
 
 
