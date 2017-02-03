@@ -1,7 +1,7 @@
-	$larger: 1280px;
+	$larger: 1281px;
 	$large: 1025px;
 	$medium: 768px;
-	$tiny: 320px;
+	$small: 320px;
 
 	
 //variables
@@ -36,8 +36,9 @@
 		}
 	}
 
+
 	@mixin frodo {
-		@media (min-width: #{$tiny}) and (max-width: #{$medium - 1px}) {
+		@media (min-width: #{$small}) and (max-width: #{$medium - 1px}) {
 			@content;
 		}
 	}
@@ -55,6 +56,7 @@ body {
  	min-height:100%;
     width: 100%;
     margin:0px;
+    padding:0px;
   
 
 }
@@ -84,7 +86,7 @@ font-family: 'Oswald';
 h2 {
 text-align: center;
 color: $dark-gray;
-font-size: 90px;
+font-size: 80px;
 font-family: 'Oswald';
 margin-top: 0px;
 padding-top: 50px;
@@ -125,7 +127,8 @@ margin-top: 0px;
 text-align: center;
 color: $teal;
 font-size: 30px;
-font-family: 'Damion';
+font-weight: bold;
+font-family: 'Bilbo';
 
 
  }

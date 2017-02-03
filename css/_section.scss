@@ -13,19 +13,30 @@ padding-top: 50px;
  h1 {
 margin-bottom: 0px;
 
+@include legolas {
+  padding-top: 30%;
+}
+
+@include sauron {
+  padding-top: 15%;
+}
+
+
  }
 
  h3 {
  @include span-columns(5);
  @include shift (5);
  color: $teal;
- font-family: 'Damion';
+ font-family: 'Bilbo';
+ font-weight: bold;
  font-size: 35px;
 
  @include frodo {
   @include span-columns(12);
   @include shift(0);
   text-align: center;
+  padding-bottom: 40px;
  }
 
  @include legolas {
@@ -44,6 +55,10 @@ margin-bottom: 0px;
 	@include outer-container;
 	background: $light-gray;
   padding-top: 50px;
+
+  @include sauron {
+  padding-top: 15%;
+}
 
  #picture {
  	@include span-columns(3);
@@ -79,12 +94,14 @@ padding-top: 60px;
  		@include span-columns(10);
  		@include shift(1);
  		text-align: center;
- 	}
+    padding-top: 0px;
+  }
 
  	@include legolas {
  		@include span-columns(10);
  		@include shift(1);
  		text-align: center;
+    padding-top: 0px;
  	}
  
  p {  
@@ -101,6 +118,7 @@ padding-top: 60px;
 
  	@include legolas {
  		text-align: center;
+    padding-bottom: 0px;
  	}
 
  
@@ -114,6 +132,10 @@ padding-top: 60px;
  	@include shift(1);
  	text-align: center;
 
+   @include legolas {
+    padding-bottom: 100px;
+  }
+
  
 }
 
@@ -124,6 +146,15 @@ padding-top: 60px;
 @include outer-container;
 background: $white;
 padding-top: 50px;
+
+
+  @include legolas {
+  padding-top: 20%;
+}
+
+  @include sauron {
+  padding-top: 10%;
+}
 
 h2 {
 	margin-bottom: 0px;
@@ -139,6 +170,13 @@ h2 {
  	padding-left: 40px;
  	padding-right: 40px; 
  	margin-top: 0px; 
+
+  @include legolas {
+    padding-bottom: 100px;
+  }
+   @include frodo {
+    padding-bottom: 40px;
+  }
  	
  
  }
@@ -171,10 +209,20 @@ h2 {
 background: $light-gray;
 padding-top: 50px;
 
+ @include sauron {
+  padding-top: 12%;
+}
+
 h2 {
 	margin-bottom: 0px;
   margin-top: 0px;
+
+   @include sauron {
+  padding-bottom: 50px;
+}
  }
+
+
 
   p {
      	@include span-columns(8);
@@ -185,6 +233,7 @@ h2 {
 
  .list {
  	@include span-columns(12);
+  padding-bottom: 50px;
  
 
  	@include frodo {
@@ -206,11 +255,7 @@ h2 {
  	text-align: center;
  	color: $yellow;
  	margin-bottom: 25px;
- 	margin-right: 1px;
- 	margin-left: 1px;
-
-
-
+ 	
  	 @include frodo {
  	 @include span-columns(12);
  	 margin-bottom: 40px;
@@ -219,7 +264,7 @@ h2 {
  	 @include legolas {
  	 @include span-columns(6);	
  	 margin-right: 0px;
- 	 margin-bottom: 40px;
+ 	 margin-bottom: 150px;
  	 }
 
  	 @include treebeard {
@@ -266,9 +311,17 @@ h2 {
 background: $white;
 padding-top: 50px;
 
+ @include sauron {
+  padding-top: 12%;
+}
+
 
 h2 {
-	margin-bottom: 0px;
+margin-bottom: 0px;
+ 
+ @include legolas {
+	margin-bottom: 40px;
+  }
 }
 
 .buttons {
@@ -332,13 +385,21 @@ p {
 
 #connect{	
 	background: #000;
-  padding-top: 50px;
+  padding-top: 80px;
+
+   @include sauron {
+  padding-top: 18%;
+}
 
 	
 	h2 {
 		color: $teal;
 		margin-bottom: 0px;
     margin-top: 0px;
+
+    @include legolas {
+      padding-top: 200px;
+    }
 
 	}
 
@@ -352,6 +413,13 @@ p {
 		text-align: center;
     margin-top: 20px;
    margin-bottom: 20px;
+   background-color: #000;
+
+   @include frodo {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+   }
 
 		.fa {
 		color: $yellow;

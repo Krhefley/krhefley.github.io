@@ -13,7 +13,8 @@ html {
 body {
   min-height: 100%;
   width: 100%;
-  margin: 0px; }
+  margin: 0px;
+  padding: 0px; }
 
 section {
   min-height: 100vh;
@@ -32,7 +33,7 @@ h1 {
 h2 {
   text-align: center;
   color: #333333;
-  font-size: 90px;
+  font-size: 80px;
   font-family: 'Oswald';
   margin-top: 0px;
   padding-top: 50px; }
@@ -63,7 +64,8 @@ blockquote {
   text-align: center;
   color: #00b7be;
   font-size: 30px;
-  font-family: 'Damion'; }
+  font-weight: bold;
+  font-family: 'Bilbo'; }
 
 @font-face {
   font-family: 'Oswald';
@@ -82,6 +84,24 @@ blockquote {
   font-style: normal;
   font-weight: 400;
   src: url("fonts/Damion/Damion-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Bilbo';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Bilbo/Bilbo-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Homemade Apple';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Homemade_Apple/HomemadeApple.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'La Belle Aurore';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/La_Belle_Aurore/LaBelleAurore.ttf") format("truetype"); }
 
 header.navigation {
   background-color: #000;
@@ -194,6 +214,9 @@ header.navigation {
   height: 60px;
   /* Height of the footer */
   background: #000; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #footer {
+      display: none; } }
   #footer p {
     padding-top: 20px; }
 
@@ -212,6 +235,12 @@ header.navigation {
     display: block; }
   #home h1 {
     margin-bottom: 0px; }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      #home h1 {
+        padding-top: 30%; } }
+    @media (min-width: 1281px) {
+      #home h1 {
+        padding-top: 15%; } }
   #home h3 {
     float: left;
     display: block;
@@ -219,7 +248,8 @@ header.navigation {
     width: 40.29137%;
     margin-left: 42.64902%;
     color: #00b7be;
-    font-family: 'Damion';
+    font-family: 'Bilbo';
+    font-weight: bold;
     font-size: 35px; }
     #home h3:last-child {
       margin-right: 0; }
@@ -230,7 +260,8 @@ header.navigation {
         margin-right: 2.35765%;
         width: 100%;
         margin-left: 0%;
-        text-align: center; }
+        text-align: center;
+        padding-bottom: 40px; }
         #home h3:last-child {
           margin-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
@@ -254,6 +285,9 @@ header.navigation {
     clear: both;
     content: "";
     display: block; }
+  @media (min-width: 1281px) {
+    #about {
+      padding-top: 15%; } }
   #about #picture {
     float: left;
     display: block;
@@ -301,7 +335,8 @@ header.navigation {
         margin-right: 2.35765%;
         width: 82.94039%;
         margin-left: 8.5298%;
-        text-align: center; }
+        text-align: center;
+        padding-top: 0px; }
         #about #about-me-text:last-child {
           margin-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
@@ -311,7 +346,8 @@ header.navigation {
         margin-right: 2.35765%;
         width: 82.94039%;
         margin-left: 8.5298%;
-        text-align: center; }
+        text-align: center;
+        padding-top: 0px; }
         #about #about-me-text:last-child {
           margin-right: 0; } }
     #about #about-me-text p {
@@ -326,7 +362,8 @@ header.navigation {
           text-align: center; } }
       @media (min-width: 768px) and (max-width: 1024px) {
         #about #about-me-text p {
-          text-align: center; } }
+          text-align: center;
+          padding-bottom: 0px; } }
   #about .quote {
     float: left;
     display: block;
@@ -336,6 +373,9 @@ header.navigation {
     text-align: center; }
     #about .quote:last-child {
       margin-right: 0; }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      #about .quote {
+        padding-bottom: 100px; } }
 
 #process {
   max-width: 2000px;
@@ -347,6 +387,12 @@ header.navigation {
     clear: both;
     content: "";
     display: block; }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #process {
+      padding-top: 20%; } }
+  @media (min-width: 1281px) {
+    #process {
+      padding-top: 10%; } }
   #process h2 {
     margin-bottom: 0px; }
   #process .process-paragraph {
@@ -367,6 +413,12 @@ header.navigation {
     margin-top: 0px; }
     #process .list:last-child {
       margin-right: 0; }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      #process .list {
+        padding-bottom: 100px; } }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #process .list {
+        padding-bottom: 40px; } }
   #process .process-item {
     float: left;
     display: block;
@@ -405,9 +457,15 @@ header.navigation {
     clear: both;
     content: "";
     display: block; }
+  @media (min-width: 1281px) {
+    #work {
+      padding-top: 12%; } }
   #work h2 {
     margin-bottom: 0px;
     margin-top: 0px; }
+    @media (min-width: 1281px) {
+      #work h2 {
+        padding-bottom: 50px; } }
   #work p {
     float: left;
     display: block;
@@ -420,7 +478,8 @@ header.navigation {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%; }
+    width: 100%;
+    padding-bottom: 50px; }
     #work .list:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
@@ -438,9 +497,7 @@ header.navigation {
     width: 23.23176%;
     text-align: center;
     color: #F5D04C;
-    margin-bottom: 25px;
-    margin-right: 1px;
-    margin-left: 1px; }
+    margin-bottom: 25px; }
     #work .work-item:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
@@ -459,10 +516,10 @@ header.navigation {
         margin-right: 2.35765%;
         width: 48.82117%;
         margin-right: 0px;
-        margin-bottom: 40px; }
+        margin-bottom: 150px; }
         #work .work-item:last-child {
           margin-right: 0; } }
-    @media (min-width: 1025px) and (max-width: 1279px) {
+    @media (min-width: 1025px) and (max-width: 1280px) {
       #work .work-item {
         float: left;
         display: block;
@@ -497,8 +554,14 @@ header.navigation {
     clear: both;
     content: "";
     display: block; }
+  @media (min-width: 1281px) {
+    #skills {
+      padding-top: 12%; } }
   #skills h2 {
     margin-bottom: 0px; }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      #skills h2 {
+        margin-bottom: 40px; } }
   #skills .buttons {
     float: left;
     display: block;
@@ -552,11 +615,17 @@ header.navigation {
 
 #connect {
   background: #000;
-  padding-top: 50px; }
+  padding-top: 80px; }
+  @media (min-width: 1281px) {
+    #connect {
+      padding-top: 18%; } }
   #connect h2 {
     color: #00b7be;
     margin-bottom: 0px;
     margin-top: 0px; }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      #connect h2 {
+        padding-top: 200px; } }
   #connect p {
     float: left;
     display: block;
@@ -573,9 +642,15 @@ header.navigation {
     width: 100%;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    background-color: #000; }
     #connect .icons:last-child {
       margin-right: 0; }
+    @media (min-width: 320px) and (max-width: 767px) {
+      #connect .icons {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 20px; } }
     #connect .icons .fa {
       color: #F5D04C;
       margin-right: 15px;

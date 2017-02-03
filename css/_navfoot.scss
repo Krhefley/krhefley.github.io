@@ -189,6 +189,10 @@
    height:60px;   /* Height of the footer */
    background:#000;
 
+   @include frodo {
+    display: none;
+   }
+
    p {
     padding-top: 20px;
    }
