@@ -1,7 +1,6 @@
 	@import "bourbon/_bourbon";
 	@import "neat/_neat";
-	@import "base";
-	@import "typography";
+	@import "base";	
 	@import "navfoot";
 	@import "section";
 
@@ -10,16 +9,13 @@
    .back {
    	width: 10%;
    	text-align: center;
-   	margin-right: auto;
-   	margin-left: auto;
+   	margin: 40px auto 40px auto;
    	float: none;
    	border: 2px solid $dark-gray;
     border-radius: 10px;
    	font-size: 28px;
-   	font-family: 'Oswald';
+   	font-family: 'Oswald', sans-serif;
    	font-weight: bold;
-   	margin-top: 40px;
-   margin-bottom: 40px;
    display: block;
    background-color: transparent;
 
@@ -31,12 +27,6 @@
    	background-color: $yellow;
     text-decoration: none; 
     border-color: $yellow;
-   }
-
-   
-
-   @include frodo {
-    width: 40%;
    }
 
  	a{
@@ -53,17 +43,14 @@
 
  .launch {
     text-align: center;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    float: none !important;
-    width: 40% !important;
+    margin: 40px auto 40px auto;
+    float: none;
+    width: 40%;
     border: 2px solid $dark-gray;
     border-radius: 10px;
     font-size: 28px;
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     font-weight: bold;
-    margin-top: 40px;
-   margin-bottom: 40px;
    display: block;
    background-color: transparent;
    @include frodo {
@@ -96,12 +83,6 @@
 
     //boxes
 
-    .content {
-    	@include outer-container;
-    	@include span-columns(12);
-
-    }
-
     .box {
     	@include span-columns(6);
     	color: $dark-gray;
@@ -109,7 +90,7 @@
     	background-color: transparent;
     	margin-top: 6%;    	
     	padding: 30px;
-    	font-family: 'Raleway';
+    	font-family: 'Raleway', sans-serif;
       font-size: 22px;
     	border: 1px solid transparent;
     	border-radius: 15px;
@@ -139,13 +120,13 @@
 
     .mockups {
     	@include span-columns(6);
-    	margin-right: 0px;
     	text-align: center;
     	margin-top: 10px;
+      margin-right: 0px;
 
     	img {
  			width: 100%;
- 			margin: 0px;
+ 			margin: 0;
     	}
 
       @include legolas {
@@ -161,8 +142,6 @@
 
      .about {
     	@include span-columns(12);
-    	float: none;
-    	display: inline-block;
     	margin-top: 15px;
     	margin-bottom: 20px;
 

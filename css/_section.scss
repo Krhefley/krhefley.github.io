@@ -1,57 +1,17 @@
-.active {
-	a {color: $yellow !important;}
-}
+
 	
 
 	//INTRODUCTION SECTION
 
-#home {
+.home {
  @include outer-container;
  background-color: #000000;
 padding-top: 50px;
 
- h1 {
-margin-bottom: 0px;
-
-@include legolas {
-  padding-top: 30%;
-}
-
-@include sauron {
-  padding-top: 15%;
-}
-
-
- }
-
- h3 {
- @include span-columns(5);
- @include shift (5);
- color: $teal;
- font-family: 'Bilbo';
- font-weight: bold;
- font-size: 35px;
-
- @include frodo {
-  @include span-columns(12);
-  @include shift(0);
-  text-align: center;
-  padding-bottom: 40px;
- }
-
- @include legolas {
- @include span-columns(12);
- @include shift(0);
- text-align: center;
-
-
- }
-
- }
 
 }
 
-#about {
+.about {
 	@include outer-container;
 	background: $light-gray;
   padding-top: 50px;
@@ -60,7 +20,7 @@ margin-bottom: 0px;
   padding-top: 15%;
 }
 
- #picture {
+ .picture {
  	@include span-columns(3);
  	@include shift (1);
  	padding-bottom: 20px;
@@ -85,7 +45,7 @@ margin-bottom: 0px;
  }
 
 
- #about-me-text {
+ .text {
 @include span-columns(6);
 @include shift (1);
 padding-top: 60px;
@@ -94,23 +54,21 @@ padding-top: 60px;
  		@include span-columns(10);
  		@include shift(1);
  		text-align: center;
-    padding-top: 0px;
+    padding-top: 0;
   }
 
  	@include legolas {
  		@include span-columns(10);
  		@include shift(1);
  		text-align: center;
-    padding-top: 0px;
+    padding-top: 0;
  	}
  
  p {  
-  font-size: 22px;
   text-align: left;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: $dark-gray;
-  margin-top: 0px;
+  margin-top: 0;
 
    @include frodo {
  		text-align: center;
@@ -118,7 +76,7 @@ padding-top: 60px;
 
  	@include legolas {
  		text-align: center;
-    padding-bottom: 0px;
+    padding-bottom: 0;
  	}
 
  
@@ -142,7 +100,7 @@ padding-top: 60px;
 }
 
 
-#process {
+.process {
 @include outer-container;
 background: $white;
 padding-top: 50px;
@@ -156,20 +114,19 @@ padding-top: 50px;
   padding-top: 10%;
 }
 
-h2 {
-	margin-bottom: 0px;
-}
 
 .process-paragraph {
 	@include span-columns(10);
 	@include shift(1);
 }
 
+
+
  .list {
  	@include span-columns(12);
  	padding-left: 40px;
  	padding-right: 40px; 
- 	margin-top: 0px; 
+ 	margin-top: 0; 
 
   @include legolas {
     padding-bottom: 100px;
@@ -193,8 +150,8 @@ h2 {
  	 @include span-columns(12);	
  	 }
  	  .fa {
- 	font-size: 50px;
  	color: $teal;
+  font-size: 50px;
  }
  }
 
@@ -204,7 +161,7 @@ h2 {
 
 
 
-#work{
+.work{
 @include outer-container;
 background: $light-gray;
 padding-top: 50px;
@@ -213,14 +170,6 @@ padding-top: 50px;
   padding-top: 12%;
 }
 
-h2 {
-	margin-bottom: 0px;
-  margin-top: 0px;
-
-   @include sauron {
-  padding-bottom: 50px;
-}
- }
 
 
 
@@ -234,12 +183,13 @@ h2 {
  .list {
  	@include span-columns(12);
   padding-bottom: 50px;
+   padding-top: 50px;
  
 
  	@include frodo {
      	padding-bottom: 120px;
-     	padding-left: 0px;
-     	padding-right: 0px;
+     	padding-left: 0;
+     	padding-right: 0;
      	
      }
 
@@ -247,7 +197,6 @@ h2 {
      	padding-bottom: 100px;
      	
      }
- 
  }
 
  .work-item {
@@ -263,14 +212,14 @@ h2 {
  	 }
  	 @include legolas {
  	 @include span-columns(6);	
- 	 margin-right: 0px;
  	 margin-bottom: 150px;
+   margin-right: 0;
  	 }
 
  	 @include treebeard {
  	 	@include span-columns(6);	
- 	 margin-right: 0px;
  	 margin-bottom: 40px;
+   margin-right: 0;
 
  	 }
 
@@ -296,17 +245,14 @@ h2 {
 
  }
 
- .fa {
- 	font-size: 50px;
- 	color: $white;
- }
+
 
 }
 
 
 
 
- #skills{
+ .skills{
 @include outer-container;
 background: $white;
 padding-top: 50px;
@@ -316,17 +262,10 @@ padding-top: 50px;
 }
 
 
-h2 {
-margin-bottom: 0px;
- 
- @include legolas {
-	margin-bottom: 40px;
-  }
-}
-
 .buttons {
 @include span-columns(12);
 text-align: center;
+margin-top: 40px;
 
 @include frodo {
   padding-bottom: 60px;
@@ -334,11 +273,11 @@ text-align: center;
 
 
 .skills-button {
-	border: none !important;
+	border: none;
     border-radius: 10px;
     padding: 10px;
     font-size: 28px;
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     font-weight: bold;
    background-color: $yellow;
    margin-right: 20px;
@@ -347,6 +286,7 @@ text-align: center;
    	@include span-columns(8);
    	@include shift(2);
 	   margin-top: 20px;
+     font-size: 20px;
 
 }
 
@@ -360,20 +300,19 @@ text-align: center;
     	border-color: $light-gray;
 
     	.button-a{
-    		color: $light-gray !important;
+    		color: $light-gray;
     	}
     }
 
    .button-a{
    	text-decoration: none;
-   	color: $dark-gray !important;
+   	color: $dark-gray;
 
    }
 
 }
 }
 p {
-	color: $dark-gray;
 	@include shift(2);
 	@include span-columns(8);
 }
@@ -383,7 +322,7 @@ p {
  
 
 
-#connect{	
+.connect{	
 	background: #000;
   padding-top: 80px;
 
@@ -391,21 +330,26 @@ p {
   padding-top: 18%;
 }
 
+@include legolas {
+  padding-top: 200px;
+}
 	
-	h2 {
+	.connect-heading {
 		color: $teal;
-		margin-bottom: 0px;
-    margin-top: 0px;
-
-    @include legolas {
-      padding-top: 200px;
-    }
-
 	}
 
-	p{  @include span-columns(8);
+	p{ @include span-columns(8);
 		@include shift(2);
 		color: $light-gray;
+
+    @include frodo {
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom:0;
+    }
+
 	}
 
 	.icons {
@@ -416,8 +360,8 @@ p {
    background-color: #000;
 
    @include frodo {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-bottom: 20px;
    }
 
@@ -425,7 +369,15 @@ p {
 		color: $yellow;
 		margin-right:15px;
 		margin-left: 15px;
-		font-size: 50px;
+    font-size: 50px;
+
+    @include frodo {
+      margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        font-size: 25px;
+    }
 
 		&:hover {
 			color: $teal;

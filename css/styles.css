@@ -7,20 +7,20 @@ html {
 html {
   height: 100%;
   width: 100%;
-  margin: 0px;
-  padding: 0px; }
+  margin: 0;
+  padding: 0; }
 
 body {
   min-height: 100%;
   width: 100%;
-  margin: 0px;
-  padding: 0px; }
+  margin: 0;
+  padding: 0; }
 
 section {
   min-height: 100vh;
   width: 100vw; }
 
-#container {
+.container {
   min-height: 100%;
   position: relative; }
 
@@ -28,80 +28,90 @@ h1 {
   text-align: center;
   color: #FFF;
   font-size: 90px;
-  font-family: 'Oswald'; }
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 0; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    h1 {
+      font-size: 70px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+      padding-top: 20%; } }
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    h1 {
+      padding-top: 11%; } }
+  @media (min-width: 1281px) {
+    h1 {
+      padding-top: 15%; } }
 
 h2 {
   text-align: center;
   color: #333333;
   font-size: 80px;
-  font-family: 'Oswald';
-  margin-top: 0px;
-  padding-top: 50px; }
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0;
+  padding-top: 50px;
+  margin-bottom: 0; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    h2 {
+      font-size: 50px; } }
 
 h3 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+  margin-left: 42.64902%;
   text-align: center;
-  color: #333333;
-  font-size: 40px;
-  font-family: 'Oswald';
+  font-family: 'Bilbo', cursive;
   margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  color: #00b7be;
+  font-weight: bold;
+  font-size: 35px; }
+  h3:last-child {
+    margin-right: 0; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    h3 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin-left: 0%;
+      text-align: center;
+      padding-bottom: 40px; }
+      h3:last-child {
+        margin-right: 0; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    h3 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin-left: 0%;
+      text-align: center; }
+      h3:last-child {
+        margin-right: 0; } }
 
 h4 {
   text-align: center;
   color: #333333;
   font-size: 28px;
-  font-family: 'Oswald';
-  margin-top: 0px; }
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0; }
 
 p {
   color: #333333;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   text-align: center;
-  font-size: 18px;
-  margin-top: 0px; }
+  font-size: 20px;
+  margin-top: 0; }
 
 blockquote {
   text-align: center;
   color: #00b7be;
   font-size: 30px;
   font-weight: bold;
-  font-family: 'Bilbo'; }
-
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: url("fonts/Oswald/Oswald-Regular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400;
-  src: url("fonts/Raleway/Raleway-Regular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Damion';
-  font-style: normal;
-  font-weight: 400;
-  src: url("fonts/Damion/Damion-Regular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Bilbo';
-  font-style: normal;
-  font-weight: 400;
-  src: url("fonts/Bilbo/Bilbo-Regular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Homemade Apple';
-  font-style: normal;
-  font-weight: 400;
-  src: url("fonts/Homemade_Apple/HomemadeApple.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'La Belle Aurore';
-  font-style: normal;
-  font-weight: 400;
-  src: url("fonts/La_Belle_Aurore/LaBelleAurore.ttf") format("truetype"); }
+  font-family: 'Bilbo', cursive; }
 
 header.navigation {
   background-color: #000;
@@ -127,7 +137,7 @@ header.navigation {
       padding: 0.8em 0; }
   header.navigation .navigation-menu-button {
     color: #00b7be;
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     display: block;
     float: right;
     line-height: 60px;
@@ -160,12 +170,11 @@ header.navigation {
     @media screen and (min-width: 53.75em) {
       header.navigation ul.navigation-menu {
         display: inline;
-        margin: 0;
         padding: 0; } }
   header.navigation ul li.nav-link {
     background: #000;
     display: block;
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     line-height: 60px;
     overflow: hidden;
     padding-right: 0.8em;
@@ -174,9 +183,7 @@ header.navigation {
     z-index: 9999; }
     @media (min-width: 320px) and (max-width: 767px) {
       header.navigation ul li.nav-link {
-        background-color: #333 !important; } }
-    header.navigation ul li.nav-link li.nav-link.active a {
-      color: #F5D04C; }
+        background: #333; } }
     @media screen and (min-width: 53.75em) {
       header.navigation ul li.nav-link {
         background: transparent;
@@ -194,101 +201,46 @@ header.navigation {
       header.navigation ul li.nav-link a:focus, header.navigation ul li.nav-link a:hover {
         color: #F5D04C; }
   header.navigation .active-nav-item a {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #F5D04C;
     padding-bottom: 3px; }
-  header.navigation .navigation-tools {
-    background: #505050;
-    clear: both;
-    display: block;
-    height: 60px; }
-    @media screen and (min-width: 53.75em) {
-      header.navigation .navigation-tools {
-        background: transparent;
-        clear: none;
-        float: right; } }
 
-#footer {
+.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 60px;
-  /* Height of the footer */
   background: #000; }
   @media (min-width: 320px) and (max-width: 767px) {
-    #footer {
+    .footer {
       display: none; } }
-  #footer p {
+  .footer p {
     padding-top: 20px; }
 
-.active a {
-  color: #F5D04C !important; }
-
-#home {
+.home {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   background-color: #000000;
   padding-top: 50px; }
-  #home::after {
+  .home::after {
     clear: both;
     content: "";
     display: block; }
-  #home h1 {
-    margin-bottom: 0px; }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #home h1 {
-        padding-top: 30%; } }
-    @media (min-width: 1281px) {
-      #home h1 {
-        padding-top: 15%; } }
-  #home h3 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 40.29137%;
-    margin-left: 42.64902%;
-    color: #00b7be;
-    font-family: 'Bilbo';
-    font-weight: bold;
-    font-size: 35px; }
-    #home h3:last-child {
-      margin-right: 0; }
-    @media (min-width: 320px) and (max-width: 767px) {
-      #home h3 {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 100%;
-        margin-left: 0%;
-        text-align: center;
-        padding-bottom: 40px; }
-        #home h3:last-child {
-          margin-right: 0; } }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #home h3 {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 100%;
-        margin-left: 0%;
-        text-align: center; }
-        #home h3:last-child {
-          margin-right: 0; } }
 
-#about {
+.about {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   background: #ececec;
   padding-top: 50px; }
-  #about::after {
+  .about::after {
     clear: both;
     content: "";
     display: block; }
   @media (min-width: 1281px) {
-    #about {
+    .about {
       padding-top: 15%; } }
-  #about #picture {
+  .about .picture {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -296,201 +248,192 @@ header.navigation {
     margin-left: 8.5298%;
     padding-bottom: 20px;
     padding-top: 60px; }
-    #about #picture:last-child {
+    .about .picture:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #about #picture {
+      .about .picture {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 65.88078%;
         margin-left: 17.05961%; }
-        #about #picture:last-child {
+        .about .picture:last-child {
           margin-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #about #picture {
+      .about .picture {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 65.88078%;
         margin-left: 17.05961%; }
-        #about #picture:last-child {
+        .about .picture:last-child {
           margin-right: 0; } }
-    #about #picture img {
+    .about .picture img {
       width: 100%;
       height: 100%; }
-  #about #about-me-text {
+  .about .text {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
     margin-left: 8.5298%;
     padding-top: 60px; }
-    #about #about-me-text:last-child {
+    .about .text:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #about #about-me-text {
+      .about .text {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 82.94039%;
         margin-left: 8.5298%;
         text-align: center;
-        padding-top: 0px; }
-        #about #about-me-text:last-child {
+        padding-top: 0; }
+        .about .text:last-child {
           margin-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #about #about-me-text {
+      .about .text {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 82.94039%;
         margin-left: 8.5298%;
         text-align: center;
-        padding-top: 0px; }
-        #about #about-me-text:last-child {
+        padding-top: 0; }
+        .about .text:last-child {
           margin-right: 0; } }
-    #about #about-me-text p {
-      font-size: 22px;
+    .about .text p {
       text-align: left;
       padding-top: 20px;
       padding-bottom: 20px;
-      color: #333333;
-      margin-top: 0px; }
+      margin-top: 0; }
       @media (min-width: 320px) and (max-width: 767px) {
-        #about #about-me-text p {
+        .about .text p {
           text-align: center; } }
       @media (min-width: 768px) and (max-width: 1024px) {
-        #about #about-me-text p {
+        .about .text p {
           text-align: center;
-          padding-bottom: 0px; } }
-  #about .quote {
+          padding-bottom: 0; } }
+  .about .quote {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%;
     margin-left: 8.5298%;
     text-align: center; }
-    #about .quote:last-child {
+    .about .quote:last-child {
       margin-right: 0; }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #about .quote {
+      .about .quote {
         padding-bottom: 100px; } }
 
-#process {
+.process {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   background: #FFF;
   padding-top: 50px; }
-  #process::after {
+  .process::after {
     clear: both;
     content: "";
     display: block; }
   @media (min-width: 768px) and (max-width: 1024px) {
-    #process {
+    .process {
       padding-top: 20%; } }
   @media (min-width: 1281px) {
-    #process {
+    .process {
       padding-top: 10%; } }
-  #process h2 {
-    margin-bottom: 0px; }
-  #process .process-paragraph {
+  .process .process-paragraph {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%;
     margin-left: 8.5298%; }
-    #process .process-paragraph:last-child {
+    .process .process-paragraph:last-child {
       margin-right: 0; }
-  #process .list {
+  .process .list {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
     padding-left: 40px;
     padding-right: 40px;
-    margin-top: 0px; }
-    #process .list:last-child {
+    margin-top: 0; }
+    .process .list:last-child {
       margin-right: 0; }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #process .list {
+      .process .list {
         padding-bottom: 100px; } }
     @media (min-width: 320px) and (max-width: 767px) {
-      #process .list {
+      .process .list {
         padding-bottom: 40px; } }
-  #process .process-item {
+  .process .process-item {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%;
     text-align: center; }
-    #process .process-item:last-child {
+    .process .process-item:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #process .process-item {
+      .process .process-item {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%; }
-        #process .process-item:last-child {
+        .process .process-item:last-child {
           margin-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #process .process-item {
+      .process .process-item {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%; }
-        #process .process-item:last-child {
+        .process .process-item:last-child {
           margin-right: 0; } }
-    #process .process-item .fa {
-      font-size: 50px;
-      color: #00b7be; }
+    .process .process-item .fa {
+      color: #00b7be;
+      font-size: 50px; }
 
-#work {
+.work {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   background: #ececec;
   padding-top: 50px; }
-  #work::after {
+  .work::after {
     clear: both;
     content: "";
     display: block; }
   @media (min-width: 1281px) {
-    #work {
+    .work {
       padding-top: 12%; } }
-  #work h2 {
-    margin-bottom: 0px;
-    margin-top: 0px; }
-    @media (min-width: 1281px) {
-      #work h2 {
-        padding-bottom: 50px; } }
-  #work p {
+  .work p {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%;
     margin-left: 17.05961%; }
-    #work p:last-child {
+    .work p:last-child {
       margin-right: 0; }
-  #work .list {
+  .work .list {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
-    padding-bottom: 50px; }
-    #work .list:last-child {
+    padding-bottom: 50px;
+    padding-top: 50px; }
+    .work .list:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #work .list {
+      .work .list {
         padding-bottom: 120px;
-        padding-left: 0px;
-        padding-right: 0px; } }
+        padding-left: 0;
+        padding-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #work .list {
+      .work .list {
         padding-bottom: 100px; } }
-  #work .work-item {
+  .work .work-item {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -498,144 +441,142 @@ header.navigation {
     text-align: center;
     color: #F5D04C;
     margin-bottom: 25px; }
-    #work .work-item:last-child {
+    .work .work-item:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #work .work-item {
+      .work .work-item {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 100%;
         margin-bottom: 40px; }
-        #work .work-item:last-child {
+        .work .work-item:last-child {
           margin-right: 0; } }
     @media (min-width: 768px) and (max-width: 1024px) {
-      #work .work-item {
+      .work .work-item {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 48.82117%;
-        margin-right: 0px;
-        margin-bottom: 150px; }
-        #work .work-item:last-child {
+        margin-bottom: 150px;
+        margin-right: 0; }
+        .work .work-item:last-child {
           margin-right: 0; } }
     @media (min-width: 1025px) and (max-width: 1280px) {
-      #work .work-item {
+      .work .work-item {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 48.82117%;
-        margin-right: 0px;
-        margin-bottom: 40px; }
-        #work .work-item:last-child {
+        margin-bottom: 40px;
+        margin-right: 0; }
+        .work .work-item:last-child {
           margin-right: 0; } }
-    #work .work-item .site-image {
+    .work .work-item .site-image {
       width: 300px;
       height: 200px;
       margin-right: auto;
       margin-left: auto; }
-      #work .work-item .site-image:hover img {
+      .work .work-item .site-image:hover img {
         border-color: #F5D04C;
         cursor: pointer; }
-      #work .work-item .site-image img {
+      .work .work-item .site-image img {
         width: 100%;
         height: auto; }
-  #work .fa {
-    font-size: 50px;
-    color: #FFF; }
 
-#skills {
+.skills {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   background: #FFF;
   padding-top: 50px; }
-  #skills::after {
+  .skills::after {
     clear: both;
     content: "";
     display: block; }
   @media (min-width: 1281px) {
-    #skills {
+    .skills {
       padding-top: 12%; } }
-  #skills h2 {
-    margin-bottom: 0px; }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #skills h2 {
-        margin-bottom: 40px; } }
-  #skills .buttons {
+  .skills .buttons {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
-    text-align: center; }
-    #skills .buttons:last-child {
+    text-align: center;
+    margin-top: 40px; }
+    .skills .buttons:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #skills .buttons {
+      .skills .buttons {
         padding-bottom: 60px; } }
-    #skills .buttons .skills-button {
-      border: none !important;
+    .skills .buttons .skills-button {
+      border: none;
       border-radius: 10px;
       padding: 10px;
       font-size: 28px;
-      font-family: 'Oswald';
+      font-family: 'Oswald', sans-serif;
       font-weight: bold;
       background-color: #F5D04C;
       margin-right: 20px; }
       @media (min-width: 320px) and (max-width: 767px) {
-        #skills .buttons .skills-button {
+        .skills .buttons .skills-button {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 65.88078%;
           margin-left: 17.05961%;
-          margin-top: 20px; }
-          #skills .buttons .skills-button:last-child {
+          margin-top: 20px;
+          font-size: 20px; }
+          .skills .buttons .skills-button:last-child {
             margin-right: 0; } }
-      #skills .buttons .skills-button:last-child {
+      .skills .buttons .skills-button:last-child {
         padding-right: 22px;
         padding-left: 22px; }
-      #skills .buttons .skills-button:hover {
+      .skills .buttons .skills-button:hover {
         background-color: #333333;
         border-color: #ececec; }
-        #skills .buttons .skills-button:hover .button-a {
-          color: #ececec !important; }
-      #skills .buttons .skills-button .button-a {
+        .skills .buttons .skills-button:hover .button-a {
+          color: #ececec; }
+      .skills .buttons .skills-button .button-a {
         text-decoration: none;
-        color: #333333 !important; }
-  #skills p {
-    color: #333333;
+        color: #333333; }
+  .skills p {
     margin-left: 17.05961%;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    #skills p:last-child {
+    .skills p:last-child {
       margin-right: 0; }
 
-#connect {
+.connect {
   background: #000;
   padding-top: 80px; }
   @media (min-width: 1281px) {
-    #connect {
+    .connect {
       padding-top: 18%; } }
-  #connect h2 {
-    color: #00b7be;
-    margin-bottom: 0px;
-    margin-top: 0px; }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      #connect h2 {
-        padding-top: 200px; } }
-  #connect p {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .connect {
+      padding-top: 200px; } }
+  .connect .connect-heading {
+    color: #00b7be; }
+  .connect p {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%;
     margin-left: 17.05961%;
     color: #ececec; }
-    #connect p:last-child {
+    .connect p:last-child {
       margin-right: 0; }
-  #connect .icons {
+    @media (min-width: 320px) and (max-width: 767px) {
+      .connect p {
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0; } }
+  .connect .icons {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -644,35 +585,39 @@ header.navigation {
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: #000; }
-    #connect .icons:last-child {
+    .connect .icons:last-child {
       margin-right: 0; }
     @media (min-width: 320px) and (max-width: 767px) {
-      #connect .icons {
-        margin-top: 0px;
-        margin-bottom: 0px;
+      .connect .icons {
+        margin-top: 0;
+        margin-bottom: 0;
         padding-bottom: 20px; } }
-    #connect .icons .fa {
+    .connect .icons .fa {
       color: #F5D04C;
       margin-right: 15px;
       margin-left: 15px;
       font-size: 50px; }
-      #connect .icons .fa:hover {
+      @media (min-width: 320px) and (max-width: 767px) {
+        .connect .icons .fa {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 10px;
+          padding-bottom: 20px;
+          font-size: 25px; } }
+      .connect .icons .fa:hover {
         color: #00b7be;
         cursor: pointer; }
 
 .back {
   width: 10%;
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 40px auto 40px auto;
   float: none;
   border: 2px solid #333333;
   border-radius: 10px;
   font-size: 28px;
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-weight: bold;
-  margin-top: 40px;
-  margin-bottom: 40px;
   display: block;
   background-color: transparent; }
   @media (min-width: 320px) and (max-width: 767px) {
@@ -682,9 +627,6 @@ header.navigation {
     background-color: #F5D04C;
     text-decoration: none;
     border-color: #F5D04C; }
-  @media (min-width: 320px) and (max-width: 767px) {
-    .back {
-      width: 40%; } }
   .back a {
     text-decoration: none;
     color: #333333; }
@@ -694,17 +636,14 @@ header.navigation {
 
 .launch {
   text-align: center;
-  margin-right: auto !important;
-  margin-left: auto !important;
-  float: none !important;
-  width: 40% !important;
+  margin: 40px auto 40px auto;
+  float: none;
+  width: 40%;
   border: 2px solid #333333;
   border-radius: 10px;
   font-size: 28px;
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-weight: bold;
-  margin-top: 40px;
-  margin-bottom: 40px;
   display: block;
   background-color: transparent; }
   @media (min-width: 320px) and (max-width: 767px) {
@@ -724,21 +663,6 @@ header.navigation {
       color: #333333;
       text-decoration: none; }
 
-.content {
-  max-width: 2000px;
-  margin-left: auto;
-  margin-right: auto;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .content::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .content:last-child {
-    margin-right: 0; }
-
 .box {
   float: left;
   display: block;
@@ -749,7 +673,7 @@ header.navigation {
   background-color: transparent;
   margin-top: 6%;
   padding: 30px;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-size: 22px;
   border: 1px solid transparent;
   border-radius: 15px; }
@@ -793,14 +717,14 @@ header.navigation {
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    margin-right: 0px;
     text-align: center;
-    margin-top: 10px; }
+    margin-top: 10px;
+    margin-right: 0px; }
     .content .mockups:last-child {
       margin-right: 0; }
     .content .mockups img {
       width: 100%;
-      margin: 0px; }
+      margin: 0; }
     @media (min-width: 768px) and (max-width: 1024px) {
       .content .mockups {
         float: left;
@@ -824,8 +748,6 @@ header.navigation {
     display: block;
     margin-right: 2.35765%;
     width: 100%;
-    float: none;
-    display: inline-block;
     margin-top: 15px;
     margin-bottom: 20px; }
     .content .about:last-child {

@@ -36,6 +36,12 @@
 		}
 	}
 
+	@mixin legolas-landscape {
+		@media (min-width: #{$medium}) and (max-width: #{$large - 1px}) and (orientation: landscape) {
+			@content;
+		}
+	}
+
 
 	@mixin frodo {
 		@media (min-width: #{$small}) and (max-width: #{$medium - 1px}) {
@@ -47,16 +53,16 @@
 html {
     height:100%;
     width: 100%;
-    margin:0px;
-    padding: 0px;
+    margin:0;
+    padding: 0;
   
 }
 
 body {
  	min-height:100%;
     width: 100%;
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
   
 
 }
@@ -68,7 +74,9 @@ section {
 
 }
 
-#container {
+
+
+.container {
    min-height:100%;
    position:relative;
 }
@@ -79,7 +87,25 @@ section {
 text-align: center;
 color: $white;
 font-size: 90px;
-font-family: 'Oswald';
+font-family: 'Oswald', sans-serif;
+margin-bottom: 0;
+
+@include frodo {
+	font-size: 70px;
+}
+
+@include legolas {
+  padding-top: 20%;
+}
+
+@include legolas-landscape {
+ padding-top: 11%;
+}
+
+@include sauron {
+  padding-top: 15%;
+}
+
 
 }
 
@@ -87,19 +113,41 @@ h2 {
 text-align: center;
 color: $dark-gray;
 font-size: 80px;
-font-family: 'Oswald';
-margin-top: 0px;
+font-family: 'Oswald', sans-serif;
+margin-top: 0;
 padding-top: 50px;
+margin-bottom: 0;
+@include frodo {
+	font-size: 50px;
+}
 
 }
 
 h3 {
+@include span-columns(5);
+@include shift (5);
 text-align: center;
-color: $dark-gray;
-font-size: 40px;
-font-family: 'Oswald';
+font-family: 'Bilbo', cursive;
 margin-top: 10px;
 margin-bottom: 10px;
+ color: $teal;
+ font-weight: bold;
+ font-size: 35px;
+
+ @include frodo {
+  @include span-columns(12);
+  @include shift(0);
+  text-align: center;
+  padding-bottom: 40px;
+ }
+
+ @include legolas {
+ @include span-columns(12);
+ @include shift(0);
+ text-align: center;
+
+
+ }
 
 
 }
@@ -108,18 +156,18 @@ h4 {
 text-align: center;
 color: $dark-gray;
 font-size: 28px;
-font-family: 'Oswald';
-margin-top: 0px;
+font-family: 'Oswald', sans-serif;
+margin-top: 0;
 
 
 }
 
  p {
    color: $dark-gray;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   text-align: center;
-  font-size: 18px;
-  margin-top: 0px;
+  font-size: 20px;
+  margin-top: 0;
 
  }
 
@@ -128,10 +176,11 @@ text-align: center;
 color: $teal;
 font-size: 30px;
 font-weight: bold;
-font-family: 'Bilbo';
+font-family: 'Bilbo', cursive;
 
 
  }
+
 
 
 

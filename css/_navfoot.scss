@@ -1,10 +1,7 @@
 
 //NAVIGATION
 	header.navigation {
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
   $action-color: $yellow !default;
-  $dark-gray: #333 !default;
   $large-screen: 53.75em !default;
   $navigation-padding: 1em;
   $navigation-background: #000;
@@ -12,13 +9,7 @@
   $navigation-color-hover: $yellow;
   $navigation-height: 60px;
   $navigation-nav-button-background: $action-color;
-  $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
-  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20%);
-  $navigation-search-background: lighten($navigation-background, 5);
-  $navigation-search-border: 1px solid darken($navigation-background, 5);
-  $navigation-active-link-color: transparentize(white, 0.5);
-  $navigation-submenu-padding: 1em;
-  $navigation-submenu-width: 12em;
+  $navigation-active-link-color: $yellow;
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
@@ -52,7 +43,7 @@
 
   .navigation-menu-button {
     color: $navigation-color;
-    font-family: 'Oswald';
+   font-family: 'Oswald', sans-serif;
     display: block;
     float: right;
     line-height: $navigation-height;
@@ -103,7 +94,6 @@
 
     @include media ($horizontal-bar-mode) {
       display: inline;
-      margin: 0;
       padding: 0;
     }
   }
@@ -113,7 +103,7 @@
   ul li.nav-link {
     background: $navigation-background;
     display: block;
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     line-height: $navigation-height;
     overflow: hidden;
     padding-right: 0.8em;
@@ -122,15 +112,10 @@
     z-index: 9999;
 
       @include frodo {
-      background-color:  #333 !important;
+      background:  #333;
    }
 
    
-
-  li.nav-link.active a {
-  color: $yellow;
-}
-
     @include media ($horizontal-bar-mode) {
       background: transparent;
       display: inline;
@@ -163,30 +148,14 @@
     padding-bottom: 3px;
   }
 
-
-
-  // Elements on the far right
-
-  .navigation-tools {
-    background: #505050;
-    clear: both;
-    display: block;
-    height: $navigation-height;
-
-    @include media($horizontal-bar-mode) {
-      background: transparent;
-      clear: none;
-      float: right;
-    }
-  }
 }
 
 
-#footer {
+.footer {
    position:absolute;
    bottom:0;
    width:100%;
-   height:60px;   /* Height of the footer */
+   height:60px;   
    background:#000;
 
    @include frodo {
