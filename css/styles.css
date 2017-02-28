@@ -1075,7 +1075,7 @@ header.navigation {
 
 @media screen and (max-width: 24em) {
   .slides {
-    height: 100vh; }
+    height: 250px; }
   .description {
     font-size: 1em;
     padding: 1.4em; }
