@@ -571,7 +571,10 @@
   top: 20px;
 }
 
-@media screen and (max-width: 65.3125em) {
+@include legolas {
+    .slides {
+    height: 90vh;
+  }
   .description,
   .tiltview {
     width: 100%;
@@ -589,7 +592,10 @@
   }
 }
 
-@media screen and (max-width: 33.75em) {
+@include gollum {
+   .slides {
+    height: 90vh;
+  }
   .description {
     font-size: 1.1em;
   }
@@ -610,7 +616,7 @@
   }
 }
 
-@media screen and (max-width: 24em) {
+@include frodo{
   .slides {
     height: 90vh;
   }

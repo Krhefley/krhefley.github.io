@@ -866,7 +866,9 @@ header.navigation {
 .no-csstransforms3d .tiltview.row {
   top: 20px; }
 
-@media screen and (max-width: 65.3125em) {
+@media (min-width: 768px) and (max-width: 1223px) {
+  .slides {
+    height: 90vh; }
   .description,
   .tiltview {
     width: 100%; }
@@ -878,7 +880,9 @@ header.navigation {
     opacity: 0.3;
     pointer-events: none; } }
 
-@media screen and (max-width: 33.75em) {
+@media (min-width: 320px) and (max-width: 479px) {
+  .slides {
+    height: 90vh; }
   .description {
     font-size: 1.1em; }
   .tiltview {
@@ -893,7 +897,7 @@ header.navigation {
     height: 40px;
     margin: 0 10px; } }
 
-@media screen and (max-width: 24em) {
+@media (min-width: 480px) and (max-width: 767px) {
   .slides {
     height: 90vh; }
   .tiltview {
