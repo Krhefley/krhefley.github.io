@@ -1075,10 +1075,11 @@ header.navigation {
 
 @media screen and (max-width: 24em) {
   .slides {
-    height: 450px; }
+    height: 80vh; }
   .description {
     font-size: 1em;
     padding: 1.4em; }
-  .no-csstransforms3d .tiltview.col,
+  /*.no-csstransforms3d .tiltview.col,
   .no-csstransforms3d .tiltview.row {
-    top: 50; } }
+    top: 50;
+  }*/ }
