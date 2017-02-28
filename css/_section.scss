@@ -5,13 +5,22 @@
     background: linear-gradient(
                      rgba(20,20,20, .4), 
                      rgba(20,20,20, .4)),
-            url("http://localhost:3000/krhefley.github.io/images/stars.jpg");
+            url("http://ricayhefley.com/images/stars.jpg");
       background-position: center center;
       background-size: cover;
       -webkit-box-shadow: 2px 20px 59px 1px rgba(0,0,0,0.33);
       -moz-box-shadow: 2px 20px 59px 1px rgba(0,0,0,0.33);
       box-shadow: 2px 20px 59px 1px rgba(0,0,0,0.33);
 
+#triangle-1 {
+  visibility: hidden;
+}
+#triangle-2 {
+  visibility: hidden;
+}
+#triangle-3 {
+  visibility: hidden;
+}
 
   #triangles {
     @include span-columns(10);
@@ -45,7 +54,7 @@
 
     .service-description {
       @include span-columns(4);
-      height: 320px;
+      height: 400px;
       text-align: center;
       background-color: $white;
       padding: 25px 20px 25px 20px;
