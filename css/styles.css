@@ -614,7 +614,8 @@ header.navigation {
   opacity: 1; }
 
 .description h2 {
-  font-size: 200%; }
+  font-size: 200%;
+  color: #333; }
 
 .tiltview {
   position: absolute;
@@ -871,7 +872,7 @@ header.navigation {
     width: 100%; }
   .tiltview {
     left: 0;
-    top: 50;
+    top: 50%;
     opacity: 0.3;
     pointer-events: none; } }
 
@@ -886,6 +887,11 @@ header.navigation {
 @media screen and (max-width: 24em) {
   .slides {
     height: 90vh; }
+  .tiltview {
+    left: 0;
+    top: 50%;
+    opacity: 0.3;
+    pointer-events: none; }
   .description {
     font-size: 1em;
     padding: 1.4em; }
