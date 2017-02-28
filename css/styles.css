@@ -872,10 +872,9 @@ header.navigation {
     width: 100%; }
   .tiltview.col,
   .tiltview.row {
-    top: 50%; }
+    top: 30%; }
   .tiltview {
     left: 0;
-    bottom: 0;
     opacity: 0.3;
     pointer-events: none; } }
 
@@ -884,12 +883,11 @@ header.navigation {
     font-size: 1.1em; }
   .tiltview {
     left: 0;
-    bottom: 0;
     opacity: 0.3;
     pointer-events: none; }
   .tiltview.col,
   .tiltview.row {
-    top: 50%; }
+    top: 30%; }
   .slideshow > nav span {
     width: 20px;
     height: 40px;
@@ -900,15 +898,14 @@ header.navigation {
     height: 90vh; }
   .tiltview {
     left: 0;
-    bottom: 0;
     opacity: 0.3;
     pointer-events: none; }
   .tiltview.col,
   .tiltview.row {
-    top: 50%; }
+    top: 30%; }
   .description {
     font-size: 1em;
     padding: 1.4em; }
   .no-csstransforms3d .tiltview.col,
   .no-csstransforms3d .tiltview.row {
-    top: 50%; } }
+    top: 30%; } }

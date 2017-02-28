@@ -579,12 +579,11 @@
   }
    .tiltview.col,
  .tiltview.row {
-    top: 50%;
+    top: 30%;
   }
 
   .tiltview {
     left: 0;
-    bottom: 0;
     opacity: 0.3;
     pointer-events: none;
   }
@@ -596,13 +595,12 @@
   }
   .tiltview {
     left: 0;
-    bottom: 0;
     opacity: 0.3;
     pointer-events: none;
   }
    .tiltview.col,
  .tiltview.row {
-    top: 50%;
+    top: 30%;
   }
 
   .slideshow > nav span {
@@ -619,14 +617,13 @@
 
   .tiltview {
     left: 0;
-    bottom:0;
     opacity: 0.3;
     pointer-events: none;
   }
 
  .tiltview.col,
  .tiltview.row {
-    top: 50%;
+    top: 30%;
   }
 
   .description {
@@ -636,7 +633,7 @@
 
   .no-csstransforms3d .tiltview.col,
   .no-csstransforms3d .tiltview.row {
-    top: 50%;
+    top: 30%;
   }
 }
 
