@@ -844,7 +844,7 @@
 
 @media screen and (max-width: 24em) {
   .slides {
-    height: 250px;
+    height: 100vh;
   }
 
   .description {
@@ -854,7 +854,7 @@
 
   .no-csstransforms3d .tiltview.col,
   .no-csstransforms3d .tiltview.row {
-    top: 0;
+    top: 50;
   }
 }
 
