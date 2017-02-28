@@ -242,6 +242,7 @@
 
 .description h2 {
   font-size: 200%;
+  color: #333;
 }
 .tiltview {
   position: absolute;
@@ -574,11 +575,12 @@
   .description,
   .tiltview {
     width: 100%;
+
   }
 
   .tiltview {
     left: 0;
-    top: 50;
+    top: 70%;
     opacity: 0.3;
     pointer-events: none;
   }
@@ -587,6 +589,12 @@
 @media screen and (max-width: 33.75em) {
   .description {
     font-size: 1.1em;
+  }
+  .tiltview {
+    left: 0;
+    top: 70%;
+    opacity: 0.3;
+    pointer-events: none;
   }
 
   .slideshow > nav span {
@@ -599,6 +607,13 @@
 @media screen and (max-width: 24em) {
   .slides {
     height: 90vh;
+  }
+
+  .tiltview {
+    left: 0;
+    top: 70%;
+    opacity: 0.3;
+    pointer-events: none;
   }
 
   .description {
