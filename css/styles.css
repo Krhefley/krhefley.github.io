@@ -884,7 +884,8 @@ header.navigation {
   .slides {
     height: 90vh; }
   .description {
-    font-size: 1.1em; }
+    font-size: 1.1em;
+    width: 100%; }
   .tiltview {
     left: 0;
     opacity: 0.3;
@@ -908,6 +909,7 @@ header.navigation {
   .tiltview.row {
     top: 30%; }
   .description {
+    width: 100%;
     font-size: 1em;
     padding: 1.4em; }
   .no-csstransforms3d .tiltview.col,
