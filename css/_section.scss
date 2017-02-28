@@ -273,6 +273,13 @@
 .description h2 {
   font-size: 200%;
   color: #333;
+
+   @include frodo {
+    font-size: 1.1em;
+  }
+  @include gollum {
+    font-size: 1.1em;
+  }
 }
 
 .tiltview {
@@ -830,6 +837,11 @@
 }
 
 @media screen and (max-width: 33.75em) {
+
+  .slides {
+    height: 80vh;
+  }
+
   .description {
     font-size: 1.1em;
   }
