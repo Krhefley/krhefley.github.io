@@ -870,6 +870,9 @@ header.navigation {
   .description,
   .tiltview {
     width: 100%; }
+  .tiltview.col,
+  .tiltview.row {
+    top: 50%; }
   .tiltview {
     left: 0;
     bottom: 0;
@@ -884,6 +887,9 @@ header.navigation {
     bottom: 0;
     opacity: 0.3;
     pointer-events: none; }
+  .tiltview.col,
+  .tiltview.row {
+    top: 50%; }
   .slideshow > nav span {
     width: 20px;
     height: 40px;
@@ -897,10 +903,12 @@ header.navigation {
     bottom: 0;
     opacity: 0.3;
     pointer-events: none; }
+  .tiltview.col,
+  .tiltview.row {
+    top: 50%; }
   .description {
     font-size: 1em;
     padding: 1.4em; }
-  /*.no-csstransforms3d .tiltview.col,
+  .no-csstransforms3d .tiltview.col,
   .no-csstransforms3d .tiltview.row {
-    top: 0;
-  }*/ }
+    top: 50%; } }
