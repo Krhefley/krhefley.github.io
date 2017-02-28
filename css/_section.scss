@@ -217,6 +217,18 @@
   cursor: pointer;
   margin: 0 3px;
   transition: background-color 0.2s;
+ @include gollum {
+    width: 20px;
+    height: 40px;
+    margin: 0 10px;
+  }
+  @include frodo {
+    width: 20px;
+    height: 40px;
+    margin: 0 10px;
+  }
+
+ 
 }
 
 .slideshow > nav span:hover {
@@ -260,6 +272,7 @@
   font-size: 200%;
   color: #333;
 }
+
 .tiltview {
   position: absolute;
   left: 50%;
@@ -676,11 +689,11 @@
     width: 100%;
     font-size: 1em;
     padding: 1.4em;
-  }
+  }*/
 
   .no-csstransforms3d .tiltview.col,
   .no-csstransforms3d .tiltview.row {
     top: 30%;
   }
-}*/
+
 
