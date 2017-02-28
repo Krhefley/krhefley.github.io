@@ -178,7 +178,7 @@
   padding: 0;
   margin: 0;
   position: relative;
-  height: 500px;
+  height: 80vh;
   width: 100%;
   overflow: hidden;
   background: #ddd;
@@ -234,6 +234,22 @@
   position: relative;
   z-index: 1000;
   opacity: 0;
+
+  @include gollum {
+    width: 100%;
+    padding: 1em 1em;
+    font-size: 1.0em;
+  }
+  @include frodo {
+    width: 100%;
+    padding: 1em 1em;
+    font-size: 1.0em;
+  }
+  @include legolas {
+    width: 100%;
+    padding: 1em 1em;
+    font-size: 1.0em;
+  }
 }
 
 .no-js .description {
@@ -251,6 +267,29 @@
   top: 50%;
   transform-style: preserve-3d;
   transform: translateY(-50%) rotateX(60deg) rotateZ(35deg);
+  ;
+
+   @include gollum {
+    width: 100%;
+    left: 0;
+    opacity: 0.2;
+    pointer-events: none;
+  
+  }
+  @include frodo {
+    width: 100%;
+     left: 0;
+    opacity: 0.2;
+    pointer-events: none;
+
+  }
+  @include legolas {
+    width: 100%;
+     left: 0;
+    opacity: 0.2;
+    pointer-events: none;
+  
+  }
 }
 
 .tiltview a {
@@ -571,7 +610,7 @@
   top: 20px;
 }
 
-@include legolas {
+/*@include legolas {
     .slides {
     height: 90vh;
   }
@@ -582,7 +621,7 @@
   }
    .tiltview.col,
  .tiltview.row {
-    top: 30%;
+    width: 100%;
   }
 
   .tiltview {
@@ -607,7 +646,7 @@
   }
    .tiltview.col,
  .tiltview.row {
-    top: 30%;
+    width: 100%;
   }
 
   .slideshow > nav span {
@@ -630,7 +669,7 @@
 
  .tiltview.col,
  .tiltview.row {
-    top: 30%;
+    width: 100%;
   }
 
   .description {
@@ -643,5 +682,5 @@
   .no-csstransforms3d .tiltview.row {
     top: 30%;
   }
-}
+}*/
 

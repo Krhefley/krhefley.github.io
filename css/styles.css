@@ -561,7 +561,7 @@ header.navigation {
   padding: 0;
   margin: 0;
   position: relative;
-  height: 500px;
+  height: 80vh;
   width: 100%;
   overflow: hidden;
   background: #ddd;
@@ -609,6 +609,21 @@ header.navigation {
   position: relative;
   z-index: 1000;
   opacity: 0; }
+  @media (min-width: 320px) and (max-width: 479px) {
+    .description {
+      width: 100%;
+      padding: 1em 1em;
+      font-size: 1.0em; } }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .description {
+      width: 100%;
+      padding: 1em 1em;
+      font-size: 1.0em; } }
+  @media (min-width: 768px) and (max-width: 1223px) {
+    .description {
+      width: 100%;
+      padding: 1em 1em;
+      font-size: 1.0em; } }
 
 .no-js .description {
   opacity: 1; }
@@ -624,6 +639,24 @@ header.navigation {
   top: 50%;
   transform-style: preserve-3d;
   transform: translateY(-50%) rotateX(60deg) rotateZ(35deg); }
+  @media (min-width: 320px) and (max-width: 479px) {
+    .tiltview {
+      width: 100%;
+      left: 0;
+      opacity: 0.2;
+      pointer-events: none; } }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .tiltview {
+      width: 100%;
+      left: 0;
+      opacity: 0.2;
+      pointer-events: none; } }
+  @media (min-width: 768px) and (max-width: 1223px) {
+    .tiltview {
+      width: 100%;
+      left: 0;
+      opacity: 0.2;
+      pointer-events: none; } }
 
 .tiltview a {
   outline: 1px solid transparent; }
@@ -866,52 +899,76 @@ header.navigation {
 .no-csstransforms3d .tiltview.row {
   top: 20px; }
 
-@media (min-width: 768px) and (max-width: 1223px) {
-  .slides {
-    height: 90vh; }
+/*@include legolas {
+    .slides {
+    height: 90vh;
+  }
   .description,
   .tiltview {
-    width: 100%; }
-  .tiltview.col,
-  .tiltview.row {
-    top: 30%; }
+    width: 100%;
+
+  }
+   .tiltview.col,
+ .tiltview.row {
+    width: 100%;
+  }
+
   .tiltview {
     left: 0;
     opacity: 0.3;
-    pointer-events: none; } }
+    pointer-events: none;
+  }
+}
 
-@media (min-width: 320px) and (max-width: 479px) {
-  .slides {
-    height: 90vh; }
+@include gollum {
+   .slides {
+    height: 90vh;
+  }
   .description {
     font-size: 1.1em;
-    width: 100%; }
+    width: 100%;
+  }
   .tiltview {
     left: 0;
     opacity: 0.3;
-    pointer-events: none; }
-  .tiltview.col,
-  .tiltview.row {
-    top: 30%; }
+    pointer-events: none;
+  }
+   .tiltview.col,
+ .tiltview.row {
+    width: 100%;
+  }
+
   .slideshow > nav span {
     width: 20px;
     height: 40px;
-    margin: 0 10px; } }
+    margin: 0 10px;
+  }
+}
 
-@media (min-width: 480px) and (max-width: 767px) {
+@include frodo{
   .slides {
-    height: 90vh; }
+    height: 90vh;
+  }
+
   .tiltview {
     left: 0;
     opacity: 0.3;
-    pointer-events: none; }
-  .tiltview.col,
-  .tiltview.row {
-    top: 30%; }
+    pointer-events: none;
+  }
+
+ .tiltview.col,
+ .tiltview.row {
+    width: 100%;
+  }
+
   .description {
     width: 100%;
     font-size: 1em;
-    padding: 1.4em; }
+    padding: 1.4em;
+  }
+
   .no-csstransforms3d .tiltview.col,
   .no-csstransforms3d .tiltview.row {
-    top: 30%; } }
+    top: 30%;
+  }
+}*/
