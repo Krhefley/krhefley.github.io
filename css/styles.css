@@ -871,6 +871,7 @@ header.navigation {
     width: 100%; }
   .tiltview {
     left: 0;
+    top: 50;
     opacity: 0.3;
     pointer-events: none; } }
 
@@ -884,7 +885,7 @@ header.navigation {
 
 @media screen and (max-width: 24em) {
   .slides {
-    height: 320px; }
+    height: 90vh; }
   .description {
     font-size: 1em;
     padding: 1.4em; }
