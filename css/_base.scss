@@ -32,11 +32,23 @@
 		}
 	}
 
+  @mixin legolas-landscape {
+    @media (min-width: #{$medium}) and (max-width: #{$large - 1px}) and (orientation: landscape) {
+      @content;
+    }
+  }
+
 	@mixin frodo {
 		@media (min-width: #{$small}) and (max-width: #{$medium - 1px}) {
 			@content;
 		}
 	}
+
+  @mixin frodo-landscape {
+    @media (min-width: #{$small}) and (max-width: #{$medium - 1px}) and (orientation: landscape) {
+      @content;
+    }
+  }
 
 
 	@mixin gollum {
@@ -44,6 +56,12 @@
 			@content;
 		}
 	}
+
+  @mixin gollum-landscape {
+    @media (min-width: #{$tiny}) and (max-width: #{$small - 1px}) and (orientation: landscape) {
+      @content;
+    }
+  }
 
 
 html,
