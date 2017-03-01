@@ -571,13 +571,13 @@ header.navigation {
       height: 80vh; } }
   @media (min-width: 320px) and (max-width: 479px) and (orientation: landscape) {
     .slides {
-      height: 110vh; } }
+      height: 120vh; } }
   @media (min-width: 480px) and (max-width: 767px) {
     .slides {
       height: 80vh; } }
   @media (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
     .slides {
-      height: 110vh; } }
+      height: 120vh; } }
   @media (min-width: 768px) and (max-width: 1223px) {
     .slides {
       height: 50vh; } }
