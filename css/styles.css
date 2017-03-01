@@ -688,6 +688,7 @@ header.navigation {
     .tiltview {
       width: 50%;
       left: 55%;
+      opacity: 0.2;
       pointer-events: none; } }
 
 .tiltview a {
