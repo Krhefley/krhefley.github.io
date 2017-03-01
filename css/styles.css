@@ -580,10 +580,10 @@ header.navigation {
       height: 120vh; } }
   @media (min-width: 768px) and (max-width: 1223px) {
     .slides {
-      height: 50vh; } }
+      height: 60vh; } }
   @media (min-width: 768px) and (max-width: 1223px) and (orientation: landscape) {
     .slides {
-      height: 50vh; } }
+      height: 60vh; } }
 
 .no-js .slides {
   height: auto; }
