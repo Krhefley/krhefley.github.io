@@ -2,5 +2,5 @@
  +.sass-cache/
   *.css.map
 
-/node_modules
+node_modules
 
